@@ -14,12 +14,8 @@
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.4.tar.gz",
     "react-native-elements": "^3.0.0-alpha.1",
-    "react-native-rating-simple": "^1.0.1",
-    "react-native-ratings": "^7.3.0",
     "react-native-safe-area-context": "3.1.4",
     "react-native-safe-area-view": "^1.1.1",
-    "react-native-star-rating": "^1.1.0",
-    "react-native-stars": "^1.2.2",
     "react-native-web": "~0.13.12"
   },
   "devDependencies": {

@@ -5,7 +5,6 @@ export default StyleSheet.create({
     aspectRatio: 1,
     marginRight: 15,
     shadowColor: '#000',
-    shadowOffset: { width: 2, height: 2 },
     backgroundColor: '#1f242a',
   },
   image: {
