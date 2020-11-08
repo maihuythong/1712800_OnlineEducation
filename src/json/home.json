@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "image": "https://i.ibb.co/JH2R7Mr/123781276-399011608136163-2056336479642610456-n.jpg",
+    "title": "Angular Fundamentals",
+    "author": "Joe Eames",
+    "level": "Intermediate",
+    "publishDate": "2020-02-09",
+    "vote": "4.5",
+    "voteCount": "1000"
+  },
+  {
+    "id": "2",
+    "image": "https://i.ibb.co/tp0k79L/image.png",
+    "title": "C# Fundamentals",
+    "author": "Scott Allen",
+    "level": "Beginner",
+    "publishDate": "2020-05-09",
+    "vote": "4.0",
+    "voteCount": "1451"
+  },
+  {
+    "id": "3",
+    "image": "https://i.ibb.co/ZWdv9xH/image.png",
+    "title": "Managing AWS Operations",
+    "author": "Andru Estes",
+    "level": "Intermediate",
+    "publishDate": "2020-05-09",
+    "vote": "4.5",
+    "voteCount": "153"
+  },
+  {
+    "id": "4",
+    "image": "https://i.ibb.co/Lnb55T3/image.png",
+    "title": "Spring Framework: Spring MVC",
+    "author": "Bryan Hansen",
+    "level": "Beginner",
+    "publishDate": "2020-07-09",
+    "vote": "4.5",
+    "voteCount": "124"
+  },
+  {
+    "id": "5",
+    "image": "https://i.ibb.co/NFtKSh2/image.png",
+    "title": "Spring: The Big Picture",
+    "author": "Dustin Schultz",
+    "level": "Beginner",
+    "publishDate": "2018-05-09",
+    "vote": "5.0",
+    "voteCount": "666"
+  },
+  {
+    "id": "6",
+    "image": "https://i.ibb.co/Y088TkK/image.png",
+    "title": "Domain-Driven Design in Practice",
+    "author": "Vladimir Khorikov",
+    "level": "Intermediate",
+    "publishDate": "2019-09-09",
+    "vote": "4.5",
+    "voteCount": "555"
+  }
+]
