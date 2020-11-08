@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "image": "https://pluralsight2.imgix.net/paths/images/react-0f6558f88f.png",
+    "pathName": "React",
+    "courseCount": "12"
+  },
+  {
+    "id": "2",
+    "image": "https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png",
+    "pathName": "Node.js",
+    "courseCount": "11"
+  },
+  {
+    "id": "3",
+    "image": "https://pluralsight.imgix.net/paths/path-icons/java-79830005fe.png",
+    "pathName": "Java",
+    "courseCount": "15"
+  },
+  {
+    "id": "4",
+    "image": "https://pluralsight2.imgix.net/paths/images/angular-14a0f6532f.png",
+    "pathName": "Angular",
+    "courseCount": "11"
+  },
+  {
+    "id": "5",
+    "image": "https://pluralsight2.imgix.net/paths/images/devops-18b91372ed.png",
+    "pathName": "DevOps",
+    "courseCount": "6"
+  }
+]

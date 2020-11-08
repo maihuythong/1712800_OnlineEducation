@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, View, Text, Image } from 'react-native';
 import styles from './styles';
-const Card = (props) => {
+const CourseCard = (props) => {
   const {
     id,
     image,
@@ -34,4 +34,4 @@ const Card = (props) => {
   );
 };
 
-export default Card;
+export default CourseCard;

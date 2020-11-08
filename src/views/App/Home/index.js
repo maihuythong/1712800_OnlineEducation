@@ -1,9 +1,11 @@
 import React from 'react';
 import { ScrollView, Text, FlatList } from 'react-native';
 import styles from './styles';
-import homejson from '../../../json/home.json';
-import Card from '../../../components/Card';
+import cousrsejson from '../../../json/home.json';
+import mypathjson from '../../../json/mypaths.json';
+import CourseCard from '../../../components/CourseCard';
 import Section from '../../../components/Section';
+import PathCard from '../../../components/PathCard';
 
 const Home = () => {
   return (
@@ -11,10 +13,10 @@ const Home = () => {
       <Section title='Software Development'>
         <FlatList
           horizontal
-          data={homejson}
+          data={cousrsejson}
           showsHorizontalScrollIndicator={false}
           renderItem={({ item }) => (
-            <Card
+            <CourseCard
               key={item.id}
               id={item.id}
               image={item.image}
@@ -30,10 +32,10 @@ const Home = () => {
       <Section title='IT Operations'>
         <FlatList
           horizontal
-          data={homejson}
+          data={cousrsejson}
           showsHorizontalScrollIndicator={false}
           renderItem={({ item }) => (
-            <Card
+            <CourseCard
               key={item.id}
               id={item.id}
               image={item.image}
@@ -49,10 +51,10 @@ const Home = () => {
       <Section title='Data Professtional'>
         <FlatList
           horizontal
-          data={homejson}
+          data={cousrsejson}
           showsHorizontalScrollIndicator={false}
           renderItem={({ item }) => (
-            <Card
+            <CourseCard
               key={item.id}
               id={item.id}
               image={item.image}
@@ -68,10 +70,10 @@ const Home = () => {
       <Section title='Security Professtional'>
         <FlatList
           horizontal
-          data={homejson}
+          data={cousrsejson}
           showsHorizontalScrollIndicator={false}
           renderItem={({ item }) => (
-            <Card
+            <CourseCard
               key={item.id}
               id={item.id}
               image={item.image}
@@ -87,10 +89,46 @@ const Home = () => {
       <Section title='Software Development'>
         <FlatList
           horizontal
-          data={homejson}
+          data={cousrsejson}
           showsHorizontalScrollIndicator={false}
           renderItem={({ item }) => (
-            <Card
+            <CourseCard
+              key={item.id}
+              id={item.id}
+              image={item.image}
+              title={item.title}
+              author={item.author}
+              level={item.level}
+              publishDate={item.publishDate}
+              vote={item.vote}
+            />
+          )}
+        />
+      </Section>
+      <Section title='My Paths'>
+        <FlatList
+          horizontal
+          data={mypathjson}
+          showsHorizontalScrollIndicator={false}
+          renderItem={({ item }) => (
+            <PathCard
+              key={item.id}
+              id={item.id}
+              image={item.image}
+              pathName={item.pathName}
+              courseCount={item.courseCount}
+            />
+          )}
+        />
+      </Section>
+
+      <Section title='Bookmarks'>
+        <FlatList
+          horizontal
+          data={cousrsejson}
+          showsHorizontalScrollIndicator={false}
+          renderItem={({ item }) => (
+            <CourseCard
               key={item.id}
               id={item.id}
               image={item.image}
