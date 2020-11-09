@@ -1,0 +1,17 @@
+import React from 'react';
+import styles from './styles';
+import { View, Text, TouchableOpacity } from 'react-native';
+import CustomIcon from '../../shared/CustomIcon';
+
+const MediumButton = ({ uri, text }) => {
+  return (
+    <TouchableOpacity style={styles.container}>
+      <View style={styles.icon}>
+        <CustomIcon uri={uri} />
+      </View>
+      <Text style={styles.text}>{text}</Text>
+    </TouchableOpacity>
+  );
+};
+
+export default MediumButton;
