@@ -6,8 +6,7 @@ export default StyleSheet.create({
     marginRight: 15,
     shadowColor: '#000',
     backgroundColor: '#1f242a',
-    width: 300,
-    height: 300,
+    width: 200,
   },
   image: {
     width: '100%',
@@ -26,7 +25,7 @@ export default StyleSheet.create({
   },
   title: {
     color: '#cbcfd2',
-    fontSize: 20,
+    fontSize: 14,
   },
   defaultText: {
     color: '#9da0a7',

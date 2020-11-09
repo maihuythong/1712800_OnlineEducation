@@ -23,8 +23,8 @@ export default StyleSheet.create({
     overflow: 'hidden',
   },
   title: {
-    color: '#cbcfd2',
-    fontSize: 20,
+    color: 'white',
+    fontSize: 14,
   },
   defaultText: {
     color: '#9da0a7',

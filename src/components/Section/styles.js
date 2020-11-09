@@ -13,7 +13,7 @@ export default StyleSheet.create({
   },
   title: {
     color: '#abadb0',
-    fontSize: 24,
+    fontSize: 16,
   },
   seeAll: {
     color: '#abadb0',

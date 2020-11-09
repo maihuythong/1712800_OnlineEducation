@@ -56,7 +56,7 @@ const Header = (props) => {
             style={styles.showMoreDescription}
             onPress={() => setIsShowFull(!isShowFull)}
           >
-            <Text style={styles.showMoreText}> {'<'}</Text>
+            <Text style={styles.showMoreText}> {'>'}</Text>
           </TouchableOpacity>
         </View>
       ) : (
