@@ -1,4 +1,7 @@
 export const images = {
+  checked: {
+    uri: require('../../assets/checked.svg'),
+  },
   takealearn: {
     uri: require('../../assets/take-a-learn-check.svg'),
   },

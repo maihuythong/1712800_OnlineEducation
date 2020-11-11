@@ -1,0 +1,88 @@
+[
+  {
+    "id": "1",
+    "title": "JavaScript",
+    "image": "images.checked.uri"
+  },
+  {
+    "id": "2",
+    "title": "Java",
+    "image": "images.checked.uri"
+  },
+  {
+    "id": "3",
+    "title": "React",
+    "image": "images.checked.uri"
+  },
+  {
+    "id": "4",
+    "title": "Android",
+    "image": "images.checked.uri"
+  },
+  {
+    "id": "5",
+    "title": "Swift",
+    "image": "images.checked.uri"
+  },
+  {
+    "id": "6",
+    "title": "Angular",
+    "image": "images.checked.uri"
+  },
+  {
+    "id": "7",
+    "title": "C#"
+  },
+  {
+    "id": "8",
+    "title": "Data Analysis"
+  },
+  {
+    "id": "9",
+    "title": "ASP.NET"
+  },
+  {
+    "id": "10",
+    "title": "Node.js"
+  },
+  {
+    "id": "11",
+    "title": "Design Patterns"
+  },
+  {
+    "id": "12",
+    "title": "Python"
+  },
+  {
+    "id": "13",
+    "title": ".NET"
+  },
+  {
+    "id": "14",
+    "title": "SQL Server"
+  },
+  {
+    "id": "15",
+    "title": "Database Administration"
+  },
+  {
+    "id": "16",
+    "title": "Part Modeling"
+  },
+  {
+    "id": "17",
+    "title": "Information Security"
+  },
+  {
+    "id": "18",
+    "title": "ASP.NET Core"
+  },
+  {
+    "id": "19",
+    "title": "TypeScript"
+  },
+  {
+    "id": "20",
+    "title": "Machine Learning"
+  }
+]

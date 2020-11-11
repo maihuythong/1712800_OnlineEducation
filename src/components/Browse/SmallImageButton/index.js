@@ -4,7 +4,6 @@ import styles from './styles';
 
 const SmallImageButton = ({ image, text }) => {
   const img = { uri: image };
-  console.log(text);
 
   return (
     <TouchableOpacity style={styles.container}>

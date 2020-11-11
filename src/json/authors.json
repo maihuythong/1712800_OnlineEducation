@@ -1,0 +1,77 @@
+[
+  {
+    "id": "1",
+    "name": "Deborah Kurata",
+    "avatar": "https://avatars3.githubusercontent.com/u/7987365?s=400&v=4"
+  },
+  {
+    "id": "2",
+    "name": "Scott Allen",
+    "avatar": "https://avatars3.githubusercontent.com/u/137119?s=460&u=206f55fff1332ff433eac30f4a0a594e00b67812&v=4"
+  },
+  {
+    "id": "3",
+    "name": "Joe Eames",
+    "avatar": "https://pluralsight.imgix.net/author/lg/joe-eames-v1.jpg?w=200"
+  },
+  {
+    "id": "4",
+    "name": "Jim Cooper",
+    "avatar": "https://pluralsight.imgix.net/author/lg/jim-cooper-v1.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Austin Bingham",
+    "avatar": "https://pluralsight.imgix.net/author/lg/austin-bingham-v1.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Robert Smallshire",
+    "avatar": "https://avatars1.githubusercontent.com/u/1044137?s=460&v=4"
+  },
+  {
+    "id": "7",
+    "name": "Samer Buna",
+    "avatar": "https://miro.medium.com/fit/c/262/262/1*aVYdyz7HKRyS7orbNP4-aA.jpeg"
+  },
+  {
+    "id": "8",
+    "name": "Mark Zamoyta",
+    "avatar": "https://pluralsight.imgix.net/author/lg/mark-zamoyta-v1.jpg"
+  },
+  {
+    "id": "9",
+    "name": "Ross Bagurdes",
+    "avatar": "https://pluralsight.imgix.net/author/lg/ross-bagurdes-v2.jpg"
+  },
+  {
+    "id": "10",
+    "name": "Simon Allardice",
+    "avatar": "https://pluralsight.imgix.net/author/lg/simon-allardice-v2.jpg"
+  },
+  {
+    "id": "11",
+    "name": "Cory House",
+    "avatar": "https://avatars0.githubusercontent.com/u/1688997?s=460&v=4"
+  },
+  {
+    "id": "12",
+    "name": "Shawn Wildermuth",
+    "avatar": "https://pluralsight.imgix.net/author/lg/shawn-wildermuth-v3.jpg?w=200"
+  },
+  {
+    "id": "13",
+    "name": "Jim Wilson",
+    "avatar": "https://pluralsight.imgix.net/author/lg/jim-wilson-v5.jpg"
+  },
+  {
+    "id": "14",
+    "name": "Neil Morrissey",
+    "avatar": "https://pluralsight.imgix.net/author/lg/d9fa4d8d-65d4-4f90-a953-107ce95eaf37.jpg?w=200"
+  },
+  {
+    "id": "15",
+    "name": "Dale Meredith",
+    "avatar": "https://pluralsight.imgix.net/author/lg/dale-meredith-v3.jpg"
+  }
+]

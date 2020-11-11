@@ -12,7 +12,8 @@ export default StyleSheet.create({
     marginBottom: 10,
   },
   title: {
-    color: '#abadb0',
+    // color: '#abadb0',
+    color: '#fff',
     fontSize: 16,
   },
   seeAll: {
