@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "JavaScript",
+    "image": "images.checked.uri"
+  },
+  {
+    "id": "2",
+    "title": "Java",
+    "image": "images.checked.uri"
+  },
+  {
+    "id": "3",
+    "title": "React",
+    "image": "images.checked.uri"
+  },
+  {
+    "id": "4",
+    "title": "Android",
+    "image": "images.checked.uri"
+  },
+  {
+    "id": "5",
+    "title": "Swift",
+    "image": "images.checked.uri"
+  },
+  {
+    "id": "6",
+    "title": "Angular",
+    "image": "images.checked.uri"
+  }
+]

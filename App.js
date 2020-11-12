@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Home from './src/views/App/Home';
 import CourseDetail from './src/views/App/CourseDetail';
 import Browse from './src/views/App/Browse';
+import Profile from './src/views/App/Profile';
 
 export default function App() {
   return (
@@ -17,7 +18,8 @@ export default function App() {
       <SafeAreaView style={styles.container}>
         {/* <Home /> */}
         {/* <CourseDetail /> */}
-        <Browse />
+        {/* <Browse /> */}
+        <Profile />
       </SafeAreaView>
     </NavigationContainer>
   );
