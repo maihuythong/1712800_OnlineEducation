@@ -8,6 +8,7 @@ import CourseDetail from './src/views/App/CourseDetail';
 import Browse from './src/views/App/Browse';
 import Profile from './src/views/App/Profile';
 import Setting from './src/views/App/Setting';
+import CourseOfSection from './src/views/App/CourseOfSection';
 
 export default function App() {
   return (
@@ -21,7 +22,8 @@ export default function App() {
         {/* <CourseDetail /> */}
         {/* <Browse /> */}
         {/* <Profile /> */}
-        <Setting />
+        {/* <Setting /> */}
+        <CourseOfSection />
       </SafeAreaView>
     </NavigationContainer>
   );

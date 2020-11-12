@@ -6,7 +6,7 @@ import styles from './styles';
 const Author = ({ image, name }) => {
   return (
     <TouchableOpacity style={styles.avatarContainer}>
-      <Avatar rounded size={70} source={{ uri: image }} />
+      <Avatar style={styles.avatar} rounded size={70} source={{ uri: image }} />
       <View style={styles.authorName}>
         <Text style={styles.name}>{name}</Text>
       </View>

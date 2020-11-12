@@ -6,6 +6,7 @@
     "author": "Joe Eames",
     "level": "Intermediate",
     "publishDate": "2020-02-09",
+    "duration": "6h5m",
     "vote": "4.5",
     "voteCount": "1000"
   },
@@ -16,6 +17,7 @@
     "author": "Scott Allen",
     "level": "Beginner",
     "publishDate": "2020-05-09",
+    "duration": "6h",
     "vote": "4.0",
     "voteCount": "1451"
   },
@@ -26,6 +28,7 @@
     "author": "Andru Estes",
     "level": "Intermediate",
     "publishDate": "2020-05-09",
+    "duration": "1h4m",
     "vote": "4.5",
     "voteCount": "153"
   },
@@ -36,6 +39,7 @@
     "author": "Bryan Hansen",
     "level": "Beginner",
     "publishDate": "2020-07-09",
+    "duration": "3h50m",
     "vote": "4.5",
     "voteCount": "124"
   },
@@ -46,6 +50,7 @@
     "author": "Dustin Schultz",
     "level": "Beginner",
     "publishDate": "2018-05-09",
+    "duration": "12h10m",
     "vote": "5.0",
     "voteCount": "666"
   },
@@ -56,6 +61,7 @@
     "author": "Vladimir Khorikov",
     "level": "Intermediate",
     "publishDate": "2019-09-09",
+    "duration": "2h",
     "vote": "4.5",
     "voteCount": "555"
   }
