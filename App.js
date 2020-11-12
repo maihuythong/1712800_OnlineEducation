@@ -7,6 +7,7 @@ import Home from './src/views/App/Home';
 import CourseDetail from './src/views/App/CourseDetail';
 import Browse from './src/views/App/Browse';
 import Profile from './src/views/App/Profile';
+import Setting from './src/views/App/Setting';
 
 export default function App() {
   return (
@@ -19,7 +20,8 @@ export default function App() {
         {/* <Home /> */}
         {/* <CourseDetail /> */}
         {/* <Browse /> */}
-        <Profile />
+        {/* <Profile /> */}
+        <Setting />
       </SafeAreaView>
     </NavigationContainer>
   );

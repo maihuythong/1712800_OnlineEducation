@@ -6,20 +6,19 @@ import interestsjson from '../../../json/interests.json';
 import SkillBadge from '../../../components/Browse/SkillBadge';
 import styles from './styles';
 import TextInformation from '../../../components/Profile/TextInfomation';
+import AccountInfo from '../../../components/AccountInfo';
 
 const Profile = () => {
   return (
     <ScrollView style={styles.scrollViewContainer}>
       <View style={styles.info}>
-        <Avatar
+        <AccountInfo
           size={72}
-          rounded
-          source={{
-            uri:
-              'https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png',
-          }}
+          username={'Mai Huy Thông'}
+          avatar={
+            'https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png'
+          }
         />
-        <Text style={styles.username}>{'Mai Huy Thong'}</Text>
       </View>
       <View style={styles.interest}>
         <Section title='Interests' hideSeeall={true}>
