@@ -1,0 +1,106 @@
+[
+  {
+    "id": "1",
+    "text": "java"
+  },
+  {
+    "id": "2",
+    "text": "javascrip"
+  },
+  {
+    "id": "3",
+    "text": "java spring boot"
+  },
+  {
+    "id": "4",
+    "text": "java jpa"
+  },
+  {
+    "id": "5",
+    "text": "java hibernate"
+  },
+  {
+    "id": "6",
+    "text": "java spring mvc"
+  },
+  {
+    "id": "7",
+    "text": "java security"
+  },
+  {
+    "id": "8",
+    "text": "java mybatis"
+  },
+  {
+    "id": "9",
+    "text": "java web"
+  },
+  {
+    "id": "10",
+    "text": "java beans"
+  },
+  {
+    "id": "11",
+    "text": "java postgresql"
+  },
+  {
+    "id": "12",
+    "text": "jav"
+  },
+  {
+    "id": "13",
+    "text": "java ee"
+  },
+  {
+    "id": "14",
+    "text": "java 11"
+  },
+  {
+    "id": "15",
+    "text": "java 14 openjdk"
+  },
+  {
+    "id": "16",
+    "text": "java development kit"
+  },
+  {
+    "id": "17",
+    "text": "java home"
+  },
+  {
+    "id": "18",
+    "text": "java for business"
+  },
+  {
+    "id": "19",
+    "text": "java messing service"
+  },
+  {
+    "id": "20",
+    "text": "java socket"
+  },
+  {
+    "id": "21",
+    "text": "java fx"
+  },
+  {
+    "id": "22",
+    "text": "java microservice"
+  },
+  {
+    "id": "23",
+    "text": "java testing"
+  },
+  {
+    "id": "24",
+    "text": "java mockito"
+  },
+  {
+    "id": "25",
+    "text": "java junit 5"
+  },
+  {
+    "id": "26",
+    "text": "java junit"
+  }
+]

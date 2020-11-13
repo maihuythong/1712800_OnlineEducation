@@ -9,6 +9,7 @@ import Browse from './src/views/App/Browse';
 import Profile from './src/views/App/Profile';
 import Setting from './src/views/App/Setting';
 import CourseOfSection from './src/views/App/CourseOfSection';
+import Search from './src/views/App/Search';
 
 export default function App() {
   return (
@@ -23,7 +24,8 @@ export default function App() {
         {/* <Browse /> */}
         {/* <Profile /> */}
         {/* <Setting /> */}
-        <CourseOfSection />
+        {/* <CourseOfSection /> */}
+        <Search />
       </SafeAreaView>
     </NavigationContainer>
   );
