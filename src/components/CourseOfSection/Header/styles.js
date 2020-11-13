@@ -5,11 +5,19 @@ export default StyleSheet.create({
     marginHorizontal: 10,
     flex: 1,
   },
+  image: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+    opacity: 0.8,
+  },
   title: {
     flex: 1,
     fontSize: 30,
     color: 'white',
     justifyContent: 'center',
     alignSelf: 'center',
+    paddingVertical: 20,
+    fontWeight: 'bold',
   },
 });

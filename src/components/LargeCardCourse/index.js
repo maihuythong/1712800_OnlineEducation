@@ -14,22 +14,21 @@ const LargeCardCourse = (props) => {
     vote,
     voteCount,
   } = props;
-  console.log(id);
 
   return (
-    <View>
-      <Image style={styles.image} source={{ uri: image }} />
-      <View>
-        <Text>{coursename}</Text>
+    <View style={styles.container}>
+      <Image style={[styles.image, styles.left]} source={{ uri: image }} />
+      <View style={styles.right}>
+        <Text style={styles.title}>{coursename}</Text>
         {/* Handle if multiple author (api only 1 author)
         <View>
           {author.map( e => <Text>{e.name}</Text>)}
         </View> */}
-        <Text>{author}</Text>
-        <Text>
+        <Text style={styles.text}>{author}</Text>
+        <Text style={styles.text}>
           {level} {publishDate} {duration}
         </Text>
-        <Text>
+        <Text style={styles.text}>
           {vote} ({voteCount})
         </Text>
       </View>

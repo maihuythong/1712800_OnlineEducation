@@ -7,8 +7,13 @@ const Header = ({ img, title }) => {
   return (
     <View style={styles.container}>
       {img ? (
-        <ImageBackground source={img} style={styles.image}>
-          <Text style={styles.title}>{text}</Text>
+        <ImageBackground
+          source={{
+            uri: img,
+          }}
+          style={styles.image}
+        >
+          <Text style={styles.title}>{title}</Text>
         </ImageBackground>
       ) : (
         <Text style={styles.title}>{title}</Text>
