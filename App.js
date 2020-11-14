@@ -7,9 +7,13 @@ import Home from './src/views/App/Home';
 import CourseDetail from './src/views/App/CourseDetail';
 import Browse from './src/views/App/Browse';
 import Profile from './src/views/App/Profile';
-import Setting from './src/views/App/Setting';
+import Setting from './src/views/Setting';
 import CourseOfSection from './src/views/App/CourseOfSection';
 import Search from './src/views/App/Search';
+import SignIn from './src/views/Authentication/RecoveryPassword';
+import SignUp from './src/views/Authentication/SignUp';
+import ForgotPassword from './src/views/Authentication/ForgotPassword';
+import RecoveryPassword from './src/views/Authentication/RecoveryPassword';
 
 export default function App() {
   return (
@@ -25,7 +29,11 @@ export default function App() {
         {/* <Profile /> */}
         {/* <Setting /> */}
         {/* <CourseOfSection /> */}
-        <Search />
+        {/* <Search /> */}
+        {/* <SignIn /> */}
+        {/* <SignUp /> */}
+        {/* <ForgotPassword /> */}
+        <RecoveryPassword />
       </SafeAreaView>
     </NavigationContainer>
   );

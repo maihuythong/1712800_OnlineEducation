@@ -2,8 +2,8 @@ import styles from './styles';
 import React, { useState } from 'react';
 import { View, Text } from 'react-native';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
-import AccountInfo from '../../../components/AccountInfo';
-import SwitchSetting from '../../../components/Setting/SwitchSetting';
+import AccountInfo from '../../components/AccountInfo';
+import SwitchSetting from '../../components/Setting/SwitchSetting';
 
 const Setting = () => {
   const [lang, setLang] = useState(true);
