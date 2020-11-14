@@ -8,7 +8,6 @@ import ForgotPassword from '../views/Authentication/ForgotPassword';
 import RecoveryPassword from '../views/Authentication/RecoveryPassword';
 import AppNavigator from './AppNav';
 import Profile from '../views/App/Profile';
-import HeaderRight from '../shared/HeaderRight';
 import Setting from '../views/Setting';
 
 const Stack = createStackNavigator();

@@ -1,41 +1,19 @@
-import React from 'react';
-import { StyleSheet, StatusBar, View } from 'react-native';
+import React, { useState } from 'react';
+import { StatusBar, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { NavigationContainer } from '@react-navigation/native';
-import Home from './src/views/App/Home';
-import CourseDetail from './src/views/App/CourseDetail';
-import Browse from './src/views/App/Browse';
-import Profile from './src/views/App/Profile';
-import Setting from './src/views/Setting';
-import CourseOfSection from './src/views/App/CourseOfSection';
-import Search from './src/views/App/Search';
-import SignIn from './src/views/Authentication/RecoveryPassword';
-import SignUp from './src/views/Authentication/SignUp';
-import ForgotPassword from './src/views/Authentication/ForgotPassword';
-import RecoveryPassword from './src/views/Authentication/RecoveryPassword';
 import RootAppNavigation from './src/navigation';
+import SpashScreen from './src/views/SplashScreen';
 
 export default function App() {
+  const [loading, setLoading] = useState(true);
+  let count = 0;
+  if (loading) {
+    const interval = setInterval(() => {
+      count += 10;
+    }, 100);
+  }
   return (
-    // <View style={styles.container}>
-    //   <Text>Open up App.js to start working on your app!</Text>
-    //   <StatusBar style='auto' />
-    // </View>
-    // <NavigationContainer>
-    //   <SafeAreaView style={styles.container}>
-    //     {/* <Home /> */}
-    //     {/* <CourseDetail /> */}
-    //     {/* <Browse /> */}
-    //     {/* <Profile /> */}
-    //     {/* <Setting /> */}
-    //     {/* <CourseOfSection /> */}
-    //     {/* <Search /> */}
-    //     {/* <SignIn /> */}
-    //     {/* <SignUp /> */}
-    //     {/* <ForgotPassword /> */}
-    //     <RecoveryPassword />
-    //   </SafeAreaView>
-    // </NavigationContainer>
+    // <SpashScreen />
     <SafeAreaView style={styles.container}>
       <StatusBar hidden={false} />
       <RootAppNavigation />

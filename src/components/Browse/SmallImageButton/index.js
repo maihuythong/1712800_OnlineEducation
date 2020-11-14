@@ -1,12 +1,18 @@
 import React from 'react';
 import { ImageBackground, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
+import * as ScreenName from '../../../global/constants/screenName';
 
-const SmallImageButton = ({ image, text }) => {
+const SmallImageButton = ({ image, text, navigation }) => {
   const img = { uri: image };
 
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() =>
+        navigation.navigate(ScreenName.CourseListScreen, { title: text })
+      }
+    >
       <ImageBackground source={img} style={styles.image}>
         <Text style={styles.text}>{text}</Text>
       </ImageBackground>

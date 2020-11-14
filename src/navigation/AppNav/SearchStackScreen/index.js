@@ -46,15 +46,6 @@ const SearchStackScreen = () => {
         component={Search}
         initialParams={{ text: text }}
       />
-      {/* <Stack.Screen
-        name={ScreenName.}
-        component={}
-      />
-
-      <Stack.Screen
-        name={ScreenName.}
-        component={}
-      /> */}
     </Stack.Navigator>
   );
 };

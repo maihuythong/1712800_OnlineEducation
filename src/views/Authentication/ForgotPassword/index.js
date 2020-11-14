@@ -4,6 +4,10 @@ import { Input } from 'react-native-elements';
 import styles from './styles';
 import { TextInput } from 'react-native-paper';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import {
+  RecoveryPasswordScreen,
+  SignInScreen,
+} from '../../../global/constants/screenName';
 
 const ForgotPassword = (props) => {
   const { navigation } = props;
@@ -28,12 +32,14 @@ const ForgotPassword = (props) => {
       />
       <TouchableOpacity
         style={styles.foot}
-        onPress={() => navigation.navigate('RecoveryPasswordScreen')}
+        onPress={() => navigation.navigate(RecoveryPasswordScreen)}
       >
         <Text style={styles.signin}>CONFIRM</Text>
       </TouchableOpacity>
       <View style={styles.footContainer}>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate(RecoveryPasswordScreen)}
+        >
           <Text style={styles.directText}>Go to Sign in?</Text>
         </TouchableOpacity>
       </View>

@@ -8,11 +8,14 @@ export default StyleSheet.create({
   },
   avatar: {
     flex: 1,
+    width: '70%',
+    aspectRatio: 1,
   },
   authorName: {
     // flex: 1,
     // flexDirection: 'row',
     // flexShrink: 1,
+    flex: 0.3,
     flexGrow: 1,
     alignItems: 'center',
   },
@@ -27,5 +30,6 @@ export default StyleSheet.create({
     flexWrap: 'wrap',
     alignItems: 'center',
     justifyContent: 'center',
+    textAlign: 'center',
   },
 });

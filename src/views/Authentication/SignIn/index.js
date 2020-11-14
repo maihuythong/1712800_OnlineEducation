@@ -4,6 +4,7 @@ import { Input } from 'react-native-elements';
 import styles from './styles';
 import { TextInput } from 'react-native-paper';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import * as ScreenName from '../../../global/constants/screenName';
 
 const SignIn = (props) => {
   const { navigation } = props;
@@ -44,19 +45,21 @@ const SignIn = (props) => {
 
       <TouchableOpacity
         style={styles.foot}
-        onPress={() => navigation.navigate('AppNavigatorScreen')}
+        onPress={() => navigation.replace(ScreenName.AppNavigatorScreen)}
       >
         <Text style={styles.signin}>SIGN IN</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.foot}
-        onPress={() => navigation.navigate('ForgotPasswordScreen')}
+        onPress={() => navigation.navigate(ScreenName.ForgotPasswordScreen)}
       >
         <Text style={styles.signin}>FORGOT PASSWORD</Text>
       </TouchableOpacity>
       <View style={styles.signupContainer}>
         <Text style={styles.text}>Don't have account?</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen')}>
+        <TouchableOpacity
+          onPress={() => navigation.push(ScreenName.SignUpScreen)}
+        >
           <Text style={styles.signup}> Sign up</Text>
         </TouchableOpacity>
       </View>

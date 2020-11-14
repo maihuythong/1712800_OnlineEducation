@@ -8,7 +8,7 @@ import styles from './styles';
 import TextInformation from '../../../components/Profile/TextInfomation';
 import AccountInfo from '../../../components/AccountInfo';
 
-const Profile = () => {
+const Profile = ({ navigation }) => {
   return (
     <ScrollView style={styles.scrollViewContainer}>
       <View style={styles.info}>

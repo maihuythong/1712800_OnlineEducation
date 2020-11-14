@@ -13,11 +13,12 @@ export default StyleSheet.create({
   },
   title: {
     flex: 1,
-    fontSize: 30,
+    fontSize: 20,
     color: 'white',
     justifyContent: 'center',
     alignSelf: 'center',
     paddingVertical: 20,
     fontWeight: 'bold',
+    textAlign: 'center',
   },
 });

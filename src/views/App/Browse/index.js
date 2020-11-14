@@ -1,19 +1,19 @@
 import React from 'react';
-import { View, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import Author from '../../../components/Browse/Author';
 import LargeImageButton from '../../../components/Browse/LargeImageButton';
+import SkillBadge from '../../../components/Browse/SkillBadge';
+import SmallImageButton from '../../../components/Browse/SmallImageButton';
+import PathCard from '../../../components/PathCard';
+import Section from '../../../components/Section';
+import * as ScreenName from '../../../global/constants/screenName';
+import authorsjson from '../../../json/authors.json';
+import browsejson from '../../../json/browse.json';
+import mypathjson from '../../../json/mypaths.json';
+import popularskilljson from '../../../json/popularskill.json';
 import { images } from '../../../shared/image';
 import styles from './styles';
-import SmallImageButton from '../../../components/Browse/SmallImageButton';
-import browsejson from '../../../json/browse.json';
-import popularskilljson from '../../../json/popularskill.json';
-import authorsjson from '../../../json/authors.json';
-import Section from '../../../components/Section';
-import PathCard from '../../../components/PathCard';
-import mypathjson from '../../../json/mypaths.json';
-import { ScrollView } from 'react-native-gesture-handler';
-import SkillBadge from '../../../components/Browse/SkillBadge';
-import Author from '../../../components/Browse/Author';
-import * as ScreenName from '../../../global/constants/screenName';
 
 const Browse = (props) => {
   const { navigation } = props;
@@ -29,7 +29,6 @@ const Browse = (props) => {
         image={images.recommended.uri}
         navigation={navigation}
       />
-      {/* <SmallImageButton text={`CONFERENCES`} image={images.conference.uri} /> */}
       <ScrollView
         horizontal
         show
@@ -48,6 +47,7 @@ const Browse = (props) => {
               id={item.id}
               text={item.text}
               image={images.conference.uri}
+              navigation={navigation}
             />
           )}
         />
