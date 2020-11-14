@@ -15,7 +15,6 @@ const CourseCard = (props) => {
     publishDate,
     navigation,
   } = props;
-  console.log(navigation);
 
   return (
     <TouchableOpacity

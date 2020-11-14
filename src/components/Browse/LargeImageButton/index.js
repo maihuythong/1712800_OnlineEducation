@@ -5,7 +5,6 @@ import * as ScreenName from '../../../global/constants/screenName';
 
 const LargeImageButton = ({ image, text, navigation }) => {
   const img = { uri: image };
-  console.log(navigation);
 
   return (
     <TouchableOpacity

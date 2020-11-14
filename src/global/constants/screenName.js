@@ -16,3 +16,7 @@ export const ProfileScreen = 'ProfileScreen';
 
 export const CourseDetailScreen = 'CourseDetailScreen';
 export const CourseListScreen = 'CourseListScreen';
+
+export const SearchRecentScreen = 'SearchRecentScreen';
+export const SearchSuggestionScreen = 'SearchSuggestionScreen';
+export const SearchResultScreen = 'SearchResultScreen';

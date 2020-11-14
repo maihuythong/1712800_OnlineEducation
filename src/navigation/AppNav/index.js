@@ -2,6 +2,8 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeStackScreen from './HomeStackScreen';
 import BrowseStackScreen from './BrowseStackScreen';
+import SearchStackScreen from './SearchStackScreen';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Tab = createBottomTabNavigator();
 
@@ -27,7 +29,12 @@ const AppNavigator = () => {
       <Tab.Screen
         name='Home'
         component={HomeStackScreen}
-        options={{ title: 'Home' }}
+        options={{
+          // title: 'Home',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name='home' color={'#009dc4'} size={30} />
+          ),
+        }}
       />
       {/* <Tab.Screen
         name="Download"
@@ -37,13 +44,31 @@ const AppNavigator = () => {
       <Tab.Screen
         name='Browse'
         component={BrowseStackScreen}
-        options={{ title: 'Browse' }}
+        options={{
+          title: 'Browse',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons
+              name='folder-key'
+              color={'#009dc4'}
+              size={30}
+            />
+          ),
+        }}
       />
-      {/* <Tab.Screen
+      <Tab.Screen
         name='Search'
-        component={Search}
-        options={{ title: 'Search' }}
-      /> */}
+        component={SearchStackScreen}
+        options={{
+          title: 'Search',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons
+              name='magnify'
+              color={'#009dc4'}
+              size={30}
+            />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 };

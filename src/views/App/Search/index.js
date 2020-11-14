@@ -8,11 +8,13 @@ import EmptySearch from '../../../components/Search/EmptyResult';
 import Recent from '../../../components/Search/Recent';
 import SearchResult from '../../../components/Search/SearchResult';
 
-const Search = () => {
+const Search = (props) => {
+  console.log(props.text);
+
   return (
     <View style={styles.container}>
       {/* <TextInput /> */}
-      {/* <Recent /> */}
+      <Recent />
       {/* <FlatList
         data={suggestionjson}
         renderItem={({ item }) => (
@@ -20,7 +22,7 @@ const Search = () => {
         )}
       /> */}
       {/* <EmptySearch text={'jh'} /> */}
-      <SearchResult />
+      {/* <SearchResult /> */}
     </View>
   );
 };
