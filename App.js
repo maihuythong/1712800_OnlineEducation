@@ -1,6 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, StatusBar, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import Home from './src/views/App/Home';
@@ -14,6 +13,7 @@ import SignIn from './src/views/Authentication/RecoveryPassword';
 import SignUp from './src/views/Authentication/SignUp';
 import ForgotPassword from './src/views/Authentication/ForgotPassword';
 import RecoveryPassword from './src/views/Authentication/RecoveryPassword';
+import RootAppNavigation from './src/navigation';
 
 export default function App() {
   return (
@@ -21,30 +21,32 @@ export default function App() {
     //   <Text>Open up App.js to start working on your app!</Text>
     //   <StatusBar style='auto' />
     // </View>
-    <NavigationContainer>
-      <SafeAreaView style={styles.container}>
-        {/* <Home /> */}
-        {/* <CourseDetail /> */}
-        {/* <Browse /> */}
-        {/* <Profile /> */}
-        {/* <Setting /> */}
-        {/* <CourseOfSection /> */}
-        {/* <Search /> */}
-        {/* <SignIn /> */}
-        {/* <SignUp /> */}
-        {/* <ForgotPassword /> */}
-        <RecoveryPassword />
-      </SafeAreaView>
-    </NavigationContainer>
+    // <NavigationContainer>
+    //   <SafeAreaView style={styles.container}>
+    //     {/* <Home /> */}
+    //     {/* <CourseDetail /> */}
+    //     {/* <Browse /> */}
+    //     {/* <Profile /> */}
+    //     {/* <Setting /> */}
+    //     {/* <CourseOfSection /> */}
+    //     {/* <Search /> */}
+    //     {/* <SignIn /> */}
+    //     {/* <SignUp /> */}
+    //     {/* <ForgotPassword /> */}
+    //     <RecoveryPassword />
+    //   </SafeAreaView>
+    // </NavigationContainer>
+    <SafeAreaView style={styles.container}>
+      <StatusBar hidden={false} />
+      <RootAppNavigation />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0f1014',
-    // backgroundColor: '#fff',
-    // alignItems: 'center',
-    // justifyContent: 'center',
+    // backgroundColor: '#0f1014',
+    // marginTop: 15,
   },
 });

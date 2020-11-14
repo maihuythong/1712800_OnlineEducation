@@ -10,7 +10,7 @@ import styles from './styles';
 
 const Tab = createMaterialTopTabNavigator();
 
-const CourseDetail = () => {
+const CourseDetail = (props) => {
   const {
     courseName,
     author,
@@ -43,12 +43,14 @@ const CourseDetail = () => {
             description={description}
           />
           <Tab.Navigator
-            initialRouteName='Feed'
+            initialRouteName='CONTENTS'
             tabBarOptions={{
               activeTintColor: '#236c8d',
               inactiveTintColor: '#858a8f',
               labelStyle: { fontSize: 12 },
-              style: { backgroundColor: '#1f242a' },
+              style: {
+                // backgroundColor: '#1f242a'
+              },
             }}
           >
             <Tab.Screen

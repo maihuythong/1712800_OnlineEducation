@@ -1,6 +1,8 @@
 import React from 'react';
 import { TouchableOpacity, View, Text, Image } from 'react-native';
 import styles from './styles';
+import * as ScrennName from '../../global/constants/screenName';
+
 const CourseCard = (props) => {
   const {
     id,
@@ -11,10 +13,15 @@ const CourseCard = (props) => {
     vote,
     voteCount,
     publishDate,
+    navigation,
   } = props;
+  console.log(navigation);
 
   return (
-    <TouchableOpacity style={styles.cardContainer}>
+    <TouchableOpacity
+      style={styles.cardContainer}
+      onPress={() => navigation.navigate(ScrennName.CourseDetailScreen)}
+    >
       <View style={styles.cardImage}>
         <Image style={styles.image} source={{ uri: image }} />
       </View>

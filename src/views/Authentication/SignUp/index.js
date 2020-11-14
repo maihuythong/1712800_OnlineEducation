@@ -5,7 +5,8 @@ import styles from './styles';
 import { TextInput } from 'react-native-paper';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const SignUp = () => {
+const SignUp = (props) => {
+  const { navigation } = props;
   const [text, setText] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
@@ -77,7 +78,7 @@ const SignUp = () => {
       </TouchableOpacity>
       <View style={styles.signupContainer}>
         <Text style={styles.text}>Already have an account?</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('SignInScreen')}>
           <Text style={styles.signup}> Sign in</Text>
         </TouchableOpacity>
       </View>

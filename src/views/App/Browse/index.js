@@ -13,26 +13,34 @@ import mypathjson from '../../../json/mypaths.json';
 import { ScrollView } from 'react-native-gesture-handler';
 import SkillBadge from '../../../components/Browse/SkillBadge';
 import Author from '../../../components/Browse/Author';
+import * as ScreenName from '../../../global/constants/screenName';
 
-const Browse = () => {
+const Browse = (props) => {
+  const { navigation } = props;
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <LargeImageButton
         text={`NEW \n RELEASES`}
         image={images.newrelease.uri}
+        navigation={navigation}
       />
       <LargeImageButton
         text={`RECOMENDED \n FOR YOU`}
         image={images.recommended.uri}
+        navigation={navigation}
       />
       {/* <SmallImageButton text={`CONFERENCES`} image={images.conference.uri} /> */}
-      <ScrollView horizontal style={styles.smallImage}>
+      <ScrollView
+        horizontal
+        show
+        style={styles.smallImage}
+        showsVerticalScrollIndicator={false}
+      >
         <FlatList
-          // contentContainerStyle={{ alignSelf: 'flex-start' }}
+          showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}
           horizontal={false}
           numColumns={Math.ceil(browsejson.length / 2)}
-          showsVerticalScrollIndicator={false}
-          showsHorizontalScrollIndicator={false}
           data={browsejson}
           renderItem={({ item }) => (
             <SmallImageButton
@@ -61,7 +69,11 @@ const Browse = () => {
         />
       </Section>
 
-      <Section title='Paths'>
+      <Section
+        title='Paths'
+        navigation={navigation}
+        nav={ScreenName.CourseListScreen}
+      >
         <FlatList
           horizontal
           data={mypathjson}
@@ -78,7 +90,11 @@ const Browse = () => {
         />
       </Section>
 
-      <Section title='Top authors'>
+      <Section
+        title='Top authors'
+        navigation={navigation}
+        nav={ScreenName.CourseListScreen}
+      >
         <FlatList
           horizontal
           data={authorsjson}

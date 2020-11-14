@@ -5,7 +5,8 @@ import styles from './styles';
 import { TextInput } from 'react-native-paper';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const RecoveryPassword = () => {
+const RecoveryPassword = (props) => {
+  const { navigation } = props;
   const [text, setText] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [confirmPassword, setConfirmPassword] = React.useState('');
@@ -58,11 +59,14 @@ const RecoveryPassword = () => {
         }}
       />
 
-      <TouchableOpacity style={styles.foot}>
-        <Text style={styles.signin}>SIGN UP</Text>
+      <TouchableOpacity
+        style={styles.foot}
+        onPress={() => navigation.navigate('SignInScreen')}
+      >
+        <Text style={styles.signin}>CONFIRM</Text>
       </TouchableOpacity>
       <View style={styles.signupContainer}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('SignInScreen')}>
           <Text style={styles.signup}>Go to Sign in</Text>
         </TouchableOpacity>
       </View>

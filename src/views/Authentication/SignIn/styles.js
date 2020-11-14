@@ -8,6 +8,7 @@ export default StyleSheet.create({
     // justifyContent: 'center',
     // alignSelf: 'center',
     marginTop: '30%',
+    // backgroundColor: '#0f1014',
   },
   text: {
     color: 'white',
@@ -31,6 +32,9 @@ export default StyleSheet.create({
   },
   text: {
     fontSize: 14,
+    color: '#fff',
+  },
+  signup: {
     color: '#009dc4',
   },
 });
