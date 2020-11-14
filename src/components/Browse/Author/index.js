@@ -2,10 +2,24 @@ import React from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
 import { Avatar } from 'react-native-elements';
 import styles from './styles';
+import * as ScreenName from '../../../global/constants/screenName';
 
-const Author = ({ image, name }) => {
+const Author = (props) => {
+  const { image, name, description, navigation } = props;
+
   return (
-    <TouchableOpacity style={styles.avatarContainer}>
+    <TouchableOpacity
+      style={styles.avatarContainer}
+      onPress={() => {
+        console.log(name);
+
+        return navigation.navigate(ScreenName.AuthorDetailScreen, {
+          image: image,
+          name: name,
+          description,
+        });
+      }}
+    >
       <Avatar
         style={styles.avatar}
         rounded

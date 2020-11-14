@@ -2,6 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as ScreenName from '../../../global/constants/screenName';
 import Browse from '../../../views/App/Browse';
+import AuthorDetail from '../../../views/App/AuthorDetail';
 import HeaderRight from '../../../shared/HeaderRight';
 import CourseOfSection from '../../../views/App/CourseOfSection';
 
@@ -33,6 +34,15 @@ const BrowseStackScreen = () => {
       <Stack.Screen
         name={ScreenName.CourseListScreen}
         component={CourseOfSection}
+        options={{
+          headerRight: null,
+          title: null,
+        }}
+      />
+
+      <Stack.Screen
+        name={ScreenName.AuthorDetailScreen}
+        component={AuthorDetail}
         options={{
           headerRight: null,
           title: null,

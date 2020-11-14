@@ -100,7 +100,12 @@ const Browse = (props) => {
           data={authorsjson}
           showsHorizontalScrollIndicator={false}
           renderItem={({ item }) => (
-            <Author image={item.avatar} name={item.name} />
+            <Author
+              image={item.avatar}
+              name={item.name}
+              description={item.description}
+              navigation={navigation}
+            />
           )}
         />
       </Section>

@@ -2,13 +2,15 @@
   {
     "id": "1",
     "name": "Deborah Kurata",
-    "courseCount": "10",
+    "courseCount": "19",
+    "description": "Deborah Kurata is a software developer, consultant, conference speaker, and Pluralsight author. Her courses include: Angular: Getting Started, Angular Routing, and Object-Oriented Programming Fundamentals in C#. For her work in support of software developers, she has been recognized with the Microsoft Most Valuable Professional (MVP) award, and is a Google Developer Expert (GDE).",
     "avatar": "https://avatars3.githubusercontent.com/u/7987365?s=400&v=4"
   },
   {
     "id": "2",
     "name": "Scott Allen",
-    "courseCount": "7",
+    "courseCount": "43",
+    "description": "Scott has worked on everything from 8-bit embedded devices to large scale web sites during his 15+ years in commercial software development. Since 2001, Scott has focused on server-side and web technologies, like ASP.NET, ASP.NET AJAX, Windows Workflow, Silverlight, and LINQ. Scott is also a speaker at national conferences like VSLive!, as well as code camps and user groups near his hometown of Hagerstown, MD. Scott has been recognized as a Microsoft MVP since 2005, and has written or co-authored several books on Microsoft technologies. Scott founded the site OdeToCode.com in 2004, and joined Pluralsight in 2007.",
     "avatar": "https://avatars3.githubusercontent.com/u/137119?s=460&u=206f55fff1332ff433eac30f4a0a594e00b67812&v=4"
   },
   {
