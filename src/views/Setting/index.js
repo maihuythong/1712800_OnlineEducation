@@ -4,8 +4,9 @@ import { View, Text } from 'react-native';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import AccountInfo from '../../components/AccountInfo';
 import SwitchSetting from '../../components/Setting/SwitchSetting';
+import { SignInScreen } from '../../global/constants/screenName';
 
-const Setting = () => {
+const Setting = ({ navigation }) => {
   const [lang, setLang] = useState(true);
   const [streaming, setStreaming] = useState(true);
   const [downloading, setDownloading] = useState(true);
@@ -56,7 +57,10 @@ const Setting = () => {
           toggleSwitch={downloadingSetting}
         />
       </View>
-      <TouchableOpacity style={styles.signoutContainer}>
+      <TouchableOpacity
+        style={styles.signoutContainer}
+        onPress={() => navigation.replace(SignInScreen)}
+      >
         <Text style={styles.signoutText}>SIGN OUT</Text>
       </TouchableOpacity>
     </ScrollView>
