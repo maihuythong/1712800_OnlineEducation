@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Image, Text } from 'react-native';
 import styles from './styles';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const LargeCardCourse = (props) => {
   const {
@@ -16,7 +17,7 @@ const LargeCardCourse = (props) => {
   } = props;
 
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container}>
       <Image style={[styles.image, styles.left]} source={{ uri: image }} />
       <View style={styles.right}>
         <Text style={styles.title}>{coursename}</Text>
@@ -32,7 +33,7 @@ const LargeCardCourse = (props) => {
           {vote} ({voteCount})
         </Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

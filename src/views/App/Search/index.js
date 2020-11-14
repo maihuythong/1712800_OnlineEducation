@@ -6,12 +6,13 @@ import suggestionjson from '../../../json/searchsuggestion.json';
 import styles from './styles';
 import EmptySearch from '../../../components/Search/EmptyResult';
 import Recent from '../../../components/Search/Recent';
+import SearchResult from '../../../components/Search/SearchResult';
 
 const Search = () => {
   return (
     <View style={styles.container}>
       {/* <TextInput /> */}
-      <Recent />
+      {/* <Recent /> */}
       {/* <FlatList
         data={suggestionjson}
         renderItem={({ item }) => (
@@ -19,6 +20,7 @@ const Search = () => {
         )}
       /> */}
       {/* <EmptySearch text={'jh'} /> */}
+      <SearchResult />
     </View>
   );
 };
