@@ -32,24 +32,6 @@ export default StyleSheet.create({
     justifyContent: 'center',
     marginTop: 15,
   },
-  description: {
-    marginTop: 15,
-    flex: 1,
-    flexDirection: 'row',
-  },
-  textDescription: {
-    flex: 0.85,
-  },
-  showMoreDescription: {
-    flex: 0.15,
-    alignSelf: 'center',
-    alignItems: 'center',
-    transform: [{ rotate: '90deg' }],
-    backgroundColor: '#394249',
-    width: '100%',
-    // height: '100%',
-    // width: '100%',
-  },
   showMoreText: {
     color: '#bcc0c7',
     fontSize: 20,
@@ -62,5 +44,34 @@ export default StyleSheet.create({
   bottom: {
     flex: 1,
     marginTop: 15,
+  },
+  descriptionContainer: {
+    flex: 0.95,
+    flexDirection: 'row',
+    marginVertical: 15,
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  toggleButton: {
+    flex: 0.05,
+    backgroundColor: '#394249',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    height: '100%',
+    borderRadius: 3,
+  },
+  toggleIcon: {
+    fontSize: 24,
+    color: 'white',
+    fontWeight: 'bold',
+  },
+  textDescription: {
+    color: 'white',
+    fontSize: 12,
+    flex: 1,
+  },
+  description: {
+    color: 'gray',
   },
 });

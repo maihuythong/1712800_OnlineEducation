@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { View, Text, FlatList, TouchableOpacity } from 'react-native';
-import BigBadge from '../../BigBadge';
-import styles from './styles';
-import Content from '../Content';
-import LargeButton from '../../LargeButton';
+import { FlatList, Text, TouchableOpacity, View } from 'react-native';
 import { images } from '../../../shared/image';
+import BigBadge from '../../BigBadge';
+import LargeButton from '../../LargeButton';
 import MediumButton from '../../MediumButton';
+import styles from './styles';
 
 const Header = (props) => {
   const {
@@ -19,7 +18,7 @@ const Header = (props) => {
     description,
   } = props;
 
-  const [isShowFull, setIsShowFull] = useState(true);
+  const [isFull, setIsFull] = useState(false);
 
   return (
     <View style={styles.container}>
@@ -47,34 +46,27 @@ const Header = (props) => {
         <MediumButton text={'Add to Channel'} uri={images.addtochannel.uri} />
         <MediumButton text={'Download'} uri={images.download.uri} />
       </View>
-      {isShowFull ? (
-        <View style={styles.description}>
-          <Text style={[styles.textDescription, styles.textNormalColor]}>
-            {description}
-          </Text>
-          <TouchableOpacity
-            style={styles.showMoreDescription}
-            onPress={() => setIsShowFull(!isShowFull)}
-          >
-            <Text style={styles.showMoreText}> {'>'}</Text>
-          </TouchableOpacity>
+      <View style={styles.descriptionContainer}>
+        <View style={styles.textDescription}>
+          {isFull ? (
+            <Text numberOfLines={5} style={styles.description}>
+              {description}
+            </Text>
+          ) : (
+            <Text style={styles.description}>{description}</Text>
+          )}
         </View>
-      ) : (
-        <View style={[styles.description, styles.textNormalColor]}>
-          <Text
-            numberOfLines={3}
-            style={[styles.textDescription, styles.textNormalColor]}
-          >
-            {description}
-          </Text>
-          <TouchableOpacity
-            style={styles.showMoreDescription}
-            onPress={() => setIsShowFull(!isShowFull)}
-          >
-            <Text style={styles.showMoreText}>{'>'}</Text>
-          </TouchableOpacity>
-        </View>
-      )}
+        <TouchableOpacity
+          style={styles.toggleButton}
+          onPress={() => setIsFull(!isFull)}
+        >
+          {isFull ? (
+            <Text style={styles.toggleIcon}>&#8897;</Text>
+          ) : (
+            <Text style={styles.toggleIcon}>&#8896;</Text>
+          )}
+        </TouchableOpacity>
+      </View>
       <View style={styles.bottom}>
         <LargeButton
           uri={images.takealearn.uri}

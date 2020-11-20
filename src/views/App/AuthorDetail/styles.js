@@ -46,10 +46,11 @@ export default StyleSheet.create({
   },
   toggleButton: {
     flex: 1,
-    backgroundColor: '#6f7f82',
+    backgroundColor: '#394249',
     justifyContent: 'center',
     width: '100%',
     height: '100%',
+    borderRadius: 3,
   },
   toggleIcon: {
     fontSize: 28,
