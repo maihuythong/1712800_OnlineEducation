@@ -4,6 +4,7 @@ import HomeStackScreen from './HomeStackScreen';
 import BrowseStackScreen from './BrowseStackScreen';
 import SearchStackScreen from './SearchStackScreen';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import CategoryStackScreen from './CategoryStackScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -36,22 +37,27 @@ const AppNavigator = () => {
           ),
         }}
       />
-      {/* <Tab.Screen
-        name="Download"
-        component={}
-        options={{title: 'Download'}}
-      /> */}
+      <Tab.Screen
+        name='Category'
+        component={CategoryStackScreen}
+        options={{
+          title: 'Category',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons
+              name='certificate'
+              color={'#009dc4'}
+              size={30}
+            />
+          ),
+        }}
+      />
       <Tab.Screen
         name='Browse'
         component={BrowseStackScreen}
         options={{
           title: 'Browse',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons
-              name='folder-key'
-              color={'#009dc4'}
-              size={30}
-            />
+            <MaterialCommunityIcons name='folder' color={'#009dc4'} size={30} />
           ),
         }}
       />

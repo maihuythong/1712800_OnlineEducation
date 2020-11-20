@@ -10,15 +10,14 @@ const Author = (props) => {
   return (
     <TouchableOpacity
       style={styles.avatarContainer}
-      onPress={() => {
-        console.log(name);
-
-        return navigation.navigate(ScreenName.AuthorDetailScreen, {
+      onPress={() =>
+        navigation.navigate(ScreenName.AuthorDetailScreen, {
           image: image,
           name: name,
           description,
-        });
-      }}
+          navigation,
+        })
+      }
     >
       <Avatar
         style={styles.avatar}

@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Image, Text } from 'react-native';
 import styles from './styles';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import * as ScreenName from '../../global/constants/screenName';
 
 const LargeCardCourse = (props) => {
   const {
@@ -14,10 +15,14 @@ const LargeCardCourse = (props) => {
     duration,
     vote,
     voteCount,
+    navigation,
   } = props;
 
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => navigation.navigate(ScreenName.CourseDetailScreen)}
+    >
       <Image style={[styles.image, styles.left]} source={{ uri: image }} />
       <View style={styles.right}>
         <Text style={styles.title}>{coursename}</Text>

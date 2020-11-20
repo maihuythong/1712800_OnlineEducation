@@ -11,8 +11,9 @@ import course from '../../../json/home.json';
 import LargeCardCourse from '../../../components/LargeCardCourse';
 
 const AuthorDetail = (props) => {
-  const { image, name, description } = props.route.params;
+  const { image, name, description, navigation } = props.route.params;
   const [isFull, setIsFull] = useState(false);
+  console.log(navigation);
 
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
@@ -61,6 +62,7 @@ const AuthorDetail = (props) => {
               duration={item.duration}
               vote={item.vote}
               voteCount={item.voteCount}
+              navigation={navigation}
             />
           )}
         />
