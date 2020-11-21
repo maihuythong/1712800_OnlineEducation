@@ -9,6 +9,7 @@ import RecoveryPassword from '../views/Authentication/RecoveryPassword';
 import AppNavigator from './AppNav';
 import Profile from '../views/App/Profile';
 import Setting from '../views/Setting';
+import SplashScreen from '../views/SplashScreen';
 
 const Stack = createStackNavigator();
 
@@ -31,11 +32,11 @@ const RootAppScreen = () => {
 
   return (
     <Stack.Navigator mode='modal' screenOptions={screenOptions}>
-      {/* <Stack.Screen
+      <Stack.Screen
         name={ScreenName.SplashScreen}
         component={SplashScreen}
         options={{ headerShown: false }}
-      /> */}
+      />
       <Stack.Screen
         name={ScreenName.SignInScreen}
         component={SignIn}
