@@ -265,107 +265,128 @@
   },
   {
     "id": "2",
-    "courseName": "C# Fundamentals",
+    "courseName": "ASP.NET Core Fundamentals",
     "author": [
       {
         "avatar": "https://avatars3.githubusercontent.com/u/137119?s=460&u=206f55fff1332ff433eac30f4a0a594e00b67812&v=4",
-        "name": "Deborah Kurata"
+        "name": "Scott Allen"
       }
     ],
     "level": "Beginner",
-    "publishDate": "2020-05-11",
+    "publishDate": "2019-09-27",
     "duration": "1.2",
     "vote": 4.5,
     "voteCount": "595",
-    "description": "You've heard of React, but it right for you? In this course, React: The Big Picture, you will first learn why React has become so popular. Next, you will learn the tradeoffs inherent in React's design. Finallym you will explore some drawbacks to consider. After watching this course, you'll have a clear understanding of React'core use cases, advantages and drawbacks so you can make an educated decision on whether Ract is right for you",
+    "description": "ASP.NET Core is the latest web framework from Microsoft, and is engineered to be fast, easy, and work across platforms. In this course, ASP.NET Core Fundamentals, you will build your first application with ASP.NET Core from scratch. First, you will learn how to work with a database to display and edit data. Then, you will explore middleware, view components, and database migrations with the Entity Framework. Finally, you will delve into building an API controller, and see how to work with client-side libraries. By the end of this course, you will have the skills and knowledge of ASP.NET Core needed to be productive in a typical business-oriented application.",
     "transcript": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae aliquet nulla. Duis a erat ut orci convallis lobortis quis ac elit. Nullam non vulputate mi. Ut convallis purus a rutrum accumsan. Duis finibus odio vitae quam varius, in tristique diam tristique. Proin eu erat massa. Vivamus nec risus lobortis, convallis est at, ultricies orci. Nulla ac justo tortor. Pellentesque id est eros. Morbi quam magna, vehicula vulputate ultricies nec, dignissim id nisl. Nullam scelerisque lorem eget elit gravida tincidunt. Curabitur interdum varius nulla nec aliquet. Quisque pulvinar, leo ac egestas tristique, tellus purus sagittis nisi, consectetur rhoncus ante lectus eget erat. Nulla facilisi. Vestibulum quis tellus ut sem congue interdum. Nam nisl nibh, tempor ut consequat quis, tristique quis felis. Quisque et elit egestas, sodales lectus quis, auctor ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor erat nibh, eu iaculis libero molestie quis. Vivamus ornare viverra ante, sed vulputate nibh mollis eu. Curabitur justo tellus, egestas vel faucibus a, ultricies sed urna. Morbi nec justo nec ipsum imperdiet cursus non sit amet nisi. In ut quam et quam varius efficitur sit amet sollicitudin lacus. Fusce ut consequat eros. Maecenas sollicitudin odio elit, ac suscipit dui lacinia quis. Donec iaculis id nibh ac tempus. Curabitur metus orci, tincidunt nec magna ut, pharetra iaculis est. Nam varius enim ac neque ornare, ac vulputate diam lacinia. Sed ipsum ipsum, venenatis eget venenatis sit amet, cursus ac justo. Fusce varius dolor lacus, facilisis finibus neque aliquet lacinia. Integer quis hendrerit magna. Nunc in nulla et est dictum fermentum eget id mauris. Donec ornare massa sed egestas condimentum. Morbi vitae venenatis odio. Pellentesque metus mi, faucibus ut ante eget, convallis pretium erat. Donec venenatis sodales dolor. Phasellus finibus arcu a libero fermentum finibus. Etiam lobortis, diam id porttitor convallis, ligula turpis dictum lacus, vitae porta felis nulla vel lectus. Donec quis sem pellentesque, consectetur leo a, congue orci. Suspendisse ac eros metus. Morbi a leo nec neque malesuada dictum. Quisque maximus venenatis nibh, vitae vulputate neque posuere sed. Sed quis urna ac metus semper maximus. Nam venenatis lacus eu tristique posuere. Nullam at ipsum vitae leo pretium venenatis. Curabitur accumsan eu tellus sed tempor. Maecenas quis erat eu mi efficitur suscipit vitae vitae dolor. Mauris id turpis at ligula maximus suscipit eu vel justo. Nam purus est, euismod at ipsum a, hendrerit semper neque. Nullam consequat felis eget est rhoncus, eu elementum nibh tincidunt. Maecenas tristique, ex a interdum sollicitudin, enim lacus ornare leo, at semper dui arcu quis nulla. Vestibulum non erat sed nulla pharetra suscipit. Suspendisse suscipit magna odio, sit amet facilisis ipsum condimentum non. Suspendisse molestie massa lacinia erat ornare ullamcorper. Etiam accumsan posuere ante at faucibus. Vivamus sed elit in nisi dignissim euismod.",
     "content": [
       {
         "id": "1",
         "title": "Course Overview",
-        "totalDuration": "1:26",
+        "totalDuration": "2:34",
         "data": [
           {
             "id": "1",
             "title": "Course Overview",
-            "duration": "1:26",
-            "link": "abc",
+            "duration": "1:04",
+            "link": "https://app.pluralsight.com/course-player?clipId=6e2e818e-a68c-4e25-867c-188645eb1819",
+            "complete": true
+          },
+          {
+            "id": "2",
+            "title": "Overview of the 3.0 Upgrade",
+            "duration": "1:30",
+            "link": "https://app.pluralsight.com/course-player?clipId=6e2e818e-a68c-4e25-867c-188645eb1819",
             "complete": true
           }
         ]
       },
       {
         "id": "2",
-        "title": "Why React?",
-        "totalDuration": "25:38",
+        "title": "Drilling into Data",
+        "totalDuration": "30:58",
         "data": [
           {
             "id": "1",
-            "title": "Intro",
-            "duration": "0:53",
-            "link": "abc",
+            "title": "Introduction",
+            "duration": "0:25",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
             "complete": true
           },
           {
             "id": "2",
-            "title": "History",
-            "duration": "2:00",
-            "link": "abc",
+            "title": "Editing Razor Pages",
+            "duration": "9:16",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
             "complete": false
           },
           {
             "id": "3",
-            "title": "Why React?",
-            "duration": "0:28",
-            "link": "abc",
+            "title": "Adding a Razor Page",
+            "duration": "6:28",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
             "complete": false
           },
           {
             "id": "4",
-            "title": "Reason 1: Flexibility",
+            "title": "Using the Scaffolding Tools",
             "duration": "3:30",
-            "link": "abc",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
             "complete": false
           },
           {
             "id": "5",
-            "title": "Reason 2: Developer Experience",
+            "title": "Injecting and Using Configuration",
             "duration": "5:50",
-            "link": "abc",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
             "complete": false
           },
           {
             "id": "6",
-            "title": "Reason 3: Corporate Investment",
+            "title": "Creating an Entity",
             "duration": "2:15",
-            "link": "abc",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
             "complete": false
           },
           {
             "id": "7",
-            "title": "Reason 4: Community",
+            "title": "Building a Data Access Service",
             "duration": "3:27",
-            "link": "abc",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
             "complete": false
           },
           {
             "id": "8",
             "title": "Reason 5: Performance",
-            "duration": "3:07",
-            "link": "abc",
+            "duration": "9:09",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
             "complete": false
           },
           {
             "id": "9",
-            "title": "Testability",
-            "duration": "3:45",
+            "title": "Registering a Data Service",
+            "duration": "13:45",
             "link": "abc",
             "complete": false
           },
           {
             "id": "10",
-            "title": "Summary",
+            "title": "Building a Page Model",
             "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "11",
+            "title": "Displaying a Table of Restaurants",
+            "duration": "1:24",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "12",
+            "title": "Summary",
+            "duration": "0:59",
             "link": "abc",
             "complete": false
           }
@@ -373,74 +394,88 @@
       },
       {
         "id": "3",
-        "title": "Tradeoffs",
+        "title": "Working with Models and Model Binding",
         "totalDuration": "23:32",
         "data": [
           {
             "id": "1",
-            "title": "Intro",
+            "title": "Introduction",
             "duration": "0:53",
             "link": "abc",
             "complete": false
           },
           {
             "id": "2",
-            "title": "History",
+            "title": "Working with HTML Forms",
             "duration": "2:00",
             "link": "abc",
             "complete": false
           },
           {
             "id": "3",
-            "title": "Why React?",
+            "title": "Building a Search Form",
             "duration": "0:28",
             "link": "abc",
             "complete": false
           },
           {
             "id": "4",
-            "title": "Reason 1: Flexibility",
+            "title": "Finding Restaurants by Name",
             "duration": "3:30",
             "link": "abc",
             "complete": false
           },
           {
             "id": "5",
-            "title": "Reason 2: Developer Experience",
+            "title": "Binding to a Query String",
             "duration": "5:50",
             "link": "abc",
             "complete": false
           },
           {
             "id": "6",
-            "title": "Reason 3: Corporate Investment",
+            "title": "Using Model Binding and Tag Helpers",
             "duration": "2:15",
             "link": "abc",
             "complete": false
           },
           {
             "id": "7",
-            "title": "Reason 4: Community",
+            "title": "Building a Detail Page",
             "duration": "3:27",
             "link": "abc",
             "complete": false
           },
           {
             "id": "8",
-            "title": "Reason 5: Performance",
+            "title": "Linking to the Details",
             "duration": "3:07",
             "link": "abc",
             "complete": false
           },
           {
             "id": "9",
-            "title": "Testability",
+            "title": "Specifying Page Routes",
             "duration": "3:45",
             "link": "abc",
             "complete": false
           },
           {
             "id": "10",
+            "title": "Fetching Restaurants by ID",
+            "duration": "3:45",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "11",
+            "title": "Handling Bad Requests",
+            "duration": "3:45",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "12",
             "title": "Summary",
             "duration": "1:21",
             "link": "abc",
@@ -450,7 +485,7 @@
       },
       {
         "id": "4",
-        "title": "Why Not React?",
+        "title": "Editing Data with Razor Pages",
         "totalDuration": "19:41",
         "data": [
           {
@@ -462,56 +497,56 @@
           },
           {
             "id": "2",
-            "title": "History",
+            "title": "Creating the Restaurant Edit Page",
             "duration": "2:00",
             "link": "abc",
             "complete": false
           },
           {
             "id": "3",
-            "title": "Why React?",
+            "title": "Building an Edit Form with Tag Helpers",
             "duration": "0:28",
             "link": "abc",
             "complete": false
           },
           {
             "id": "4",
-            "title": "Reason 1: Flexibility",
+            "title": "Model Binding an HTTP POST Operation",
             "duration": "3:30",
             "link": "abc",
             "complete": false
           },
           {
             "id": "5",
-            "title": "Reason 2: Developer Experience",
+            "title": "Adding Validation Checks",
             "duration": "5:50",
             "link": "abc",
             "complete": false
           },
           {
             "id": "6",
-            "title": "Reason 3: Corporate Investment",
+            "title": "Using Model State and Showing Validation Errors",
             "duration": "2:15",
             "link": "abc",
             "complete": false
           },
           {
             "id": "7",
-            "title": "Reason 4: Community",
+            "title": "Following the POST-GET-REDIRECT Pattern",
             "duration": "3:27",
             "link": "abc",
             "complete": false
           },
           {
             "id": "8",
-            "title": "Reason 5: Performance",
+            "title": "Building a Create Restaurant Page",
             "duration": "3:07",
             "link": "abc",
             "complete": false
           },
           {
             "id": "9",
-            "title": "Testability",
+            "title": "Adding Create to the Data Access Service",
             "duration": "3:45",
             "link": "abc",
             "complete": false
@@ -520,6 +555,5048 @@
             "id": "10",
             "title": "Summary",
             "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "courseName": "Managing AWS Operations",
+    "author": [
+      {
+        "avatar": "https://i.ibb.co/NFtKSh2/image.png",
+        "name": "Andru Estes"
+      }
+    ],
+    "level": "Intermediate",
+    "publishDate": "2020-05-15",
+    "duration": "3.9",
+    "vote": 4,
+    "voteCount": "22",
+    "description": "With a seemingly endless amount of different AWS services, how do you know which ones will help you better manage your resources more efficiently? In this course, Managing AWS Operations, you will learn how to optimize your daily operations within your AWS cloud account better than before. First, you will learn the ins and outs of AWS Systems Manager and what you can use it for in terms of automation and operations. Next, you will discover the several services built around monitoring and maintaining compliance requirements for your accounts. Finally, you will explore how to optimize your S3 storage usage by incorporating numerous tools built-in to the service itself. When you are finished with this course, you will have the skills and knowledge of AWS services needed to optimize all of your AWS operations fully.",
+    "transcript": "Hello. Welcome to the planning and configuring A W s systems manager module within this managing AWS operations course. Now, what are we going to learn in this course? Well, we're gonna have a deep dive into A W s systems manager. We're going to discuss monitoring and compliance dealing with Cloudwatch and Cloud Trail. We're gonna look at leveraging service catalog to offer our applications and services as needed to separate clients or our own organization. And then we're going to explore the different S three features that AWS provides. So let's dive into this first module in this module. We have a few learning objectives that we want to cover. The main overarching objective is we want to have a deep dive into A W S systems manager. Now this breaks apart into three things. We're going to identify benefits of the service itself. We're going to explore actions that can be performed using the service. And then we're going to look at managing actions and events using systems manager. So with that, let's go ahead and break here and in the next clip will pick up by diving into why we want to use systems manager. All right, let's dive into systems manager now. Why would we want to use a systems manager in AWS? Well, there's three main reasons now. The first is that it allows us to group. Our resource is into resource groups, which allows for easier management using those resource groups. We can then analyze our workloads and gain insights toe operational data that we're working with inside a ws. And then using those insights, we can then perform actions on our resource groups as needed. Now we'll dive in deeper to each of these three topics as we work our way through this module. In this course now a W s systems manager is really a suite of tools and services offered to us by a W S. They all simply live under one roof called systems Manager. So let's talk about the first subsection now. The first thing we see in the Consul which will see here upcoming in the next clip is operations management. Now, Operations management is a sub suite of tools built into A W s systems manager. It has something called Explorer, which allows us to customize dashboards. Four reports of our resource is in our accounts. We then have ops Center and this is going toe offer us a centralized place for viewing, investigating and remediating operational tasks that we need to perform. So a good example here would be patching, weaken. See that hate? We need to go ahead and re mediate these instances and get them up to date for the patching standards that we put into place. The next thing that's offered his cloudwatch dashboards. Now we'll discuss dashboards in depth later in this course, but at a high level, they allow us to monitor cloudwatch metrics from within the Systems Manager page. This is a handy thing toe have. Since you'll be poking around the different systems, you don't wanna have to keep hopping back and forth between services like system Manager and Cloudwatch. Now it's in one location, and the final capability is trusted advisor for real time guidance in the Personal Health dashboard, which monitors A W s health events. And it will put event notifications in our consul for us to view. So if AWS is having a service malfunction in a specific region, it would appear in our personal health dashboard. Now that's going to do it for this overview on operations management. Let's go ahead and jump away from the presentations and let's get into the console and start exploring each of these capabilities.",
+    "content": [
+      {
+        "id": "1",
+        "title": "Course Overview",
+        "totalDuration": "2:34",
+        "data": [
+          {
+            "id": "1",
+            "title": "Course Overview",
+            "duration": "1:37",
+            "link": "https://app.pluralsight.com/course-player?clipId=6e2e818e-a68c-4e25-867c-188645eb1819",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Planning and Configuring AWS System Manager",
+        "totalDuration": "30:58",
+        "data": [
+          {
+            "id": "1",
+            "title": "Module Introduction",
+            "duration": "1:24",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": true
+          },
+          {
+            "id": "2",
+            "title": "Operations Management Overview",
+            "duration": "9:16",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Exploring Explorer Capabilities",
+            "duration": "6:28",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Centralizing Ops Tasks via OpsCenter",
+            "duration": "3:30",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "CloudWatch Dashboards, Trusted Advisor, and Personal Health Dashboard",
+            "duration": "5:50",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Application Management Overview",
+            "duration": "2:15",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "7",
+            "title": "Creating, Understanding, and Using Resource Groups",
+            "duration": "3:27",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "8",
+            "title": "Configure Applications Using AppConfig",
+            "duration": "9:09",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "9",
+            "title": "Reusable Parameters with Parameter Store - Part 1",
+            "duration": "13:45",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "10",
+            "title": "Reusable Parameters with Parameter Store - Part 2",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "11",
+            "title": "Actions and Change Overview",
+            "duration": "1:24",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "12",
+            "title": "Performing Tasks Using Automation",
+            "duration": "1:24",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "13",
+            "title": "Creating Maintenance Windows and Setting a Change Calendar",
+            "duration": "1:24",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "14",
+            "title": "Instances and Nodes Overview",
+            "duration": "1:24",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "15",
+            "title": "Monitoring Compliance, Inventory, and Creating Managed Instances",
+            "duration": "1:24",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "16",
+            "title": "Hybrid Activations, Connecting via Session Manager, and Using Run Command",
+            "duration": "1:24",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "17",
+            "title": "Implementing State Manager and Patch Manager",
+            "duration": "1:24",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "18",
+            "title": "Distribute Applications with Distributor",
+            "duration": "1:24",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "19",
+            "title": "Shared Resources Overview",
+            "duration": "1:24",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "20",
+            "title": "Creating and Managing Automation Documents",
+            "duration": "1:24",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "21",
+            "title": "Module Review",
+            "duration": "0:59",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Monitoring Compliance",
+        "totalDuration": "23:32",
+        "data": [
+          {
+            "id": "1",
+            "title": "Overview",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Cloudwatch Overview",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Cloudwatch Dashboards",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Cloudwatch Alarms",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Log Groups",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Metric Filters Log Subscriptions",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "7",
+            "title": "Cloudwatch Events",
+            "duration": "3:27",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "8",
+            "title": "Cloudtrail",
+            "duration": "3:07",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "9",
+            "title": "Amazon Inspector Overview",
+            "duration": "3:45",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "10",
+            "title": "Amazon Inspector in Detail",
+            "duration": "3:45",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "11",
+            "title": "Guardduty",
+            "duration": "3:45",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "12",
+            "title": "Iam Best Practices",
+            "duration": "3:45",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "13",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Using Additional Monitoring Services",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Creating the Restaurant Edit Page",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Building an Edit Form with Tag Helpers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Model Binding an HTTP POST Operation",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Adding Validation Checks",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Using Model State and Showing Validation Errors",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "7",
+            "title": "Following the POST-GET-REDIRECT Pattern",
+            "duration": "3:27",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "8",
+            "title": "Building a Create Restaurant Page",
+            "duration": "3:07",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "9",
+            "title": "Adding Create to the Data Access Service",
+            "duration": "3:45",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "10",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "courseName": "Spring Framework: Spring MVC Fundamentals",
+    "author": [
+      {
+        "avatar": "https://i.ibb.co/Lnb55T3/image.png",
+        "name": "Bryan Hansen"
+      }
+    ],
+    "level": "Intermediate",
+    "publishDate": "2020-05-15",
+    "duration": "3.9",
+    "vote": 4,
+    "voteCount": "22",
+    "description": "Spring MVC is the a popular web framework for Java development. In this course, Spring Framework: Spring MVC Fundamentals, you will gain a solid understanding of creating web applications with Spring MVC. First, you will learn architecture in Spring. Next, you will discover controllers and navigation. Finally, you will explore how to create views. When you are finished with this course, you will have the skills and knowledge of Spring MVC needed to create web applications.",
+    "transcript": "Hi, everyone. My name is Bryan Hansen, and welcome to my course, Spring MVC Fundamentals. I'm the director of software development at Software Technology Group and the CEO of Complete Programmer. Spring MVC is a full‑featured yet lightweight Java framework that has taken the web development space by storm. Spring's integration is excellent with just about any other Java tooling, and Spring MVC is no exception. In this course we're going to cover the fundamentals of Spring MVC. We will cover all the major parts of Spring MVC, including container and containerless deployments, both standard controllers and REST controllers, JSP pages and the Spring alternative, Thymeleaf, as well as consuming Spring MVC from client‑side JavaScript. By the end of this course, you should feel comfortable developing with Spring MVC. Before beginning the course, you should be familiar with Java, and although not necessary, some Maven experience will help. From here, you should feel comfortable diving into Spring with courses on Spring security, Spring data JPA using Hibernate, or having a better understanding of architectural design through the design patterns in Java courses here on Pluralsight. I hope you'll join me on this journey to learn Spring MVC with the Spring MVC Fundamentals Course, here at Pluralsight.",
+    "content": [
+      {
+        "id": "1",
+        "title": "Course Overview",
+        "totalDuration": "2:34",
+        "data": [
+          {
+            "id": "1",
+            "title": "Course Overview",
+            "duration": "1:37",
+            "link": "https://app.pluralsight.com/course-player?clipId=6e2e818e-a68c-4e25-867c-188645eb1819",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "What Is Spring MVC?",
+        "totalDuration": "30:58",
+        "data": [
+          {
+            "id": "1",
+            "title": "Module Introduction",
+            "duration": "1:24",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": true
+          },
+          {
+            "id": "2",
+            "title": "Course Update",
+            "duration": "9:16",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Request / Response Lifecycle",
+            "duration": "6:28",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Vocabulary",
+            "duration": "3:30",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "What Are We Going to Build?",
+            "duration": "5:50",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Summary",
+            "duration": "2:15",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Creating Your First Spring MVC Application",
+        "totalDuration": "23:32",
+        "data": [
+          {
+            "id": "1",
+            "title": "Overview",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Getting Spring",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Demo: Project Setup",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Demo: Tomcat Configuration",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Spring MVC Configuration",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Demo: Greeting Controller",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "13",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Understanding the Structure of Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Creating Controllers in Spring MVC",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Creating Views in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Using Java Server Pages with Spring MVC View",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Using Thymeleaf in Spring MVC Views",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "title": "Validating Objects in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "courseName": "Spring: The Big Picture",
+    "author": [
+      {
+        "avatar": "https://avatars3.githubusercontent.com/u/137119?s=460&u=206f55fff1332ff433eac30f4a0a594e00b67812&v=4",
+        "name": "Andru Estes"
+      }
+    ],
+    "level": "Intermediate",
+    "publishDate": "2020-05-15",
+    "duration": "3.9",
+    "vote": 4,
+    "voteCount": "22",
+    "description": "Spring MVC is the a popular web framework for Java development. In this course, Spring Framework: Spring MVC Fundamentals, you will gain a solid understanding of creating web applications with Spring MVC. First, you will learn architecture in Spring. Next, you will discover controllers and navigation. Finally, you will explore how to create views. When you are finished with this course, you will have the skills and knowledge of Spring MVC needed to create web applications.",
+    "transcript": "Hi, everyone. My name is Bryan Hansen, and welcome to my course, Spring MVC Fundamentals. I'm the director of software development at Software Technology Group and the CEO of Complete Programmer. Spring MVC is a full‑featured yet lightweight Java framework that has taken the web development space by storm. Spring's integration is excellent with just about any other Java tooling, and Spring MVC is no exception. In this course we're going to cover the fundamentals of Spring MVC. We will cover all the major parts of Spring MVC, including container and containerless deployments, both standard controllers and REST controllers, JSP pages and the Spring alternative, Thymeleaf, as well as consuming Spring MVC from client‑side JavaScript. By the end of this course, you should feel comfortable developing with Spring MVC. Before beginning the course, you should be familiar with Java, and although not necessary, some Maven experience will help. From here, you should feel comfortable diving into Spring with courses on Spring security, Spring data JPA using Hibernate, or having a better understanding of architectural design through the design patterns in Java courses here on Pluralsight. I hope you'll join me on this journey to learn Spring MVC with the Spring MVC Fundamentals Course, here at Pluralsight.",
+    "content": [
+      {
+        "id": "1",
+        "title": "Course Overview",
+        "totalDuration": "2:34",
+        "data": [
+          {
+            "id": "1",
+            "title": "Course Overview",
+            "duration": "1:37",
+            "link": "https://app.pluralsight.com/course-player?clipId=6e2e818e-a68c-4e25-867c-188645eb1819",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "What Is Spring MVC?",
+        "totalDuration": "30:58",
+        "data": [
+          {
+            "id": "1",
+            "title": "Module Introduction",
+            "duration": "1:24",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": true
+          },
+          {
+            "id": "2",
+            "title": "Course Update",
+            "duration": "9:16",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Request / Response Lifecycle",
+            "duration": "6:28",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Vocabulary",
+            "duration": "3:30",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "What Are We Going to Build?",
+            "duration": "5:50",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Summary",
+            "duration": "2:15",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Creating Your First Spring MVC Application",
+        "totalDuration": "23:32",
+        "data": [
+          {
+            "id": "1",
+            "title": "Overview",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Getting Spring",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Demo: Project Setup",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Demo: Tomcat Configuration",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Spring MVC Configuration",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Demo: Greeting Controller",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "13",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Understanding the Structure of Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Creating Controllers in Spring MVC",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Creating Views in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Using Java Server Pages with Spring MVC View",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Using Thymeleaf in Spring MVC Views",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "title": "Validating Objects in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "courseName": "Domain-Driven Design in Practice",
+    "author": [
+      {
+        "avatar": "https://i.ibb.co/Y088TkK/image.png",
+        "name": "Vladimir Khorikov"
+      }
+    ],
+    "level": "Intermediate",
+    "publishDate": "2020-05-15",
+    "duration": "3.9",
+    "vote": 4,
+    "voteCount": "22",
+    "description": "Spring MVC is the a popular web framework for Java development. In this course, Spring Framework: Spring MVC Fundamentals, you will gain a solid understanding of creating web applications with Spring MVC. First, you will learn architecture in Spring. Next, you will discover controllers and navigation. Finally, you will explore how to create views. When you are finished with this course, you will have the skills and knowledge of Spring MVC needed to create web applications.",
+    "transcript": "Hi, everyone. My name is Bryan Hansen, and welcome to my course, Spring MVC Fundamentals. I'm the director of software development at Software Technology Group and the CEO of Complete Programmer. Spring MVC is a full‑featured yet lightweight Java framework that has taken the web development space by storm. Spring's integration is excellent with just about any other Java tooling, and Spring MVC is no exception. In this course we're going to cover the fundamentals of Spring MVC. We will cover all the major parts of Spring MVC, including container and containerless deployments, both standard controllers and REST controllers, JSP pages and the Spring alternative, Thymeleaf, as well as consuming Spring MVC from client‑side JavaScript. By the end of this course, you should feel comfortable developing with Spring MVC. Before beginning the course, you should be familiar with Java, and although not necessary, some Maven experience will help. From here, you should feel comfortable diving into Spring with courses on Spring security, Spring data JPA using Hibernate, or having a better understanding of architectural design through the design patterns in Java courses here on Pluralsight. I hope you'll join me on this journey to learn Spring MVC with the Spring MVC Fundamentals Course, here at Pluralsight.",
+    "content": [
+      {
+        "id": "1",
+        "title": "Course Overview",
+        "totalDuration": "2:34",
+        "data": [
+          {
+            "id": "1",
+            "title": "Course Overview",
+            "duration": "1:37",
+            "link": "https://app.pluralsight.com/course-player?clipId=6e2e818e-a68c-4e25-867c-188645eb1819",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "What Is Spring MVC?",
+        "totalDuration": "30:58",
+        "data": [
+          {
+            "id": "1",
+            "title": "Module Introduction",
+            "duration": "1:24",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": true
+          },
+          {
+            "id": "2",
+            "title": "Course Update",
+            "duration": "9:16",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Request / Response Lifecycle",
+            "duration": "6:28",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Vocabulary",
+            "duration": "3:30",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "What Are We Going to Build?",
+            "duration": "5:50",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Summary",
+            "duration": "2:15",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Creating Your First Spring MVC Application",
+        "totalDuration": "23:32",
+        "data": [
+          {
+            "id": "1",
+            "title": "Overview",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Getting Spring",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Demo: Project Setup",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Demo: Tomcat Configuration",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Spring MVC Configuration",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Demo: Greeting Controller",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "13",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Understanding the Structure of Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Creating Controllers in Spring MVC",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Creating Views in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Using Java Server Pages with Spring MVC View",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Using Thymeleaf in Spring MVC Views",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "title": "Validating Objects in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "courseName": "DevOps",
+    "author": [
+      {
+        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzO_cED3Qw5_OoU236htFa7-xfbNyabysswa4rGg631QevS_rPKd1g3dPZOLiLjw0a7tuvcVCkbp_agbY0SjEiFBLb_QKMpoQ&usqp=CAU&ec=45732300",
+        "name": "Joe Biden"
+      }
+    ],
+    "level": "Intermediate",
+    "publishDate": "2020-05-15",
+    "duration": "3.9",
+    "vote": 4,
+    "voteCount": "22",
+    "description": "Spring MVC is the a popular web framework for Java development. In this course, Spring Framework: Spring MVC Fundamentals, you will gain a solid understanding of creating web applications with Spring MVC. First, you will learn architecture in Spring. Next, you will discover controllers and navigation. Finally, you will explore how to create views. When you are finished with this course, you will have the skills and knowledge of Spring MVC needed to create web applications.",
+    "transcript": "Hi, everyone. My name is Bryan Hansen, and welcome to my course, Spring MVC Fundamentals. I'm the director of software development at Software Technology Group and the CEO of Complete Programmer. Spring MVC is a full‑featured yet lightweight Java framework that has taken the web development space by storm. Spring's integration is excellent with just about any other Java tooling, and Spring MVC is no exception. In this course we're going to cover the fundamentals of Spring MVC. We will cover all the major parts of Spring MVC, including container and containerless deployments, both standard controllers and REST controllers, JSP pages and the Spring alternative, Thymeleaf, as well as consuming Spring MVC from client‑side JavaScript. By the end of this course, you should feel comfortable developing with Spring MVC. Before beginning the course, you should be familiar with Java, and although not necessary, some Maven experience will help. From here, you should feel comfortable diving into Spring with courses on Spring security, Spring data JPA using Hibernate, or having a better understanding of architectural design through the design patterns in Java courses here on Pluralsight. I hope you'll join me on this journey to learn Spring MVC with the Spring MVC Fundamentals Course, here at Pluralsight.",
+    "content": [
+      {
+        "id": "1",
+        "title": "Course Overview",
+        "totalDuration": "2:34",
+        "data": [
+          {
+            "id": "1",
+            "title": "Course Overview",
+            "duration": "1:37",
+            "link": "https://app.pluralsight.com/course-player?clipId=6e2e818e-a68c-4e25-867c-188645eb1819",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "What Is Spring MVC?",
+        "totalDuration": "30:58",
+        "data": [
+          {
+            "id": "1",
+            "title": "Module Introduction",
+            "duration": "1:24",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": true
+          },
+          {
+            "id": "2",
+            "title": "Course Update",
+            "duration": "9:16",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Request / Response Lifecycle",
+            "duration": "6:28",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Vocabulary",
+            "duration": "3:30",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "What Are We Going to Build?",
+            "duration": "5:50",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Summary",
+            "duration": "2:15",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Creating Your First Spring MVC Application",
+        "totalDuration": "23:32",
+        "data": [
+          {
+            "id": "1",
+            "title": "Overview",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Getting Spring",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Demo: Project Setup",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Demo: Tomcat Configuration",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Spring MVC Configuration",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Demo: Greeting Controller",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "13",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Understanding the Structure of Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Creating Controllers in Spring MVC",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Creating Views in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Using Java Server Pages with Spring MVC View",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Using Thymeleaf in Spring MVC Views",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "title": "Validating Objects in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "courseName": "AWS For Beginners",
+    "author": [
+      {
+        "avatar": "https://www.zarantech.com/blog/wp-content/uploads/2019/03/aws-logo.png",
+        "name": "Donal Trump"
+      }
+    ],
+    "level": "Intermediate",
+    "publishDate": "2020-05-15",
+    "duration": "3.9",
+    "vote": 4,
+    "voteCount": "22",
+    "description": "Spring MVC is the a popular web framework for Java development. In this course, Spring Framework: Spring MVC Fundamentals, you will gain a solid understanding of creating web applications with Spring MVC. First, you will learn architecture in Spring. Next, you will discover controllers and navigation. Finally, you will explore how to create views. When you are finished with this course, you will have the skills and knowledge of Spring MVC needed to create web applications.",
+    "transcript": "Hi, everyone. My name is Bryan Hansen, and welcome to my course, Spring MVC Fundamentals. I'm the director of software development at Software Technology Group and the CEO of Complete Programmer. Spring MVC is a full‑featured yet lightweight Java framework that has taken the web development space by storm. Spring's integration is excellent with just about any other Java tooling, and Spring MVC is no exception. In this course we're going to cover the fundamentals of Spring MVC. We will cover all the major parts of Spring MVC, including container and containerless deployments, both standard controllers and REST controllers, JSP pages and the Spring alternative, Thymeleaf, as well as consuming Spring MVC from client‑side JavaScript. By the end of this course, you should feel comfortable developing with Spring MVC. Before beginning the course, you should be familiar with Java, and although not necessary, some Maven experience will help. From here, you should feel comfortable diving into Spring with courses on Spring security, Spring data JPA using Hibernate, or having a better understanding of architectural design through the design patterns in Java courses here on Pluralsight. I hope you'll join me on this journey to learn Spring MVC with the Spring MVC Fundamentals Course, here at Pluralsight.",
+    "content": [
+      {
+        "id": "1",
+        "title": "Course Overview",
+        "totalDuration": "2:34",
+        "data": [
+          {
+            "id": "1",
+            "title": "Course Overview",
+            "duration": "1:37",
+            "link": "https://app.pluralsight.com/course-player?clipId=6e2e818e-a68c-4e25-867c-188645eb1819",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "What Is Spring MVC?",
+        "totalDuration": "30:58",
+        "data": [
+          {
+            "id": "1",
+            "title": "Module Introduction",
+            "duration": "1:24",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": true
+          },
+          {
+            "id": "2",
+            "title": "Course Update",
+            "duration": "9:16",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Request / Response Lifecycle",
+            "duration": "6:28",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Vocabulary",
+            "duration": "3:30",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "What Are We Going to Build?",
+            "duration": "5:50",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Summary",
+            "duration": "2:15",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Creating Your First Spring MVC Application",
+        "totalDuration": "23:32",
+        "data": [
+          {
+            "id": "1",
+            "title": "Overview",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Getting Spring",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Demo: Project Setup",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Demo: Tomcat Configuration",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Spring MVC Configuration",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Demo: Greeting Controller",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "13",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Understanding the Structure of Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Creating Controllers in Spring MVC",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Creating Views in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Using Java Server Pages with Spring MVC View",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Using Thymeleaf in Spring MVC Views",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "title": "Validating Objects in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "courseName": "Understanding Your GCP",
+    "author": [
+      {
+        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT_x0SF4MM0IbgN2KiqvzgfBg3slj2cQKaZA&usqp=CAU",
+        "name": "Authored by Google Cloud"
+      }
+    ],
+    "level": "Intermediate",
+    "publishDate": "2020-05-15",
+    "duration": "3.9",
+    "vote": 4,
+    "voteCount": "22",
+    "description": "Spring MVC is the a popular web framework for Java development. In this course, Spring Framework: Spring MVC Fundamentals, you will gain a solid understanding of creating web applications with Spring MVC. First, you will learn architecture in Spring. Next, you will discover controllers and navigation. Finally, you will explore how to create views. When you are finished with this course, you will have the skills and knowledge of Spring MVC needed to create web applications.",
+    "transcript": "Hi, everyone. My name is Bryan Hansen, and welcome to my course, Spring MVC Fundamentals. I'm the director of software development at Software Technology Group and the CEO of Complete Programmer. Spring MVC is a full‑featured yet lightweight Java framework that has taken the web development space by storm. Spring's integration is excellent with just about any other Java tooling, and Spring MVC is no exception. In this course we're going to cover the fundamentals of Spring MVC. We will cover all the major parts of Spring MVC, including container and containerless deployments, both standard controllers and REST controllers, JSP pages and the Spring alternative, Thymeleaf, as well as consuming Spring MVC from client‑side JavaScript. By the end of this course, you should feel comfortable developing with Spring MVC. Before beginning the course, you should be familiar with Java, and although not necessary, some Maven experience will help. From here, you should feel comfortable diving into Spring with courses on Spring security, Spring data JPA using Hibernate, or having a better understanding of architectural design through the design patterns in Java courses here on Pluralsight. I hope you'll join me on this journey to learn Spring MVC with the Spring MVC Fundamentals Course, here at Pluralsight.",
+    "content": [
+      {
+        "id": "1",
+        "title": "Course Overview",
+        "totalDuration": "2:34",
+        "data": [
+          {
+            "id": "1",
+            "title": "Course Overview",
+            "duration": "1:37",
+            "link": "https://app.pluralsight.com/course-player?clipId=6e2e818e-a68c-4e25-867c-188645eb1819",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "What Is Spring MVC?",
+        "totalDuration": "30:58",
+        "data": [
+          {
+            "id": "1",
+            "title": "Module Introduction",
+            "duration": "1:24",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": true
+          },
+          {
+            "id": "2",
+            "title": "Course Update",
+            "duration": "9:16",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Request / Response Lifecycle",
+            "duration": "6:28",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Vocabulary",
+            "duration": "3:30",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "What Are We Going to Build?",
+            "duration": "5:50",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Summary",
+            "duration": "2:15",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Creating Your First Spring MVC Application",
+        "totalDuration": "23:32",
+        "data": [
+          {
+            "id": "1",
+            "title": "Overview",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Getting Spring",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Demo: Project Setup",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Demo: Tomcat Configuration",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Spring MVC Configuration",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Demo: Greeting Controller",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "13",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Understanding the Structure of Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Creating Controllers in Spring MVC",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Creating Views in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Using Java Server Pages with Spring MVC View",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Using Thymeleaf in Spring MVC Views",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "title": "Validating Objects in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "courseName": "Java Beginner to Master",
+    "author": [
+      {
+        "avatar": "https://avatars3.githubusercontent.com/u/137119?s=460&u=206f55fff1332ff433eac30f4a0a594e00b67812&v=4",
+        "name": "Ho Tuan Thanh"
+      }
+    ],
+    "level": "Intermediate",
+    "publishDate": "2020-05-15",
+    "duration": "3.9",
+    "vote": 4,
+    "voteCount": "22",
+    "description": "Spring MVC is the a popular web framework for Java development. In this course, Spring Framework: Spring MVC Fundamentals, you will gain a solid understanding of creating web applications with Spring MVC. First, you will learn architecture in Spring. Next, you will discover controllers and navigation. Finally, you will explore how to create views. When you are finished with this course, you will have the skills and knowledge of Spring MVC needed to create web applications.",
+    "transcript": "Hi, everyone. My name is Bryan Hansen, and welcome to my course, Spring MVC Fundamentals. I'm the director of software development at Software Technology Group and the CEO of Complete Programmer. Spring MVC is a full‑featured yet lightweight Java framework that has taken the web development space by storm. Spring's integration is excellent with just about any other Java tooling, and Spring MVC is no exception. In this course we're going to cover the fundamentals of Spring MVC. We will cover all the major parts of Spring MVC, including container and containerless deployments, both standard controllers and REST controllers, JSP pages and the Spring alternative, Thymeleaf, as well as consuming Spring MVC from client‑side JavaScript. By the end of this course, you should feel comfortable developing with Spring MVC. Before beginning the course, you should be familiar with Java, and although not necessary, some Maven experience will help. From here, you should feel comfortable diving into Spring with courses on Spring security, Spring data JPA using Hibernate, or having a better understanding of architectural design through the design patterns in Java courses here on Pluralsight. I hope you'll join me on this journey to learn Spring MVC with the Spring MVC Fundamentals Course, here at Pluralsight.",
+    "content": [
+      {
+        "id": "1",
+        "title": "Course Overview",
+        "totalDuration": "2:34",
+        "data": [
+          {
+            "id": "1",
+            "title": "Course Overview",
+            "duration": "1:37",
+            "link": "https://app.pluralsight.com/course-player?clipId=6e2e818e-a68c-4e25-867c-188645eb1819",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "What Is Spring MVC?",
+        "totalDuration": "30:58",
+        "data": [
+          {
+            "id": "1",
+            "title": "Module Introduction",
+            "duration": "1:24",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": true
+          },
+          {
+            "id": "2",
+            "title": "Course Update",
+            "duration": "9:16",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Request / Response Lifecycle",
+            "duration": "6:28",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Vocabulary",
+            "duration": "3:30",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "What Are We Going to Build?",
+            "duration": "5:50",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Summary",
+            "duration": "2:15",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Creating Your First Spring MVC Application",
+        "totalDuration": "23:32",
+        "data": [
+          {
+            "id": "1",
+            "title": "Overview",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Getting Spring",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Demo: Project Setup",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Demo: Tomcat Configuration",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Spring MVC Configuration",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Demo: Greeting Controller",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "13",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Understanding the Structure of Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Creating Controllers in Spring MVC",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Creating Views in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Using Java Server Pages with Spring MVC View",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Using Thymeleaf in Spring MVC Views",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "title": "Validating Objects in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "courseName": "Java Best Practice",
+    "author": [
+      {
+        "avatar": "https://du5jhqks4kn0y.cloudfront.net/5dade5d9e601d300712c2392/dae1ec3f-698c-2b0d-7a80-9b7ef353208f.png",
+        "name": "Nguyen Van Khiet"
+      }
+    ],
+    "level": "Intermediate",
+    "publishDate": "2020-05-15",
+    "duration": "3.9",
+    "vote": 4,
+    "voteCount": "22",
+    "description": "Spring MVC is the a popular web framework for Java development. In this course, Spring Framework: Spring MVC Fundamentals, you will gain a solid understanding of creating web applications with Spring MVC. First, you will learn architecture in Spring. Next, you will discover controllers and navigation. Finally, you will explore how to create views. When you are finished with this course, you will have the skills and knowledge of Spring MVC needed to create web applications.",
+    "transcript": "Hi, everyone. My name is Bryan Hansen, and welcome to my course, Spring MVC Fundamentals. I'm the director of software development at Software Technology Group and the CEO of Complete Programmer. Spring MVC is a full‑featured yet lightweight Java framework that has taken the web development space by storm. Spring's integration is excellent with just about any other Java tooling, and Spring MVC is no exception. In this course we're going to cover the fundamentals of Spring MVC. We will cover all the major parts of Spring MVC, including container and containerless deployments, both standard controllers and REST controllers, JSP pages and the Spring alternative, Thymeleaf, as well as consuming Spring MVC from client‑side JavaScript. By the end of this course, you should feel comfortable developing with Spring MVC. Before beginning the course, you should be familiar with Java, and although not necessary, some Maven experience will help. From here, you should feel comfortable diving into Spring with courses on Spring security, Spring data JPA using Hibernate, or having a better understanding of architectural design through the design patterns in Java courses here on Pluralsight. I hope you'll join me on this journey to learn Spring MVC with the Spring MVC Fundamentals Course, here at Pluralsight.",
+    "content": [
+      {
+        "id": "1",
+        "title": "Course Overview",
+        "totalDuration": "2:34",
+        "data": [
+          {
+            "id": "1",
+            "title": "Course Overview",
+            "duration": "1:37",
+            "link": "https://app.pluralsight.com/course-player?clipId=6e2e818e-a68c-4e25-867c-188645eb1819",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "What Is Spring MVC?",
+        "totalDuration": "30:58",
+        "data": [
+          {
+            "id": "1",
+            "title": "Module Introduction",
+            "duration": "1:24",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": true
+          },
+          {
+            "id": "2",
+            "title": "Course Update",
+            "duration": "9:16",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Request / Response Lifecycle",
+            "duration": "6:28",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Vocabulary",
+            "duration": "3:30",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "What Are We Going to Build?",
+            "duration": "5:50",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Summary",
+            "duration": "2:15",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Creating Your First Spring MVC Application",
+        "totalDuration": "23:32",
+        "data": [
+          {
+            "id": "1",
+            "title": "Overview",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Getting Spring",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Demo: Project Setup",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Demo: Tomcat Configuration",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Spring MVC Configuration",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Demo: Greeting Controller",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "13",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Understanding the Structure of Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Creating Controllers in Spring MVC",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Creating Views in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Using Java Server Pages with Spring MVC View",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Using Thymeleaf in Spring MVC Views",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "title": "Validating Objects in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "courseName": "C# For Beginners",
+    "author": [
+      {
+        "avatar": "https://res.cloudinary.com/practicaldev/image/fetch/s--ey3lvuv5--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://cdn-images-1.medium.com/max/1600/1%2AMfOHvI5b1XZKYTXIAKY7PQ.png",
+        "name": "Tran Duy Quang"
+      }
+    ],
+    "level": "Intermediate",
+    "publishDate": "2020-05-15",
+    "duration": "3.9",
+    "vote": 4,
+    "voteCount": "22",
+    "description": "Spring MVC is the a popular web framework for Java development. In this course, Spring Framework: Spring MVC Fundamentals, you will gain a solid understanding of creating web applications with Spring MVC. First, you will learn architecture in Spring. Next, you will discover controllers and navigation. Finally, you will explore how to create views. When you are finished with this course, you will have the skills and knowledge of Spring MVC needed to create web applications.",
+    "transcript": "Hi, everyone. My name is Bryan Hansen, and welcome to my course, Spring MVC Fundamentals. I'm the director of software development at Software Technology Group and the CEO of Complete Programmer. Spring MVC is a full‑featured yet lightweight Java framework that has taken the web development space by storm. Spring's integration is excellent with just about any other Java tooling, and Spring MVC is no exception. In this course we're going to cover the fundamentals of Spring MVC. We will cover all the major parts of Spring MVC, including container and containerless deployments, both standard controllers and REST controllers, JSP pages and the Spring alternative, Thymeleaf, as well as consuming Spring MVC from client‑side JavaScript. By the end of this course, you should feel comfortable developing with Spring MVC. Before beginning the course, you should be familiar with Java, and although not necessary, some Maven experience will help. From here, you should feel comfortable diving into Spring with courses on Spring security, Spring data JPA using Hibernate, or having a better understanding of architectural design through the design patterns in Java courses here on Pluralsight. I hope you'll join me on this journey to learn Spring MVC with the Spring MVC Fundamentals Course, here at Pluralsight.",
+    "content": [
+      {
+        "id": "1",
+        "title": "Course Overview",
+        "totalDuration": "2:34",
+        "data": [
+          {
+            "id": "1",
+            "title": "Course Overview",
+            "duration": "1:37",
+            "link": "https://app.pluralsight.com/course-player?clipId=6e2e818e-a68c-4e25-867c-188645eb1819",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "What Is Spring MVC?",
+        "totalDuration": "30:58",
+        "data": [
+          {
+            "id": "1",
+            "title": "Module Introduction",
+            "duration": "1:24",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": true
+          },
+          {
+            "id": "2",
+            "title": "Course Update",
+            "duration": "9:16",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Request / Response Lifecycle",
+            "duration": "6:28",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Vocabulary",
+            "duration": "3:30",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "What Are We Going to Build?",
+            "duration": "5:50",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Summary",
+            "duration": "2:15",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Creating Your First Spring MVC Application",
+        "totalDuration": "23:32",
+        "data": [
+          {
+            "id": "1",
+            "title": "Overview",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Getting Spring",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Demo: Project Setup",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Demo: Tomcat Configuration",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Spring MVC Configuration",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Demo: Greeting Controller",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "13",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Understanding the Structure of Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Creating Controllers in Spring MVC",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Creating Views in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Using Java Server Pages with Spring MVC View",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Using Thymeleaf in Spring MVC Views",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "title": "Validating Objects in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "courseName": "Domain-Driven Design in Practice",
+    "author": [
+      {
+        "avatar": "https://i.ibb.co/Y088TkK/image.png",
+        "name": "Ho Tuan Thanh"
+      }
+    ],
+    "level": "Intermediate",
+    "publishDate": "2020-05-15",
+    "duration": "3.9",
+    "vote": 4,
+    "voteCount": "22",
+    "description": "Spring MVC is the a popular web framework for Java development. In this course, Spring Framework: Spring MVC Fundamentals, you will gain a solid understanding of creating web applications with Spring MVC. First, you will learn architecture in Spring. Next, you will discover controllers and navigation. Finally, you will explore how to create views. When you are finished with this course, you will have the skills and knowledge of Spring MVC needed to create web applications.",
+    "transcript": "Hi, everyone. My name is Bryan Hansen, and welcome to my course, Spring MVC Fundamentals. I'm the director of software development at Software Technology Group and the CEO of Complete Programmer. Spring MVC is a full‑featured yet lightweight Java framework that has taken the web development space by storm. Spring's integration is excellent with just about any other Java tooling, and Spring MVC is no exception. In this course we're going to cover the fundamentals of Spring MVC. We will cover all the major parts of Spring MVC, including container and containerless deployments, both standard controllers and REST controllers, JSP pages and the Spring alternative, Thymeleaf, as well as consuming Spring MVC from client‑side JavaScript. By the end of this course, you should feel comfortable developing with Spring MVC. Before beginning the course, you should be familiar with Java, and although not necessary, some Maven experience will help. From here, you should feel comfortable diving into Spring with courses on Spring security, Spring data JPA using Hibernate, or having a better understanding of architectural design through the design patterns in Java courses here on Pluralsight. I hope you'll join me on this journey to learn Spring MVC with the Spring MVC Fundamentals Course, here at Pluralsight.",
+    "content": [
+      {
+        "id": "1",
+        "title": "Course Overview",
+        "totalDuration": "2:34",
+        "data": [
+          {
+            "id": "1",
+            "title": "Course Overview",
+            "duration": "1:37",
+            "link": "https://app.pluralsight.com/course-player?clipId=6e2e818e-a68c-4e25-867c-188645eb1819",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "What Is Spring MVC?",
+        "totalDuration": "30:58",
+        "data": [
+          {
+            "id": "1",
+            "title": "Module Introduction",
+            "duration": "1:24",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": true
+          },
+          {
+            "id": "2",
+            "title": "Course Update",
+            "duration": "9:16",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Request / Response Lifecycle",
+            "duration": "6:28",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Vocabulary",
+            "duration": "3:30",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "What Are We Going to Build?",
+            "duration": "5:50",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Summary",
+            "duration": "2:15",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Creating Your First Spring MVC Application",
+        "totalDuration": "23:32",
+        "data": [
+          {
+            "id": "1",
+            "title": "Overview",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Getting Spring",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Demo: Project Setup",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Demo: Tomcat Configuration",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Spring MVC Configuration",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Demo: Greeting Controller",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "13",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Understanding the Structure of Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Creating Controllers in Spring MVC",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Creating Views in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Using Java Server Pages with Spring MVC View",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Using Thymeleaf in Spring MVC Views",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "title": "Validating Objects in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "courseName": "Domain-Driven Design in Practice",
+    "author": [
+      {
+        "avatar": "https://avatars3.githubusercontent.com/u/137119?s=460&u=206f55fff1332ff433eac30f4a0a594e00b67812&v=4",
+        "name": "Ho Tuan Thanh"
+      }
+    ],
+    "level": "Intermediate",
+    "publishDate": "2020-05-15",
+    "duration": "3.9",
+    "vote": 4,
+    "voteCount": "22",
+    "description": "Spring MVC is the a popular web framework for Java development. In this course, Spring Framework: Spring MVC Fundamentals, you will gain a solid understanding of creating web applications with Spring MVC. First, you will learn architecture in Spring. Next, you will discover controllers and navigation. Finally, you will explore how to create views. When you are finished with this course, you will have the skills and knowledge of Spring MVC needed to create web applications.",
+    "transcript": "Hi, everyone. My name is Bryan Hansen, and welcome to my course, Spring MVC Fundamentals. I'm the director of software development at Software Technology Group and the CEO of Complete Programmer. Spring MVC is a full‑featured yet lightweight Java framework that has taken the web development space by storm. Spring's integration is excellent with just about any other Java tooling, and Spring MVC is no exception. In this course we're going to cover the fundamentals of Spring MVC. We will cover all the major parts of Spring MVC, including container and containerless deployments, both standard controllers and REST controllers, JSP pages and the Spring alternative, Thymeleaf, as well as consuming Spring MVC from client‑side JavaScript. By the end of this course, you should feel comfortable developing with Spring MVC. Before beginning the course, you should be familiar with Java, and although not necessary, some Maven experience will help. From here, you should feel comfortable diving into Spring with courses on Spring security, Spring data JPA using Hibernate, or having a better understanding of architectural design through the design patterns in Java courses here on Pluralsight. I hope you'll join me on this journey to learn Spring MVC with the Spring MVC Fundamentals Course, here at Pluralsight.",
+    "content": [
+      {
+        "id": "1",
+        "title": "Course Overview",
+        "totalDuration": "2:34",
+        "data": [
+          {
+            "id": "1",
+            "title": "Course Overview",
+            "duration": "1:37",
+            "link": "https://app.pluralsight.com/course-player?clipId=6e2e818e-a68c-4e25-867c-188645eb1819",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "What Is Spring MVC?",
+        "totalDuration": "30:58",
+        "data": [
+          {
+            "id": "1",
+            "title": "Module Introduction",
+            "duration": "1:24",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": true
+          },
+          {
+            "id": "2",
+            "title": "Course Update",
+            "duration": "9:16",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Request / Response Lifecycle",
+            "duration": "6:28",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Vocabulary",
+            "duration": "3:30",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "What Are We Going to Build?",
+            "duration": "5:50",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Summary",
+            "duration": "2:15",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Creating Your First Spring MVC Application",
+        "totalDuration": "23:32",
+        "data": [
+          {
+            "id": "1",
+            "title": "Overview",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Getting Spring",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Demo: Project Setup",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Demo: Tomcat Configuration",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Spring MVC Configuration",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Demo: Greeting Controller",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "13",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Understanding the Structure of Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Creating Controllers in Spring MVC",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Creating Views in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Using Java Server Pages with Spring MVC View",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Using Thymeleaf in Spring MVC Views",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "title": "Validating Objects in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "courseName": "Vladimir Khorikov",
+    "author": [
+      {
+        "avatar": "https://avatars3.githubusercontent.com/u/137119?s=460&u=206f55fff1332ff433eac30f4a0a594e00b67812&v=4",
+        "name": "Ho Tuan Thanh"
+      }
+    ],
+    "level": "Intermediate",
+    "publishDate": "2020-05-15",
+    "duration": "3.9",
+    "vote": 4,
+    "voteCount": "22",
+    "description": "Spring MVC is the a popular web framework for Java development. In this course, Spring Framework: Spring MVC Fundamentals, you will gain a solid understanding of creating web applications with Spring MVC. First, you will learn architecture in Spring. Next, you will discover controllers and navigation. Finally, you will explore how to create views. When you are finished with this course, you will have the skills and knowledge of Spring MVC needed to create web applications.",
+    "transcript": "Hi, everyone. My name is Bryan Hansen, and welcome to my course, Spring MVC Fundamentals. I'm the director of software development at Software Technology Group and the CEO of Complete Programmer. Spring MVC is a full‑featured yet lightweight Java framework that has taken the web development space by storm. Spring's integration is excellent with just about any other Java tooling, and Spring MVC is no exception. In this course we're going to cover the fundamentals of Spring MVC. We will cover all the major parts of Spring MVC, including container and containerless deployments, both standard controllers and REST controllers, JSP pages and the Spring alternative, Thymeleaf, as well as consuming Spring MVC from client‑side JavaScript. By the end of this course, you should feel comfortable developing with Spring MVC. Before beginning the course, you should be familiar with Java, and although not necessary, some Maven experience will help. From here, you should feel comfortable diving into Spring with courses on Spring security, Spring data JPA using Hibernate, or having a better understanding of architectural design through the design patterns in Java courses here on Pluralsight. I hope you'll join me on this journey to learn Spring MVC with the Spring MVC Fundamentals Course, here at Pluralsight.",
+    "content": [
+      {
+        "id": "1",
+        "title": "Course Overview",
+        "totalDuration": "2:34",
+        "data": [
+          {
+            "id": "1",
+            "title": "Course Overview",
+            "duration": "1:37",
+            "link": "https://app.pluralsight.com/course-player?clipId=6e2e818e-a68c-4e25-867c-188645eb1819",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "What Is Spring MVC?",
+        "totalDuration": "30:58",
+        "data": [
+          {
+            "id": "1",
+            "title": "Module Introduction",
+            "duration": "1:24",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": true
+          },
+          {
+            "id": "2",
+            "title": "Course Update",
+            "duration": "9:16",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Request / Response Lifecycle",
+            "duration": "6:28",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Vocabulary",
+            "duration": "3:30",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "What Are We Going to Build?",
+            "duration": "5:50",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Summary",
+            "duration": "2:15",
+            "link": "https://app.pluralsight.com/library/courses/aspnet-core-fundamentals/table-of-contents",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Creating Your First Spring MVC Application",
+        "totalDuration": "23:32",
+        "data": [
+          {
+            "id": "1",
+            "title": "Overview",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Getting Spring",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Demo: Project Setup",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Demo: Tomcat Configuration",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Spring MVC Configuration",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Demo: Greeting Controller",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "13",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Understanding the Structure of Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Creating Controllers in Spring MVC",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Creating Views in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Using Java Server Pages with Spring MVC View",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Using Thymeleaf in Spring MVC Views",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "title": "Validating Objects in Spring MVC Applications",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "Model-View-Controller",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Application Layers",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "pring Components",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Summary",
+            "duration": "1:50",
             "link": "abc",
             "complete": false
           }

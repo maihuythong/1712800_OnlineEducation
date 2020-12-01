@@ -13,13 +13,13 @@
   {
     "id": "2",
     "image": "https://i.ibb.co/tp0k79L/image.png",
-    "title": "C# Fundamentals",
+    "title": "ASP.NET Core Fundamentals",
     "author": "Scott Allen",
     "level": "Beginner",
-    "publishDate": "2020-05-09",
+    "publishDate": "2019-09-27",
     "duration": "6h",
-    "vote": "4.0",
-    "voteCount": "1451"
+    "vote": "4.5",
+    "voteCount": "520"
   },
   {
     "id": "3",
@@ -27,21 +27,21 @@
     "title": "Managing AWS Operations",
     "author": "Andru Estes",
     "level": "Intermediate",
-    "publishDate": "2020-05-09",
-    "duration": "1h4m",
+    "publishDate": "2020-05-15",
+    "duration": "3h50m",
     "vote": "4.5",
     "voteCount": "153"
   },
   {
     "id": "4",
     "image": "https://i.ibb.co/Lnb55T3/image.png",
-    "title": "Spring Framework: Spring MVC",
+    "title": "Spring Framework: Spring MVC Fundamentals",
     "author": "Bryan Hansen",
     "level": "Beginner",
-    "publishDate": "2020-07-09",
-    "duration": "3h50m",
+    "publishDate": "2020-02-12",
+    "duration": "2h32m",
     "vote": "4.5",
-    "voteCount": "124"
+    "voteCount": "141"
   },
   {
     "id": "5",
@@ -89,9 +89,9 @@
   },
   {
     "id": "9",
-    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Google_Cloud_Covered.png",
-    "title": "Google Cloud Platform Best Practice",
-    "author": "Vladimir Khorikov",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT_x0SF4MM0IbgN2KiqvzgfBg3slj2cQKaZA&usqp=CAU",
+    "title": "Understanding Your GCP",
+    "author": "Authored by Google Cloud",
     "level": "Intermediate",
     "publishDate": "2019-09-09",
     "duration": "2h",
@@ -125,39 +125,6 @@
     "image": "https://res.cloudinary.com/practicaldev/image/fetch/s--ey3lvuv5--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://cdn-images-1.medium.com/max/1600/1%2AMfOHvI5b1XZKYTXIAKY7PQ.png",
     "title": "C# For Beginners",
     "author": "Tran Duy Quang",
-    "level": "Intermediate",
-    "publishDate": "2019-09-09",
-    "duration": "2h",
-    "vote": "4.5",
-    "voteCount": "555"
-  },
-  {
-    "id": "13",
-    "image": "https://i.ibb.co/Y088TkK/image.png",
-    "title": "Domain-Driven Design in Practice",
-    "author": "Vladimir Khorikov",
-    "level": "Intermediate",
-    "publishDate": "2019-09-09",
-    "duration": "2h",
-    "vote": "4.5",
-    "voteCount": "555"
-  },
-  {
-    "id": "14",
-    "image": "https://i.ibb.co/Y088TkK/image.png",
-    "title": "Domain-Driven Design in Practice",
-    "author": "Vladimir Khorikov",
-    "level": "Intermediate",
-    "publishDate": "2019-09-09",
-    "duration": "2h",
-    "vote": "4.5",
-    "voteCount": "555"
-  },
-  {
-    "id": "15",
-    "image": "https://i.ibb.co/Y088TkK/image.png",
-    "title": "Domain-Driven Design in Practice",
-    "author": "Vladimir Khorikov",
     "level": "Intermediate",
     "publishDate": "2019-09-09",
     "duration": "2h",

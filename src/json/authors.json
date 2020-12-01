@@ -17,17 +17,20 @@
     "id": "3",
     "name": "Joe Eames",
     "courseCount": "12",
+    "description": "Joe began his love of programming on an Apple III in BASIC. Although his preferred language is JavaScript, he has worked professionally with just about every major Microsoft language. He is currently a consultant and full time author for Pluralsight. Joe has always had a strong interest in education, and has worked both full and part time as a technical teacher for over ten years. He is a frequent blogger and speaker, organizer of ng-conf, the AngularJS conference (www.ng-conf.org), and a panelist on the JavaScript Jabber podcast.",
     "avatar": "https://pluralsight.imgix.net/author/lg/joe-eames-v1.jpg?w=200"
   },
   {
     "id": "4",
     "name": "Jim Cooper",
     "courseCount": "16",
+    "description": "Jim Cooper is a software developer at Pluralsight, with more than 20 years of software development experience. He has a passion for Agile processes, especially lean software development. Jim has been developing production Angular apps since before Angular version 1.0, including Pluralsight's first Html5-based video player. Jim has over 10 years of TDD and pair programming experience which has contributed significantly to his professional development. He has successfully mentored other developers in the use of TDD and agile practices and still enjoys learning from talented developers everywhere",
     "avatar": "https://pluralsight.imgix.net/author/lg/jim-cooper-v1.jpg"
   },
   {
     "id": "5",
     "name": "Austin Bingham",
+    "description": "Austin is a founding director of Sixty North, a software consulting, training, and application development company. A native of Texas, in 2008 Austin moved to Stavanger, Norway where he helped develop industry-leading oil reservoir modeling software in C++ and Python. Prior to that he worked at National Instruments developing LabVIEW, at Applied Research Labs (Univ. of Texas at Austin) developing sonar systems for the U.S. Navy, and at a number of telecommunications companies. He is an experienced presenter and teacher, having spoken at a number of conferences, software groups, and internal corporate venues. Austin is also an active member of the open source community, contributing regularly to various Python and Emacs projects, and he's the founder of Stavanger Software Developers, one of the largest and most active social software groups in Stavanger. Austin holds a Master of Science in Computer Engineering from the University of Texas at Austin.",
     "courseCount": "5",
     "avatar": "https://pluralsight.imgix.net/author/lg/austin-bingham-v1.jpg"
   },
@@ -35,12 +38,14 @@
     "id": "6",
     "name": "Robert Smallshire",
     "courseCount": "12",
+    "description": "Robert Smallshire is a founder of Sixty North, a software product and consulting business in Norway. Robert has worked in senior architecture and technical management roles for software companies in the energy sector processing the masses of information flowing from today's digital oil fields. He has designed, and implemented effective architectures for sophisticated scientific and enterprise software in Python, C++, and C#. Robert is a regular speaker at conferences, meetups and corporate software events where he can be found speaking about topics as diverse as behavioral microeconomics in software development to implementing web services on 8-bit microcontrollers. He is organizer of the Oslo Python group and holds a Ph.D. in a natural science.",
     "avatar": "https://avatars1.githubusercontent.com/u/1044137?s=460&v=4"
   },
   {
     "id": "7",
     "name": "Samer Buna",
     "courseCount": "19",
+    "description": "Samer Buna is a polyglot coder with years of practical experience in designing, implementing, and testing software, including web and mobile applications development, API design, functional programming, optimization, system administration, databases, and scalability. Samer worked in several industries including real estate, government, education, and publications. Samer has also authored several technical books and online courses about Node.js, React.js, GraphQL, and Ruby on Rails. He is passionate about everything JavaScript, and he loves exploring new libraries. You can follow his latest work over at jsComplete.com and EdgeCoders.com",
     "avatar": "https://miro.medium.com/fit/c/262/262/1*aVYdyz7HKRyS7orbNP4-aA.jpeg"
   },
   {
@@ -53,12 +58,14 @@
     "id": "9",
     "name": "Ross Bagurdes",
     "courseCount": "15",
+    "description": "Mark started in the developer world over 25 years ago. He began his career with a Bachelor of Science in Computer Science from St. Johns University. After spending 10 years on Wall Street working for Goldman Sachs, Lehman Brothers and other major investment banks, Mark became interested in animation and video game software. He has written numerous mobile apps and games for clients including Electronic Arts and Yahoo! Games. Some of his popular mobile titles include Yahtzee, Yahoo! Chess, and Yahoo! Poker. Currently, Mark is the founder of Curious Inventions in Portland, Oregon. This company develops a wide range of entertainment and educational software titles for the web and mobile devices.",
     "avatar": "https://pluralsight.imgix.net/author/lg/ross-bagurdes-v2.jpg"
   },
   {
     "id": "10",
     "name": "Simon Allardice",
     "courseCount": "10",
+    "description": "Simon is a staff author at Pluralsight. With over three decades of software development experience, he's programmed in every discipline: from finance to transportation, nuclear reactors to game development. Prior to joining Pluralsight, Simon was the principal developer author at lynda.com. His first video course released back in 2002: since then, his popular courses have been viewed by hundreds of thousands of developers. His current focus is both on the new — the latest iOS and Mac development technologies — and on the old: fundamental computer science topics. He obsesses on making complicated subjects accessible, memorable, and easier to learn.",
     "avatar": "https://pluralsight.imgix.net/author/lg/simon-allardice-v2.jpg"
   },
   {
@@ -77,6 +84,7 @@
     "id": "13",
     "name": "Jim Wilson",
     "courseCount": "13",
+    "description": "Shawn Wildermuth has been tinkering with computers and software since he got a Vic-20 back in the early '80s. As a Microsoft MVP since 2002, he's also involved with Microsoft as an ASP.NET Insider and ClientDev Insider. He's authored eight books and innumerable articles on software development. You can also see him at one of the local and international conferences he's spoken at including TechEd, Oredev, SDC, NDC, VSLive, DevIntersection, MIX, Devteach, DevConnections, and Dev Reach. He is one of the Wilder Minds.",
     "avatar": "https://pluralsight.imgix.net/author/lg/jim-wilson-v5.jpg"
   },
   {
@@ -89,6 +97,7 @@
     "id": "15",
     "name": "Dale Meredith",
     "courseCount": "14",
+    "description": "Neil has worked on everything from early mobile .NET compact framework apps to modern Azure based web apps during his years in IT. As a developer and architect, he has focused on .NET and JavaScript application development, security, and hosting across a variety of Microsoft platforms, including ASP.NET, SharePoint, and Dynamics CRM. Neil has several Microsoft Certifications, including MCPD, MCSA, and MCSD.",
     "avatar": "https://pluralsight.imgix.net/author/lg/dale-meredith-v3.jpg"
   }
 ]
