@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { View } from 'react-native';
-import course from '../../../json/home.json';
+// import course from '../../../json/home.json';
 import { FlatList } from 'react-native-gesture-handler';
 import LargeCardCourse from '../../../components/LargeCardCourse';
+import { OfflineDataContext } from '../../../provider/offlinedata-provider';
 
 const Category = (props) => {
   const { navigation } = props;
+  const context = useContext(OfflineDataContext);
 
   return (
     <View>
       <FlatList
-        data={course}
+        data={context.bookmark}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => (
           <LargeCardCourse

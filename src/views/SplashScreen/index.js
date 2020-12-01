@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, View, Image } from 'react-native';
-import LottieView from 'lottie-react-native';
+import { Image, StyleSheet, View } from 'react-native';
 import * as ScreenName from '../../global/constants/screenName';
 
 const SpashScreen = ({ navigation }) => {
   useEffect(() => {
     let count = 0;
     const interval = setInterval(() => {
-      if (count === 3) {
+      if (count === 1) {
         navigation.replace(ScreenName.SignInScreen);
       } else {
         count++;

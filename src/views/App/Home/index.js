@@ -1,16 +1,17 @@
-import React from 'react';
-import { ScrollView, Text, FlatList } from 'react-native';
-import styles from './styles';
-import cousrsejson from '../../../json/home.json';
-import mypathjson from '../../../json/mypaths.json';
+import React, { useContext } from 'react';
+import { FlatList, ScrollView } from 'react-native';
 import CourseCard from '../../../components/CourseCard';
-import Section from '../../../components/Section';
 import PathCard from '../../../components/PathCard';
+import Section from '../../../components/Section';
 import * as ScreenName from '../../../global/constants/screenName';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { OfflineDataContext } from '../../../provider/offlinedata-provider';
+import styles from './styles';
 
 const Home = (props) => {
   const { navigation } = props;
+
+  const context = useContext(OfflineDataContext);
+
   return (
     <ScrollView style={styles.scrollViewContainer}>
       <Section
@@ -20,7 +21,7 @@ const Home = (props) => {
       >
         <FlatList
           horizontal
-          data={cousrsejson}
+          data={context.course}
           showsHorizontalScrollIndicator={false}
           renderItem={({ item }) => (
             <CourseCard
@@ -44,7 +45,7 @@ const Home = (props) => {
       >
         <FlatList
           horizontal
-          data={cousrsejson}
+          data={context.course}
           showsHorizontalScrollIndicator={false}
           renderItem={({ item }) => {
             return (
@@ -70,7 +71,7 @@ const Home = (props) => {
       >
         <FlatList
           horizontal
-          data={cousrsejson}
+          data={context.course}
           showsHorizontalScrollIndicator={false}
           renderItem={({ item }) => (
             <CourseCard
@@ -94,7 +95,7 @@ const Home = (props) => {
       >
         <FlatList
           horizontal
-          data={cousrsejson}
+          data={context.course}
           showsHorizontalScrollIndicator={false}
           renderItem={({ item }) => (
             <CourseCard
@@ -118,7 +119,7 @@ const Home = (props) => {
       >
         <FlatList
           horizontal
-          data={cousrsejson}
+          data={context.course}
           showsHorizontalScrollIndicator={false}
           renderItem={({ item }) => (
             <CourseCard
@@ -142,7 +143,7 @@ const Home = (props) => {
       >
         <FlatList
           horizontal
-          data={mypathjson}
+          data={context.path}
           showsHorizontalScrollIndicator={false}
           renderItem={({ item }) => (
             <PathCard
@@ -157,14 +158,14 @@ const Home = (props) => {
         />
       </Section>
 
-      <Section
+      {/* <Section
         title='Bookmarks'
         navigation={navigation}
         nav={ScreenName.CourseListScreen}
       >
         <FlatList
           horizontal
-          data={cousrsejson}
+          data={context.bookmark}
           showsHorizontalScrollIndicator={false}
           renderItem={({ item }) => (
             <CourseCard
@@ -180,7 +181,7 @@ const Home = (props) => {
             />
           )}
         />
-      </Section>
+      </Section> */}
     </ScrollView>
   );
 };

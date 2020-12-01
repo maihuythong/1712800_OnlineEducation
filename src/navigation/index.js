@@ -10,14 +10,21 @@ import AppNavigator from './AppNav';
 import Profile from '../views/App/Profile';
 import Setting from '../views/Setting';
 import SplashScreen from '../views/SplashScreen';
+import { OfflineDataProvider } from '../provider/offlinedata-provider';
+import { AuthenticationProvider } from '../provider/authentication-provider';
+import CourseDetail from '../views/App/CourseDetail';
 
 const Stack = createStackNavigator();
 
 const RootAppNavigation = () => {
   return (
-    <NavigationContainer theme={DarkTheme}>
-      <RootAppScreen />
-    </NavigationContainer>
+    <AuthenticationProvider>
+      <OfflineDataProvider>
+        <NavigationContainer theme={DarkTheme}>
+          <RootAppScreen />
+        </NavigationContainer>
+      </OfflineDataProvider>
+    </AuthenticationProvider>
   );
 };
 
@@ -72,6 +79,11 @@ const RootAppScreen = () => {
         component={Setting}
         options={{ title: 'Setting' }}
       />
+      {/* <Stack.Screen
+        name={ScreenName.CourseDetailScreen}
+        component={CourseDetail}
+        options={{ headerShown: false }}
+      /> */}
     </Stack.Navigator>
   );
 };

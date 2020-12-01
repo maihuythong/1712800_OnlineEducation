@@ -1,263 +1,530 @@
-{
-  "courseName": "React: The Big Picture",
-  "author": [
-    {
-      "avatar": "https://avatars0.githubusercontent.com/u/1688997?s=460&v=4",
-      "name": "Cory House"
-    }
-  ],
-  "level": "Beginner",
-  "publishDate": "2020-05-11",
-  "duration": "1.2",
-  "vote": 4.5,
-  "voteCount": "595",
-  "description": "You've heard of React, but it right for you? In this course, React: The Big Picture, you will first learn why React has become so popular. Next, you will learn the tradeoffs inherent in React's design. Finallym you will explore some drawbacks to consider. After watching this course, you'll have a clear understanding of React'core use cases, advantages and drawbacks so you can make an educated decision on whether Ract is right for you",
-  "transcript": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae aliquet nulla. Duis a erat ut orci convallis lobortis quis ac elit. Nullam non vulputate mi. Ut convallis purus a rutrum accumsan. Duis finibus odio vitae quam varius, in tristique diam tristique. Proin eu erat massa. Vivamus nec risus lobortis, convallis est at, ultricies orci. Nulla ac justo tortor. Pellentesque id est eros. Morbi quam magna, vehicula vulputate ultricies nec, dignissim id nisl. Nullam scelerisque lorem eget elit gravida tincidunt. Curabitur interdum varius nulla nec aliquet. Quisque pulvinar, leo ac egestas tristique, tellus purus sagittis nisi, consectetur rhoncus ante lectus eget erat. Nulla facilisi. Vestibulum quis tellus ut sem congue interdum. Nam nisl nibh, tempor ut consequat quis, tristique quis felis. Quisque et elit egestas, sodales lectus quis, auctor ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor erat nibh, eu iaculis libero molestie quis. Vivamus ornare viverra ante, sed vulputate nibh mollis eu. Curabitur justo tellus, egestas vel faucibus a, ultricies sed urna. Morbi nec justo nec ipsum imperdiet cursus non sit amet nisi. In ut quam et quam varius efficitur sit amet sollicitudin lacus. Fusce ut consequat eros. Maecenas sollicitudin odio elit, ac suscipit dui lacinia quis. Donec iaculis id nibh ac tempus. Curabitur metus orci, tincidunt nec magna ut, pharetra iaculis est. Nam varius enim ac neque ornare, ac vulputate diam lacinia. Sed ipsum ipsum, venenatis eget venenatis sit amet, cursus ac justo. Fusce varius dolor lacus, facilisis finibus neque aliquet lacinia. Integer quis hendrerit magna. Nunc in nulla et est dictum fermentum eget id mauris. Donec ornare massa sed egestas condimentum. Morbi vitae venenatis odio. Pellentesque metus mi, faucibus ut ante eget, convallis pretium erat. Donec venenatis sodales dolor. Phasellus finibus arcu a libero fermentum finibus. Etiam lobortis, diam id porttitor convallis, ligula turpis dictum lacus, vitae porta felis nulla vel lectus. Donec quis sem pellentesque, consectetur leo a, congue orci. Suspendisse ac eros metus. Morbi a leo nec neque malesuada dictum. Quisque maximus venenatis nibh, vitae vulputate neque posuere sed. Sed quis urna ac metus semper maximus. Nam venenatis lacus eu tristique posuere. Nullam at ipsum vitae leo pretium venenatis. Curabitur accumsan eu tellus sed tempor. Maecenas quis erat eu mi efficitur suscipit vitae vitae dolor. Mauris id turpis at ligula maximus suscipit eu vel justo. Nam purus est, euismod at ipsum a, hendrerit semper neque. Nullam consequat felis eget est rhoncus, eu elementum nibh tincidunt. Maecenas tristique, ex a interdum sollicitudin, enim lacus ornare leo, at semper dui arcu quis nulla. Vestibulum non erat sed nulla pharetra suscipit. Suspendisse suscipit magna odio, sit amet facilisis ipsum condimentum non. Suspendisse molestie massa lacinia erat ornare ullamcorper. Etiam accumsan posuere ante at faucibus. Vivamus sed elit in nisi dignissim euismod.",
-  "content": [
-    {
-      "id": "1",
-      "title": "Course Overview",
-      "totalDuration": "1:26",
-      "data": [
-        {
-          "id": "1",
-          "title": "Course Overview",
-          "duration": "1:26",
-          "link": "abc",
-          "complete": true
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "title": "Why React?",
-      "totalDuration": "25:38",
-      "data": [
-        {
-          "id": "1",
-          "title": "Intro",
-          "duration": "0:53",
-          "link": "abc",
-          "complete": true
-        },
-        {
-          "id": "2",
-          "title": "History",
-          "duration": "2:00",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "3",
-          "title": "Why React?",
-          "duration": "0:28",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "4",
-          "title": "Reason 1: Flexibility",
-          "duration": "3:30",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "5",
-          "title": "Reason 2: Developer Experience",
-          "duration": "5:50",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "6",
-          "title": "Reason 3: Corporate Investment",
-          "duration": "2:15",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "7",
-          "title": "Reason 4: Community",
-          "duration": "3:27",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "8",
-          "title": "Reason 5: Performance",
-          "duration": "3:07",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "9",
-          "title": "Testability",
-          "duration": "3:45",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "10",
-          "title": "Summary",
-          "duration": "1:21",
-          "link": "abc",
-          "complete": false
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "title": "Tradeoffs",
-      "totalDuration": "23:32",
-      "data": [
-        {
-          "id": "1",
-          "title": "Intro",
-          "duration": "0:53",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "2",
-          "title": "History",
-          "duration": "2:00",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "3",
-          "title": "Why React?",
-          "duration": "0:28",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "4",
-          "title": "Reason 1: Flexibility",
-          "duration": "3:30",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "5",
-          "title": "Reason 2: Developer Experience",
-          "duration": "5:50",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "6",
-          "title": "Reason 3: Corporate Investment",
-          "duration": "2:15",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "7",
-          "title": "Reason 4: Community",
-          "duration": "3:27",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "8",
-          "title": "Reason 5: Performance",
-          "duration": "3:07",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "9",
-          "title": "Testability",
-          "duration": "3:45",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "10",
-          "title": "Summary",
-          "duration": "1:21",
-          "link": "abc",
-          "complete": false
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "title": "Why Not React?",
-      "totalDuration": "19:41",
-      "data": [
-        {
-          "id": "1",
-          "title": "Intro",
-          "duration": "0:53",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "2",
-          "title": "History",
-          "duration": "2:00",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "3",
-          "title": "Why React?",
-          "duration": "0:28",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "4",
-          "title": "Reason 1: Flexibility",
-          "duration": "3:30",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "5",
-          "title": "Reason 2: Developer Experience",
-          "duration": "5:50",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "6",
-          "title": "Reason 3: Corporate Investment",
-          "duration": "2:15",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "7",
-          "title": "Reason 4: Community",
-          "duration": "3:27",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "8",
-          "title": "Reason 5: Performance",
-          "duration": "3:07",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "9",
-          "title": "Testability",
-          "duration": "3:45",
-          "link": "abc",
-          "complete": false
-        },
-        {
-          "id": "10",
-          "title": "Summary",
-          "duration": "1:21",
-          "link": "abc",
-          "complete": false
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": "1",
+    "courseName": "React: The Big Picture",
+    "author": [
+      {
+        "avatar": "https://avatars0.githubusercontent.com/u/1688997?s=460&v=4",
+        "name": "Cory House"
+      }
+    ],
+    "level": "Beginner",
+    "publishDate": "2020-05-11",
+    "duration": "1.2",
+    "vote": 4.5,
+    "voteCount": "595",
+    "description": "You've heard of React, but it right for you? In this course, React: The Big Picture, you will first learn why React has become so popular. Next, you will learn the tradeoffs inherent in React's design. Finallym you will explore some drawbacks to consider. After watching this course, you'll have a clear understanding of React'core use cases, advantages and drawbacks so you can make an educated decision on whether Ract is right for you",
+    "transcript": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae aliquet nulla. Duis a erat ut orci convallis lobortis quis ac elit. Nullam non vulputate mi. Ut convallis purus a rutrum accumsan. Duis finibus odio vitae quam varius, in tristique diam tristique. Proin eu erat massa. Vivamus nec risus lobortis, convallis est at, ultricies orci. Nulla ac justo tortor. Pellentesque id est eros. Morbi quam magna, vehicula vulputate ultricies nec, dignissim id nisl. Nullam scelerisque lorem eget elit gravida tincidunt. Curabitur interdum varius nulla nec aliquet. Quisque pulvinar, leo ac egestas tristique, tellus purus sagittis nisi, consectetur rhoncus ante lectus eget erat. Nulla facilisi. Vestibulum quis tellus ut sem congue interdum. Nam nisl nibh, tempor ut consequat quis, tristique quis felis. Quisque et elit egestas, sodales lectus quis, auctor ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor erat nibh, eu iaculis libero molestie quis. Vivamus ornare viverra ante, sed vulputate nibh mollis eu. Curabitur justo tellus, egestas vel faucibus a, ultricies sed urna. Morbi nec justo nec ipsum imperdiet cursus non sit amet nisi. In ut quam et quam varius efficitur sit amet sollicitudin lacus. Fusce ut consequat eros. Maecenas sollicitudin odio elit, ac suscipit dui lacinia quis. Donec iaculis id nibh ac tempus. Curabitur metus orci, tincidunt nec magna ut, pharetra iaculis est. Nam varius enim ac neque ornare, ac vulputate diam lacinia. Sed ipsum ipsum, venenatis eget venenatis sit amet, cursus ac justo. Fusce varius dolor lacus, facilisis finibus neque aliquet lacinia. Integer quis hendrerit magna. Nunc in nulla et est dictum fermentum eget id mauris. Donec ornare massa sed egestas condimentum. Morbi vitae venenatis odio. Pellentesque metus mi, faucibus ut ante eget, convallis pretium erat. Donec venenatis sodales dolor. Phasellus finibus arcu a libero fermentum finibus. Etiam lobortis, diam id porttitor convallis, ligula turpis dictum lacus, vitae porta felis nulla vel lectus. Donec quis sem pellentesque, consectetur leo a, congue orci. Suspendisse ac eros metus. Morbi a leo nec neque malesuada dictum. Quisque maximus venenatis nibh, vitae vulputate neque posuere sed. Sed quis urna ac metus semper maximus. Nam venenatis lacus eu tristique posuere. Nullam at ipsum vitae leo pretium venenatis. Curabitur accumsan eu tellus sed tempor. Maecenas quis erat eu mi efficitur suscipit vitae vitae dolor. Mauris id turpis at ligula maximus suscipit eu vel justo. Nam purus est, euismod at ipsum a, hendrerit semper neque. Nullam consequat felis eget est rhoncus, eu elementum nibh tincidunt. Maecenas tristique, ex a interdum sollicitudin, enim lacus ornare leo, at semper dui arcu quis nulla. Vestibulum non erat sed nulla pharetra suscipit. Suspendisse suscipit magna odio, sit amet facilisis ipsum condimentum non. Suspendisse molestie massa lacinia erat ornare ullamcorper. Etiam accumsan posuere ante at faucibus. Vivamus sed elit in nisi dignissim euismod.",
+    "content": [
+      {
+        "id": "1",
+        "title": "Course Overview",
+        "totalDuration": "1:26",
+        "data": [
+          {
+            "id": "1",
+            "title": "Course Overview",
+            "duration": "1:26",
+            "link": "abc",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Why React?",
+        "totalDuration": "25:38",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": true
+          },
+          {
+            "id": "2",
+            "title": "History",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Why React?",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Reason 1: Flexibility",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Reason 2: Developer Experience",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Reason 3: Corporate Investment",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "7",
+            "title": "Reason 4: Community",
+            "duration": "3:27",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "8",
+            "title": "Reason 5: Performance",
+            "duration": "3:07",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "9",
+            "title": "Testability",
+            "duration": "3:45",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "10",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Tradeoffs",
+        "totalDuration": "23:32",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "History",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Why React?",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Reason 1: Flexibility",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Reason 2: Developer Experience",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Reason 3: Corporate Investment",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "7",
+            "title": "Reason 4: Community",
+            "duration": "3:27",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "8",
+            "title": "Reason 5: Performance",
+            "duration": "3:07",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "9",
+            "title": "Testability",
+            "duration": "3:45",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "10",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Why Not React?",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "History",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Why React?",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Reason 1: Flexibility",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Reason 2: Developer Experience",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Reason 3: Corporate Investment",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "7",
+            "title": "Reason 4: Community",
+            "duration": "3:27",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "8",
+            "title": "Reason 5: Performance",
+            "duration": "3:07",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "9",
+            "title": "Testability",
+            "duration": "3:45",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "10",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "courseName": "C# Fundamentals",
+    "author": [
+      {
+        "avatar": "https://avatars3.githubusercontent.com/u/137119?s=460&u=206f55fff1332ff433eac30f4a0a594e00b67812&v=4",
+        "name": "Deborah Kurata"
+      }
+    ],
+    "level": "Beginner",
+    "publishDate": "2020-05-11",
+    "duration": "1.2",
+    "vote": 4.5,
+    "voteCount": "595",
+    "description": "You've heard of React, but it right for you? In this course, React: The Big Picture, you will first learn why React has become so popular. Next, you will learn the tradeoffs inherent in React's design. Finallym you will explore some drawbacks to consider. After watching this course, you'll have a clear understanding of React'core use cases, advantages and drawbacks so you can make an educated decision on whether Ract is right for you",
+    "transcript": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae aliquet nulla. Duis a erat ut orci convallis lobortis quis ac elit. Nullam non vulputate mi. Ut convallis purus a rutrum accumsan. Duis finibus odio vitae quam varius, in tristique diam tristique. Proin eu erat massa. Vivamus nec risus lobortis, convallis est at, ultricies orci. Nulla ac justo tortor. Pellentesque id est eros. Morbi quam magna, vehicula vulputate ultricies nec, dignissim id nisl. Nullam scelerisque lorem eget elit gravida tincidunt. Curabitur interdum varius nulla nec aliquet. Quisque pulvinar, leo ac egestas tristique, tellus purus sagittis nisi, consectetur rhoncus ante lectus eget erat. Nulla facilisi. Vestibulum quis tellus ut sem congue interdum. Nam nisl nibh, tempor ut consequat quis, tristique quis felis. Quisque et elit egestas, sodales lectus quis, auctor ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor erat nibh, eu iaculis libero molestie quis. Vivamus ornare viverra ante, sed vulputate nibh mollis eu. Curabitur justo tellus, egestas vel faucibus a, ultricies sed urna. Morbi nec justo nec ipsum imperdiet cursus non sit amet nisi. In ut quam et quam varius efficitur sit amet sollicitudin lacus. Fusce ut consequat eros. Maecenas sollicitudin odio elit, ac suscipit dui lacinia quis. Donec iaculis id nibh ac tempus. Curabitur metus orci, tincidunt nec magna ut, pharetra iaculis est. Nam varius enim ac neque ornare, ac vulputate diam lacinia. Sed ipsum ipsum, venenatis eget venenatis sit amet, cursus ac justo. Fusce varius dolor lacus, facilisis finibus neque aliquet lacinia. Integer quis hendrerit magna. Nunc in nulla et est dictum fermentum eget id mauris. Donec ornare massa sed egestas condimentum. Morbi vitae venenatis odio. Pellentesque metus mi, faucibus ut ante eget, convallis pretium erat. Donec venenatis sodales dolor. Phasellus finibus arcu a libero fermentum finibus. Etiam lobortis, diam id porttitor convallis, ligula turpis dictum lacus, vitae porta felis nulla vel lectus. Donec quis sem pellentesque, consectetur leo a, congue orci. Suspendisse ac eros metus. Morbi a leo nec neque malesuada dictum. Quisque maximus venenatis nibh, vitae vulputate neque posuere sed. Sed quis urna ac metus semper maximus. Nam venenatis lacus eu tristique posuere. Nullam at ipsum vitae leo pretium venenatis. Curabitur accumsan eu tellus sed tempor. Maecenas quis erat eu mi efficitur suscipit vitae vitae dolor. Mauris id turpis at ligula maximus suscipit eu vel justo. Nam purus est, euismod at ipsum a, hendrerit semper neque. Nullam consequat felis eget est rhoncus, eu elementum nibh tincidunt. Maecenas tristique, ex a interdum sollicitudin, enim lacus ornare leo, at semper dui arcu quis nulla. Vestibulum non erat sed nulla pharetra suscipit. Suspendisse suscipit magna odio, sit amet facilisis ipsum condimentum non. Suspendisse molestie massa lacinia erat ornare ullamcorper. Etiam accumsan posuere ante at faucibus. Vivamus sed elit in nisi dignissim euismod.",
+    "content": [
+      {
+        "id": "1",
+        "title": "Course Overview",
+        "totalDuration": "1:26",
+        "data": [
+          {
+            "id": "1",
+            "title": "Course Overview",
+            "duration": "1:26",
+            "link": "abc",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Why React?",
+        "totalDuration": "25:38",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": true
+          },
+          {
+            "id": "2",
+            "title": "History",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Why React?",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Reason 1: Flexibility",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Reason 2: Developer Experience",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Reason 3: Corporate Investment",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "7",
+            "title": "Reason 4: Community",
+            "duration": "3:27",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "8",
+            "title": "Reason 5: Performance",
+            "duration": "3:07",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "9",
+            "title": "Testability",
+            "duration": "3:45",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "10",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Tradeoffs",
+        "totalDuration": "23:32",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "History",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Why React?",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Reason 1: Flexibility",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Reason 2: Developer Experience",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Reason 3: Corporate Investment",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "7",
+            "title": "Reason 4: Community",
+            "duration": "3:27",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "8",
+            "title": "Reason 5: Performance",
+            "duration": "3:07",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "9",
+            "title": "Testability",
+            "duration": "3:45",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "10",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Why Not React?",
+        "totalDuration": "19:41",
+        "data": [
+          {
+            "id": "1",
+            "title": "Intro",
+            "duration": "0:53",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "2",
+            "title": "History",
+            "duration": "2:00",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "3",
+            "title": "Why React?",
+            "duration": "0:28",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "4",
+            "title": "Reason 1: Flexibility",
+            "duration": "3:30",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "5",
+            "title": "Reason 2: Developer Experience",
+            "duration": "5:50",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "6",
+            "title": "Reason 3: Corporate Investment",
+            "duration": "2:15",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "7",
+            "title": "Reason 4: Community",
+            "duration": "3:27",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "8",
+            "title": "Reason 5: Performance",
+            "duration": "3:07",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "9",
+            "title": "Testability",
+            "duration": "3:45",
+            "link": "abc",
+            "complete": false
+          },
+          {
+            "id": "10",
+            "title": "Summary",
+            "duration": "1:21",
+            "link": "abc",
+            "complete": false
+          }
+        ]
+      }
+    ]
+  }
+]

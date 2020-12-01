@@ -8,43 +8,23 @@ import CourseDetail from '../../../views/App/CourseDetail';
 import SearchHeader from '../../../components/SearchHeader';
 import Recent from '../../../components/Search/Recent';
 import Search from '../../../views/App/Search';
+import SearchResult from '../../../components/Search/SearchResult';
 
 const Stack = createStackNavigator();
 
 const SearchStackScreen = () => {
-  const [text, setText] = useState('');
-
-  const onChange = (value) => {
-    setText(value);
-  };
-
-  const screenOptions = {
-    headerStyle: {
-      backgroundColor: '#0f1014',
-    },
-    headerTintColor: 'white',
-    headerTitleAlign: 'center',
-  };
-
   return (
-    <Stack.Navigator
-      headerMode='screen'
-      screenOptions={({ navigation }) => ({
-        header: (props) => {
-          return (
-            <SearchHeader
-              navigation={navigation}
-              text={text}
-              onChange={onChange}
-            />
-          );
-        },
-      })}
-    >
+    <Stack.Navigator headerMode='screen'>
       <Stack.Screen
         name={ScreenName.SearchRecentScreen}
         component={Search}
-        initialParams={{ text: text }}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
+        name={ScreenName.SearchResultScreen}
+        component={SearchResult}
+        options={{ title: '' }}
       />
     </Stack.Navigator>
   );

@@ -1,17 +1,22 @@
-import React from 'react';
-import { View, ScrollView, Text } from 'react-native';
-import VideoPlayer from '../../../components/VideoPlayer';
-import courseDetailJson from '../../../json/courseDetail.json';
-import Header from '../../../components/CourseDetail/Header';
-import Content from '../../../components/CourseDetail/Content';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import React, { useContext } from 'react';
+import { ScrollView, Text, View } from 'react-native';
+import Content from '../../../components/CourseDetail/Content';
+import Header from '../../../components/CourseDetail/Header';
 import Transcipt from '../../../components/CourseDetail/Transcript';
+import VideoPlayer from '../../../components/VideoPlayer';
+import { OfflineDataContext } from '../../../provider/offlinedata-provider';
 import styles from './styles';
 
 const Tab = createMaterialTopTabNavigator();
 
 const CourseDetail = (props) => {
+  const context = useContext(OfflineDataContext);
+  const course = context.courseDetailList.find(
+    (el) => el.id === props.route.params.course.id
+  );
   const {
+    id,
     courseName,
     author,
     level,
@@ -22,7 +27,14 @@ const CourseDetail = (props) => {
     description,
     content,
     transcript,
-  } = courseDetailJson;
+  } = course;
+
+  const courseCard = context.course.find((el) => el.id === id);
+
+  const addToBookmark = () => {
+    if (!context.bookmark.find((el) => el.id === id))
+      context.setBookmark([...context.bookmark, courseCard]);
+  };
 
   return (
     <View style={styles.courseDetailContainer}>
@@ -41,6 +53,7 @@ const CourseDetail = (props) => {
             vote={vote}
             voteCount={voteCount}
             description={description}
+            addToBookmark={addToBookmark}
           />
           <Tab.Navigator
             initialRouteName='CONTENTS'

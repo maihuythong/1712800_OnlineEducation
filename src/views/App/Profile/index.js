@@ -1,12 +1,11 @@
-import React from 'react';
-import { ScrollView, FlatList, Text, View } from 'react-native';
-import { Avatar } from 'react-native-elements';
+import React, { useContext } from 'react';
+import { FlatList, ScrollView, View } from 'react-native';
+import AccountInfo from '../../../components/AccountInfo';
+import SkillBadge from '../../../components/Browse/SkillBadge';
+import TextInformation from '../../../components/Profile/TextInfomation';
 import Section from '../../../components/Section';
 import interestsjson from '../../../json/interests.json';
-import SkillBadge from '../../../components/Browse/SkillBadge';
 import styles from './styles';
-import TextInformation from '../../../components/Profile/TextInfomation';
-import AccountInfo from '../../../components/AccountInfo';
 
 const Profile = ({ navigation }) => {
   return (

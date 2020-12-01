@@ -12,8 +12,7 @@ import LargeCardCourse from '../../../components/LargeCardCourse';
 
 const AuthorDetail = (props) => {
   const { image, name, description, navigation } = props.route.params;
-  const [isFull, setIsFull] = useState(false);
-  console.log(navigation);
+  const [isFull, setIsFull] = useState(true);
 
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>

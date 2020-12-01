@@ -16,9 +16,10 @@ const Header = (props) => {
     vote,
     voteCount,
     description,
+    addToBookmark,
   } = props;
 
-  const [isFull, setIsFull] = useState(false);
+  const [isFull, setIsFull] = useState(true);
 
   return (
     <View style={styles.container}>
@@ -42,7 +43,11 @@ const Header = (props) => {
         </View>
       </View>
       <View style={styles.operation}>
-        <MediumButton text={'Bookmark'} uri={images.bookmark.uri} />
+        <MediumButton
+          text={'Bookmark'}
+          uri={images.bookmark.uri}
+          action={addToBookmark}
+        />
         <MediumButton text={'Add to Channel'} uri={images.addtochannel.uri} />
         <MediumButton text={'Download'} uri={images.download.uri} />
       </View>

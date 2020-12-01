@@ -11,7 +11,8 @@ import LargeCardDefault from '../../LargeCardDefault';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 const Tab = createMaterialTopTabNavigator();
 
-const SearchResult = () => {
+const SearchResult = (props) => {
+  const { navigation } = props;
   const ALL = () => (
     <ScrollView style={styles.container}>
       {COURSE()}
@@ -36,6 +37,7 @@ const SearchResult = () => {
               duration={item.duration}
               vote={item.vote}
               voteCount={item.voteCount}
+              navigation={navigation}
             />
           )}
         />

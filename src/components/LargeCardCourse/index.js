@@ -18,10 +18,14 @@ const LargeCardCourse = (props) => {
     navigation,
   } = props;
 
+  const course = { id };
+
   return (
     <TouchableOpacity
       style={styles.container}
-      onPress={() => navigation.navigate(ScreenName.CourseDetailScreen)}
+      onPress={() =>
+        navigation.navigate(ScreenName.CourseDetailScreen, { course: course })
+      }
     >
       <Image style={[styles.image, styles.left]} source={{ uri: image }} />
       <View style={styles.right}>
