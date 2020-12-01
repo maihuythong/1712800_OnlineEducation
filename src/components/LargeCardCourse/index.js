@@ -3,6 +3,7 @@ import { View, Image, Text } from 'react-native';
 import styles from './styles';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import * as ScreenName from '../../global/constants/screenName';
+import CustomRatingBar from '../../shared/CustomRatingBar';
 
 const LargeCardCourse = (props) => {
   const {
@@ -38,9 +39,13 @@ const LargeCardCourse = (props) => {
         <Text style={styles.text}>
           {level} {publishDate} {duration}
         </Text>
-        <Text style={styles.text}>
+        <View style={styles.voteContainer}>
+          <CustomRatingBar star={vote} />
+          <Text style={styles.text}>({voteCount})</Text>
+        </View>
+        {/* <Text style={styles.text}>
           {vote} ({voteCount})
-        </Text>
+        </Text> */}
       </View>
     </TouchableOpacity>
   );

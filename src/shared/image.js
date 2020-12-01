@@ -17,6 +17,15 @@ export const images = {
   bookmark: {
     uri: require('../../assets/bookmark.svg'),
   },
+  starcorner: {
+    uri: require('../../assets/star-corner.svg'),
+  },
+  starhalf: {
+    uri: require('../../assets/star-half.svg'),
+  },
+  starfill: {
+    uri: require('../../assets/star-fill.svg'),
+  },
   newrelease: {
     uri:
       'https://vnn-imgs-a1.vgcloud.vn/img2.infonet.vn/w660/Uploaded/2020/bnx_mjxuh/2019_07_18/san_ho_la_thuc_vat_hay_dong_vat.jpg',

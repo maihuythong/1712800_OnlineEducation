@@ -17,14 +17,19 @@ export default StyleSheet.create({
   },
   cardContent: {
     color: '#FFF',
+    flex: 1,
     height: '50%',
     maxHeight: 150,
     padding: 10,
     overflow: 'hidden',
+    width: '100%',
+    // maxWidth: '50%',
   },
   title: {
     color: 'white',
-    fontSize: 14,
+    fontSize: 16,
+    // overflow: 'hidden',
+    flexWrap: 'wrap',
   },
   defaultText: {
     color: '#9da0a7',
@@ -32,6 +37,10 @@ export default StyleSheet.create({
   rating: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    // justifyContent: 'flex-start',
+  },
+  voteCount: {
+    marginLeft: 5,
+    color: '#9da0a7',
   },
 });

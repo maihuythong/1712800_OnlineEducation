@@ -33,6 +33,7 @@ const Home = (props) => {
               level={item.level}
               publishDate={item.publishDate}
               vote={item.vote}
+              voteCount={item.voteCount}
               navigation={navigation}
             />
           )}
@@ -58,6 +59,7 @@ const Home = (props) => {
                 level={item.level}
                 publishDate={item.publishDate}
                 vote={item.vote}
+                voteCount={item.voteCount}
                 navigation={navigation}
               />
             );
@@ -83,6 +85,7 @@ const Home = (props) => {
               level={item.level}
               publishDate={item.publishDate}
               vote={item.vote}
+              voteCount={item.voteCount}
               navigation={navigation}
             />
           )}
@@ -107,6 +110,7 @@ const Home = (props) => {
               level={item.level}
               publishDate={item.publishDate}
               vote={item.vote}
+              voteCount={item.voteCount}
               navigation={navigation}
             />
           )}
@@ -131,6 +135,7 @@ const Home = (props) => {
               level={item.level}
               publishDate={item.publishDate}
               vote={item.vote}
+              voteCount={item.voteCount}
               navigation={navigation}
             />
           )}

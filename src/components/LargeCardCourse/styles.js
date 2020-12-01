@@ -30,4 +30,8 @@ export default StyleSheet.create({
     color: '#BEBEBEBE',
     fontSize: 12,
   },
+  voteContainer: {
+    flex: 1,
+    flexDirection: 'row',
+  },
 });

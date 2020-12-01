@@ -5,6 +5,7 @@ import BigBadge from '../../BigBadge';
 import LargeButton from '../../LargeButton';
 import MediumButton from '../../MediumButton';
 import styles from './styles';
+import CustomRatingBar from '../../../shared/CustomRatingBar';
 
 const Header = (props) => {
   const {
@@ -38,7 +39,7 @@ const Header = (props) => {
           {level} • {publishDate} • {duration}
         </Text>
         <View style={styles.vote}>
-          <Text style={styles.textNormalColor}>{vote}</Text>
+          <CustomRatingBar star={vote} />
           <Text style={styles.textNormalColor}>({voteCount})</Text>
         </View>
       </View>

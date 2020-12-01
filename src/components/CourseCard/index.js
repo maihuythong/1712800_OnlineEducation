@@ -2,6 +2,7 @@ import React from 'react';
 import { TouchableOpacity, View, Text, Image } from 'react-native';
 import styles from './styles';
 import * as ScrennName from '../../global/constants/screenName';
+import CustomRatingBar from '../../shared/CustomRatingBar';
 
 const CourseCard = (props) => {
   const {
@@ -31,15 +32,16 @@ const CourseCard = (props) => {
         <Image style={styles.image} source={{ uri: image }} />
       </View>
       <View style={styles.cardContent}>
-        <Text style={styles.title}>{title}</Text>
+        <Text numberOfLines={1} style={styles.title}>
+          {title.length < 30 ? `${title}` : `${title.substring(0, 30)}...`}
+        </Text>
         <Text style={styles.defaultText}>{author}</Text>
         <Text style={styles.defaultText}>
           {level} - {publishDate}
         </Text>
-        {/* <Text>{publishDate}</Text> */}
         <View style={styles.rating}>
-          <Text>{vote}</Text>
-          <Text>{voteCount}123</Text>
+          <CustomRatingBar star={vote} />
+          <Text style={styles.voteCount}>({voteCount})</Text>
         </View>
       </View>
     </TouchableOpacity>
