@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { showFlashMessage } from "../../../services/app/actions";
 import MessageType from "../../../services/app/MessageType";
 import { SIGNUP } from "../../../services/user/constants";
+import * as ScreenName from '../../../global/constants/screenName';
 import styles from "./styles";
 
 const SignUp = (props) => {
@@ -18,17 +19,17 @@ const SignUp = (props) => {
   const dispatch = useDispatch();
 
   const onSignUpPress = useCallback(() => {
-    // if(password !== confirmPassword){
-
-    // }
+    if(password !== confirmPassword){
+      dispatch(
+        showFlashMessage({
+          type: MessageType.Type.DANGER,
+          description:
+            "Password and Confirm password not match!",
+        })
+      );
+      return;
+    }
     const params = { username, email, phone, password };
-    dispatch(
-      showFlashMessage({
-        type: MessageType.Type.SUCCESS,
-        description:
-          "Đăng kí thành công! Có mail được gửi vào địa chỉ email của bạn.",
-      })
-    );
     dispatch({
       type: SIGNUP,
       payload: params,
@@ -38,10 +39,10 @@ const SignUp = (props) => {
             showFlashMessage({
               type: MessageType.Type.SUCCESS,
               description:
-                "Đăng kí thành công! Có mail được gửi vào địa chỉ email của bạn.",
+                "Please check your email to activate your new account!.",
             })
           );
-          navigation.navigate("SignInScreen");
+          navigation.navigate(ScreenName.SignInScreen);
         },
       },
     });

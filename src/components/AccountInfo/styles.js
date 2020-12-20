@@ -15,7 +15,7 @@ export default StyleSheet.create({
   },
   username: {
     color: 'white',
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
   },
   nickname: {

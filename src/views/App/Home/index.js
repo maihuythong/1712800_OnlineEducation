@@ -15,11 +15,9 @@ const Home = (props) => {
 
   const context = useContext(OfflineDataContext);
   const currentUser = useSelector(getLoggedAccount);
-  console.log("HOME SCREEN -> " + currentUser);
   useEffect(() => {
     const getToken = async () => {
       const token = await AsyncStorage.getAccessToken();
-      console.log(token);
     };
     getToken();
   });

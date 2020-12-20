@@ -3,4 +3,5 @@ export const SIGNUP = 'SIGNUP';
 export const SIGNIN = 'SIGNIN';
 export const SIGNOUT = 'SIGNOUT';
 export const UPDATE_PROFILE = 'UPDATE_PROFILE';
+export const RESET_PASSWORD = 'RESET_PASSWORD';
 export const APP_BOOT = 'APP_BOOT';

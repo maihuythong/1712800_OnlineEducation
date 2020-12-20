@@ -14,7 +14,7 @@ class FlashMessage extends Component {
       setTimeout(() => {
         const { dispatch } = this.props;
         dispatch(removeFlashMessage());
-      }, 3000);
+      }, 4000);
     }
   }
 

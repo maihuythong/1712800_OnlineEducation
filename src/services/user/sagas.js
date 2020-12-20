@@ -8,6 +8,7 @@ import {
   GET_USER_DATA,
   SIGNUP,
   SIGNIN,
+  RESET_PASSWORD,
   SIGNOUT,
   UPDATE_PROFILE,
   APP_BOOT,
@@ -34,8 +35,6 @@ function* signin({
 }) {
   try {
     const userData = yield call(UserRepo.signin, { email, password });
-    // save token
-    // save data to redux
     yield all([
       call(AsyncStorage.setAccessToken, userData?.token),
       put(setLoggedAccount(userData?.userInfo ?? null)),
@@ -92,6 +91,21 @@ function* updateProfile({
   }
 }
 
+function* resetPassword({ payload, meta: { callback } = {} }) {
+  try {
+    yield call(UserRepo.sendEmailForgotPassword, payload.email);
+    if (typeof callback === "function") {
+      yield call(callback);
+    }
+  } catch (e) {
+    yield put(
+      showFlashMessage({
+        description: e?.response?.data?.message ?? null,
+      })
+    );
+  }
+}
+
 function* appBoot({
   meta: { afterSuccess = () => {}, afterFail = () => {} } = {},
 }) {
@@ -111,6 +125,7 @@ export default function* () {
   yield takeLatest(GET_USER_DATA, getLoggedAccount);
   yield takeLatest(SIGNIN, signin);
   yield takeLatest(SIGNUP, signup);
+  yield takeLatest(RESET_PASSWORD, resetPassword);
   yield takeEvery(SIGNOUT, signout);
   yield takeLatest(UPDATE_PROFILE, updateProfile);
   yield takeLatest(APP_BOOT, appBoot);

@@ -1,5 +1,5 @@
 export const getLoggedAccount = (state) => {
-  return state.app?.currentUser;
+  return state.app?.loggedAccount;
 };
 
 export const getFlashMessage = (state) => state.app.flashMessage;
