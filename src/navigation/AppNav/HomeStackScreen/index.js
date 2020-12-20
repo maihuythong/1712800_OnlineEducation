@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as ScreenName from '../../../global/constants/screenName';
 import Home from '../../../views/App/Home';
-import HeaderRight from '../../../shared/HeaderRight';
+import HeaderRight from '../../../components/shared/HeaderRight';
 import CourseOfSection from '../../../views/App/CourseOfSection';
 import CourseDetail from '../../../views/App/CourseDetail';
 

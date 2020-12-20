@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { FlatList, Text, TouchableOpacity, View } from 'react-native';
-import { images } from '../../../shared/image';
+import { images } from '../../shared/image';
 import BigBadge from '../../BigBadge';
 import LargeButton from '../../LargeButton';
 import MediumButton from '../../MediumButton';
 import styles from './styles';
-import CustomRatingBar from '../../../shared/CustomRatingBar';
+import CustomRatingBar from '../../shared/CustomRatingBar';
 
 const Header = (props) => {
   const {

@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import SvgUri from 'expo-svg-uri';
 import styles from './styles';
-import * as ScreenName from '../../global/constants/screenName';
+import * as ScreenName from '../../../global/constants/screenName';
 
 const HeaderRight = (props) => {
   const { navigation, route } = props;
@@ -16,7 +16,7 @@ const HeaderRight = (props) => {
         <SvgUri
           width='30'
           height='30'
-          source={require('../../../assets/user.svg')}
+          source={require('../../../../assets/user.svg')}
         />
       </TouchableOpacity>
       <TouchableOpacity
@@ -26,7 +26,7 @@ const HeaderRight = (props) => {
         <SvgUri
           width='30'
           height='30'
-          source={require('../../../assets/settings.svg')}
+          source={require('../../../../assets/settings.svg')}
         />
       </TouchableOpacity>
     </View>

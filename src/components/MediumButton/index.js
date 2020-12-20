@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles';
 import { View, Text, TouchableOpacity } from 'react-native';
-import CustomIcon from '../../shared/CustomIcon';
+import CustomIcon from '../../components/shared/CustomIcon';
 
 const MediumButton = ({ uri, text, action }) => {
   return (

@@ -3,7 +3,7 @@ import { View, Image, Text } from 'react-native';
 import styles from './styles';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import * as ScreenName from '../../global/constants/screenName';
-import CustomRatingBar from '../../shared/CustomRatingBar';
+import CustomRatingBar from '../../components/shared/CustomRatingBar';
 
 const LargeCardCourse = (props) => {
   const {

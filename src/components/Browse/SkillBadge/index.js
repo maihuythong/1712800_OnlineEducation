@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
 import SvgUri from 'expo-svg-uri';
-import { images } from '../../../shared/image';
+import { images } from '../../shared/image';
 
 const SkillBadge = ({ image, content }) => {
   return (

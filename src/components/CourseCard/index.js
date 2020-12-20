@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity, View, Text, Image } from 'react-native';
 import styles from './styles';
 import * as ScrennName from '../../global/constants/screenName';
-import CustomRatingBar from '../../shared/CustomRatingBar';
+import CustomRatingBar from '../../components/shared/CustomRatingBar';
 
 const CourseCard = (props) => {
   const {

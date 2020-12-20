@@ -1,21 +1,33 @@
-import React, { useContext } from 'react';
-import { FlatList, ScrollView } from 'react-native';
-import CourseCard from '../../../components/CourseCard';
-import PathCard from '../../../components/PathCard';
-import Section from '../../../components/Section';
-import * as ScreenName from '../../../global/constants/screenName';
-import { OfflineDataContext } from '../../../provider/offlinedata-provider';
-import styles from './styles';
+import React, { useContext, useEffect } from "react";
+import { FlatList, ScrollView } from "react-native";
+import { useSelector } from "react-redux";
+import CourseCard from "../../../components/CourseCard";
+import PathCard from "../../../components/PathCard";
+import Section from "../../../components/Section";
+import * as ScreenName from "../../../global/constants/screenName";
+import { OfflineDataContext } from "../../../provider/offlinedata-provider";
+import { getLoggedAccount } from "../../../services/app/getHelper";
+import AsyncStorage from "../../../utils/storage/asyncStorage";
+import styles from "./styles";
 
 const Home = (props) => {
   const { navigation } = props;
 
   const context = useContext(OfflineDataContext);
+  const currentUser = useSelector(getLoggedAccount);
+  console.log("HOME SCREEN -> " + currentUser);
+  useEffect(() => {
+    const getToken = async () => {
+      const token = await AsyncStorage.getAccessToken();
+      console.log(token);
+    };
+    getToken();
+  });
 
   return (
     <ScrollView style={styles.scrollViewContainer}>
       <Section
-        title='Software Development'
+        title="Software Development"
         navigation={navigation}
         nav={ScreenName.CourseListScreen}
       >
@@ -40,7 +52,7 @@ const Home = (props) => {
         />
       </Section>
       <Section
-        title='IT Operations'
+        title="IT Operations"
         navigation={navigation}
         nav={ScreenName.CourseListScreen}
       >
@@ -67,7 +79,7 @@ const Home = (props) => {
         />
       </Section>
       <Section
-        title='Data Professtional'
+        title="Data Professtional"
         navigation={navigation}
         nav={ScreenName.CourseListScreen}
       >
@@ -92,7 +104,7 @@ const Home = (props) => {
         />
       </Section>
       <Section
-        title='Security Professtional'
+        title="Security Professtional"
         navigation={navigation}
         nav={ScreenName.CourseListScreen}
       >
@@ -117,7 +129,7 @@ const Home = (props) => {
         />
       </Section>
       <Section
-        title='Software Development'
+        title="Software Development"
         navigation={navigation}
         nav={ScreenName.CourseListScreen}
       >
@@ -142,7 +154,7 @@ const Home = (props) => {
         />
       </Section>
       <Section
-        title='My Paths'
+        title="My Paths"
         navigation={navigation}
         nav={ScreenName.CourseListScreen}
       >

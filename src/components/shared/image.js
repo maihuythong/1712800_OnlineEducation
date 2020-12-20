@@ -1,30 +1,30 @@
 export const images = {
   checked: {
-    uri: require('../../assets/checked.svg'),
+    uri: require('../../../assets/checked.svg'),
   },
   takealearn: {
-    uri: require('../../assets/take-a-learn-check.svg'),
+    uri: require('../../../assets/take-a-learn-check.svg'),
   },
   viewmore: {
-    uri: require('../../assets/view-more.svg'),
+    uri: require('../../../assets/view-more.svg'),
   },
   download: {
-    uri: require('../../assets/download.svg'),
+    uri: require('../../../assets/download.svg'),
   },
   addtochannel: {
-    uri: require('../../assets/add-to-channel.svg'),
+    uri: require('../../../assets/add-to-channel.svg'),
   },
   bookmark: {
-    uri: require('../../assets/bookmark.svg'),
+    uri: require('../../../assets/bookmark.svg'),
   },
   starcorner: {
-    uri: require('../../assets/star-corner.svg'),
+    uri: require('../../../assets/star-corner.svg'),
   },
   starhalf: {
-    uri: require('../../assets/star-half.svg'),
+    uri: require('../../../assets/star-half.svg'),
   },
   starfill: {
-    uri: require('../../assets/star-fill.svg'),
+    uri: require('../../../assets/star-fill.svg'),
   },
   newrelease: {
     uri:

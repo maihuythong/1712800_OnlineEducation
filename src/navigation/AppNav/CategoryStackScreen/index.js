@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import * as ScreenName from '../../../global/constants/screenName';
-import HeaderRight from '../../../shared/HeaderRight';
+import HeaderRight from '../../../components/shared/HeaderRight';
 import Category from '../../../views/App/Category';
 import CourseDetail from '../../../views/App/CourseDetail';
 

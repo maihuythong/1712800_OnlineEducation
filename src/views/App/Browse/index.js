@@ -1,19 +1,19 @@
-import React from 'react';
-import { FlatList } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
-import Author from '../../../components/Browse/Author';
-import LargeImageButton from '../../../components/Browse/LargeImageButton';
-import SkillBadge from '../../../components/Browse/SkillBadge';
-import SmallImageButton from '../../../components/Browse/SmallImageButton';
-import PathCard from '../../../components/PathCard';
-import Section from '../../../components/Section';
-import * as ScreenName from '../../../global/constants/screenName';
-import authorsjson from '../../../json/authors.json';
-import browsejson from '../../../json/browse.json';
-import mypathjson from '../../../json/mypaths.json';
-import popularskilljson from '../../../json/popularskill.json';
-import { images } from '../../../shared/image';
-import styles from './styles';
+import React from "react";
+import { FlatList } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
+import Author from "../../../components/Browse/Author";
+import LargeImageButton from "../../../components/Browse/LargeImageButton";
+import SkillBadge from "../../../components/Browse/SkillBadge";
+import SmallImageButton from "../../../components/Browse/SmallImageButton";
+import PathCard from "../../../components/PathCard";
+import Section from "../../../components/Section";
+import { images } from "../../../components/shared/image";
+import * as ScreenName from "../../../global/constants/screenName";
+import authorsjson from "../../../json/authors.json";
+import browsejson from "../../../json/browse.json";
+import mypathjson from "../../../json/mypaths.json";
+import popularskilljson from "../../../json/popularskill.json";
+import styles from "./styles";
 
 const Browse = (props) => {
   const { navigation } = props;
@@ -53,7 +53,7 @@ const Browse = (props) => {
         />
       </ScrollView>
 
-      <Section title='Popular skills' hideSeeall={true}>
+      <Section title="Popular skills" hideSeeall={true}>
         <FlatList
           horizontal
           data={popularskilljson}
@@ -70,7 +70,7 @@ const Browse = (props) => {
       </Section>
 
       <Section
-        title='Paths'
+        title="Paths"
         navigation={navigation}
         nav={ScreenName.CourseListScreen}
       >
@@ -91,7 +91,7 @@ const Browse = (props) => {
       </Section>
 
       <Section
-        title='Top authors'
+        title="Top authors"
         navigation={navigation}
         nav={ScreenName.CourseListScreen}
       >

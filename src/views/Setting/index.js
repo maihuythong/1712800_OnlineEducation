@@ -1,38 +1,48 @@
-import styles from './styles';
-import React, { useState } from 'react';
-import { View, Text } from 'react-native';
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
-import AccountInfo from '../../components/AccountInfo';
-import SwitchSetting from '../../components/Setting/SwitchSetting';
-import { SignInScreen } from '../../global/constants/screenName';
+import React, { useState } from "react";
+import { Text, View } from "react-native";
+import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
+import { useDispatch } from "react-redux";
+import AccountInfo from "../../components/AccountInfo";
+import SwitchSetting from "../../components/Setting/SwitchSetting";
+import { SignInScreen } from "../../global/constants/screenName";
+import { SIGNOUT } from "../../services/user/constants";
+import styles from "./styles";
 
 const Setting = ({ navigation }) => {
   const [lang, setLang] = useState(true);
   const [streaming, setStreaming] = useState(true);
   const [downloading, setDownloading] = useState(true);
+  const dispatch = useDispatch();
 
   const languageSetting = () => {
-    console.log('langue change');
+    console.log("langue change");
     setLang(!lang);
   };
   const streamingSetting = () => {
-    console.log('stream change');
+    console.log("stream change");
     setStreaming(!streaming);
   };
   const downloadingSetting = () => {
-    console.log('downloading change');
+    console.log("downloading change");
     setDownloading(!downloading);
+  };
+
+  const onSignOutPress = () => {
+    dispatch({
+      type: SIGNOUT,
+    });
+    navigation.replace(SignInScreen);
   };
 
   return (
     <ScrollView style={styles.container}>
       <AccountInfo
         size={56}
-        username={'Mai Huy Thong'}
+        username={"Mai Huy Thong"}
         avatar={
-          'https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png'
+          "https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png"
         }
-        nickname={'mai-thong'}
+        nickname={"mai-thong"}
       />
       <View style={styles.section}>
         <Text style={styles.text}>Account</Text>
@@ -41,25 +51,25 @@ const Setting = ({ navigation }) => {
       </View>
       <View style={styles.section}>
         <SwitchSetting
-          content={'Default caption language'}
-          note={'English'}
+          content={"Default caption language"}
+          note={"English"}
           isEnabled={lang}
           toggleSwitch={languageSetting}
         />
         <SwitchSetting
-          content={'Require Wi-Fi for streaming'}
+          content={"Require Wi-Fi for streaming"}
           isEnabled={streaming}
           toggleSwitch={streamingSetting}
         />
         <SwitchSetting
-          content={'Require Wi-Fi for downloading'}
+          content={"Require Wi-Fi for downloading"}
           isEnabled={downloading}
           toggleSwitch={downloadingSetting}
         />
       </View>
       <TouchableOpacity
         style={styles.signoutContainer}
-        onPress={() => navigation.replace(SignInScreen)}
+        onPress={() => onSignOutPress()}
       >
         <Text style={styles.signoutText}>SIGN OUT</Text>
       </TouchableOpacity>

@@ -3,7 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as ScreenName from '../../../global/constants/screenName';
 import Browse from '../../../views/App/Browse';
 import AuthorDetail from '../../../views/App/AuthorDetail';
-import HeaderRight from '../../../shared/HeaderRight';
+import HeaderRight from '../../../components/shared/HeaderRight';
 import CourseOfSection from '../../../views/App/CourseOfSection';
 import CourseDetail from '../../../views/App/CourseDetail';
 

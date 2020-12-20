@@ -1,26 +1,52 @@
-import React, { useEffect } from 'react';
-import { Image, StyleSheet, View } from 'react-native';
-import * as ScreenName from '../../global/constants/screenName';
+import React, { useEffect } from "react";
+import { Image, StyleSheet, View } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
+import * as ScreenName from "../../global/constants/screenName";
+import { getLoggedAccount } from "../../services/app/getHelper";
+import { APP_BOOT } from "../../services/user/constants";
 
-const SpashScreen = ({ navigation }) => {
+const SplashScreen = ({ navigation }) => {
+  const loggedAccount = useSelector(getLoggedAccount);
+  const dispatch = useDispatch();
+
   useEffect(() => {
     let count = 0;
     const interval = setInterval(() => {
-      if (count === 1) {
-        navigation.replace(ScreenName.SignInScreen);
+      if (count === 2) {
+        dispatch({
+          type: APP_BOOT,
+          meta: {
+            afterSuccess: () => {
+              if (loggedAccount) {
+                navigation.replace(ScreenName.HomeScreen);
+              } else {
+                navigation.replace(ScreenName.SignInScreen);
+              }
+            },
+            afterFail: () => {
+              dispatch(
+                showFlashMessage({
+                  description: "Something went wrong!",
+                })
+              );
+              navigation.replace(ScreenName.SignInScreen);
+            },
+          },
+        });
       } else {
         count++;
       }
     }, 1000);
+
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [dispatch]);
   return (
     <View>
       <Image
-        source={require('./loading.gif')}
-        style={{ width: '100%', height: '100%' }}
+        source={require("./loading.gif")}
+        style={{ width: "100%", height: "100%" }}
       />
     </View>
   );
@@ -28,9 +54,9 @@ const SpashScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   animationContainer: {
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
     flex: 1,
   },
   buttonContainer: {
@@ -43,4 +69,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SpashScreen;
+export default SplashScreen;
