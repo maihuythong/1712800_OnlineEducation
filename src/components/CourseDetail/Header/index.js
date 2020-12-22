@@ -1,34 +1,27 @@
-import React, { useState } from 'react';
-import { FlatList, Text, TouchableOpacity, View } from 'react-native';
-import { images } from '../../shared/image';
-import BigBadge from '../../BigBadge';
-import LargeButton from '../../LargeButton';
-import MediumButton from '../../MediumButton';
-import styles from './styles';
-import CustomRatingBar from '../../shared/CustomRatingBar';
+import React, { useState } from "react";
+import { FlatList, Text, TouchableOpacity, View } from "react-native";
+import BigBadge from "../../BigBadge";
+import LargeButton from "../../LargeButton";
+import MediumButton from "../../MediumButton";
+import CustomRatingBar from "../../shared/CustomRatingBar";
+import { images } from "../../shared/image";
+import styles from "./styles";
 
 const Header = (props) => {
-  const {
-    title,
-    author,
-    level,
-    publishDate,
-    duration,
-    vote,
-    voteCount,
-    description,
-    addToBookmark,
-  } = props;
+  const { data } = props;
 
+  const addToBookmark = () => {
+    console.log("add to bookmark " + data.id);
+  };
   const [isFull, setIsFull] = useState(true);
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.title}>{data.title}</Text>
       <View style={styles.author}>
         <FlatList
           horizontal
-          data={author}
+          data={[data.instructor]}
           renderItem={({ item }) => (
             <BigBadge image={item.avatar} content={item.name} />
           )}
@@ -36,30 +29,30 @@ const Header = (props) => {
       </View>
       <View style={styles.courseInfo}>
         <Text style={styles.textNormalColor}>
-          {level} • {publishDate} • {duration}
+          {data.createdAt} • {data.totalHours}
         </Text>
         <View style={styles.vote}>
-          <CustomRatingBar star={vote} />
-          <Text style={styles.textNormalColor}>({voteCount})</Text>
+          <CustomRatingBar star={data.formalityPoint} />
+          <Text style={styles.textNormalColor}>({data.ratedNumber})</Text>
         </View>
       </View>
       <View style={styles.operation}>
         <MediumButton
-          text={'Bookmark'}
+          text={"Bookmark"}
           uri={images.bookmark.uri}
           action={addToBookmark}
         />
-        <MediumButton text={'Add to Channel'} uri={images.addtochannel.uri} />
-        <MediumButton text={'Download'} uri={images.download.uri} />
+        <MediumButton text={"Add to Channel"} uri={images.addtochannel.uri} />
+        <MediumButton text={"Download"} uri={images.download.uri} />
       </View>
       <View style={styles.descriptionContainer}>
         <View style={styles.textDescription}>
           {isFull ? (
             <Text numberOfLines={5} style={styles.description}>
-              {description}
+              {data.description}
             </Text>
           ) : (
-            <Text style={styles.description}>{description}</Text>
+            <Text style={styles.description}>{data.description}</Text>
           )}
         </View>
         <TouchableOpacity
@@ -76,11 +69,11 @@ const Header = (props) => {
       <View style={styles.bottom}>
         <LargeButton
           uri={images.takealearn.uri}
-          text={'Take a learning check'}
+          text={"Take a learning check"}
         />
         <LargeButton
           uri={images.viewmore.uri}
-          text={'View related paths & courses'}
+          text={"View related paths & courses"}
         />
       </View>
     </View>

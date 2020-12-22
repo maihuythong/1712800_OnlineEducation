@@ -10,8 +10,8 @@ import styles from "./styles";
 
 const SignIn = (props) => {
   const { navigation } = props;
-  const [username, setUsername] = React.useState("");
-  const [password, setPassword] = React.useState("");
+  const [username, setUsername] = React.useState("maihuythong99@gmail.com");
+  const [password, setPassword] = React.useState("huythong");
   const { setAuthentication } = useContext(AuthenticationContext);
   const dispatch = useDispatch();
 

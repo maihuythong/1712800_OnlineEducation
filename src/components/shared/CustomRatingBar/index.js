@@ -5,7 +5,8 @@ import { images } from '../image';
 import SvgUri from 'expo-svg-uri';
 
 const CustomRatingBar = (props) => {
-  const { star } = props;
+  let { star } = props;
+  star = star > 5 ? 5 : star;
   const starRound = ~~star;
   const left = star - starRound;
   let stars = [];
@@ -21,6 +22,7 @@ const CustomRatingBar = (props) => {
       stars[j] = -1;
     }
   }
+
 
   return (
     <View style={styles.container}>

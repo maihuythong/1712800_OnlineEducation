@@ -18,7 +18,7 @@ const SplashScreen = ({ navigation }) => {
           meta: {
             afterSuccess: () => {
               if (loggedAccount) {
-                navigation.replace(ScreenName.HomeScreen);
+                navigation.replace(ScreenName.AppNavigatorScreen);
               } else {
                 navigation.replace(ScreenName.SignInScreen);
               }

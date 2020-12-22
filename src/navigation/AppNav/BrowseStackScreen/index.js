@@ -1,18 +1,18 @@
-import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import * as ScreenName from '../../../global/constants/screenName';
-import Browse from '../../../views/App/Browse';
-import AuthorDetail from '../../../views/App/AuthorDetail';
-import HeaderRight from '../../../components/shared/HeaderRight';
-import CourseOfSection from '../../../views/App/CourseOfSection';
-import CourseDetail from '../../../views/App/CourseDetail';
+import { createStackNavigator } from "@react-navigation/stack";
+import React from "react";
+import HeaderRight from "../../../components/shared/HeaderRight";
+import * as ScreenName from "../../../global/constants/screenName";
+import AuthorDetail from "../../../views/App/AuthorDetail";
+import Browse from "../../../views/App/Browse";
+import CourseDetail from "../../../views/App/CourseDetail";
+import CourseOfSection from "../../../views/App/CourseOfSection";
 
 const Stack = createStackNavigator();
 
 const BrowseStackScreen = () => {
   return (
     <Stack.Navigator
-      headerMode='screen'
+      headerMode="screen"
       screenOptions={({ navigation }) => ({
         headerRight: (props) => {
           return <HeaderRight navigation={navigation} />;
@@ -23,8 +23,8 @@ const BrowseStackScreen = () => {
         name={ScreenName.BrowseScreen}
         component={Browse}
         options={{
-          title: 'Browse',
-          headerTitleAlign: 'left',
+          title: "Browse",
+          headerTitleAlign: "left",
           headerLeft: null,
           headerTitleStyle: {
             fontSize: 18,

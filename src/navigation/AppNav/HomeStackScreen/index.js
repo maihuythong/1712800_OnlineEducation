@@ -1,25 +1,25 @@
-import React, { useContext } from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import * as ScreenName from '../../../global/constants/screenName';
-import Home from '../../../views/App/Home';
-import HeaderRight from '../../../components/shared/HeaderRight';
-import CourseOfSection from '../../../views/App/CourseOfSection';
-import CourseDetail from '../../../views/App/CourseDetail';
+import { createStackNavigator } from "@react-navigation/stack";
+import React from "react";
+import HeaderRight from "../../../components/shared/HeaderRight";
+import * as ScreenName from "../../../global/constants/screenName";
+import CourseDetail from "../../../views/App/CourseDetail";
+import CourseOfSection from "../../../views/App/CourseOfSection";
+import Home from "../../../views/App/Home";
 
 const Stack = createStackNavigator();
 
 const HomeStackScreen = () => {
   const screenOptions = {
     headerStyle: {
-      backgroundColor: '#0f1014',
+      backgroundColor: "#0f1014",
     },
-    headerTintColor: 'white',
-    headerTitleAlign: 'center',
+    headerTintColor: "white",
+    headerTitleAlign: "center",
   };
 
   return (
     <Stack.Navigator
-      headerMode='screen'
+      headerMode="screen"
       screenOptions={({ navigation }) => ({
         headerRight: (props) => {
           return <HeaderRight navigation={navigation} />;
@@ -30,8 +30,8 @@ const HomeStackScreen = () => {
         name={ScreenName.HomeScreen}
         component={Home}
         options={{
-          title: 'Home',
-          headerTitleAlign: 'left',
+          title: "Home",
+          headerTitleAlign: "left",
           headerLeft: null,
           headerTitleStyle: {
             fontSize: 18,

@@ -1,47 +1,51 @@
-import React from 'react';
-import { TouchableOpacity, View, Text, Image } from 'react-native';
-import styles from './styles';
-import * as ScrennName from '../../global/constants/screenName';
-import CustomRatingBar from '../../components/shared/CustomRatingBar';
+import React from "react";
+import { TouchableOpacity, View, Text, Image } from "react-native";
+import styles from "./styles";
+import * as ScreenName from "../../global/constants/screenName";
+import CustomRatingBar from "../../components/shared/CustomRatingBar";
+import moment from "moment";
 
 const CourseCard = (props) => {
-  const {
-    id,
-    image,
-    title,
-    author,
-    level,
-    vote,
-    voteCount,
-    publishDate,
-    navigation,
-  } = props;
-
+  const { data, navigation } = props;
   const course = {
-    id,
+    id: data.id,
   };
 
   return (
     <TouchableOpacity
       style={styles.cardContainer}
       onPress={() =>
-        navigation.navigate(ScrennName.CourseDetailScreen, { course: course })
+        navigation.navigate(ScreenName.CourseDetailScreen, { course: course })
       }
     >
       <View style={styles.cardImage}>
-        <Image style={styles.image} source={{ uri: image }} />
+        <Image
+          style={styles.image}
+          source={{ uri: data.imageUrl }}
+          resizeMode="stretch"
+        />
       </View>
       <View style={styles.cardContent}>
         <Text numberOfLines={1} style={styles.title}>
-          {title.length < 30 ? `${title}` : `${title.substring(0, 30)}...`}
+          {data.title.length < 30
+            ? `${data.title}`
+            : `${data.title.substring(0, 30)}...`}
         </Text>
-        <Text style={styles.defaultText}>{author}</Text>
+        <Text style={styles.defaultText}>{data["instructor.user.name"]}</Text>
         <Text style={styles.defaultText}>
-          {level} - {publishDate}
+          {moment(data.createdAt).format("DD/MM/yyyy")} - {data.totalHours}{" "}
+          hours
         </Text>
         <View style={styles.rating}>
-          <CustomRatingBar star={vote} />
-          <Text style={styles.voteCount}>({voteCount})</Text>
+          <CustomRatingBar
+            star={
+              (data.presentationPoint +
+                data.formalityPoint +
+                data.contentPoint) /
+                3 ?? 1
+            }
+          />
+          <Text style={styles.voteCount}>({data.ratedNumber})</Text>
         </View>
       </View>
     </TouchableOpacity>

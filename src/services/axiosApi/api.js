@@ -3,7 +3,7 @@ import { BASE_API_URL } from "../../constants";
 
 const instance = axios.create({
   baseURL: BASE_API_URL,
-  timeout: 20000,
+  timeout: 5000,
 });
 
 async function Api({

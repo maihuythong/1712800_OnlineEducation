@@ -1,6 +1,6 @@
-import React from 'react';
-import { View, Text } from 'react-native';
-import styles from './styles';
+import React from "react";
+import { Text, View } from "react-native";
+import styles from "./styles";
 
 const HeaderSection = (props) => {
   const { id, title, totalDuration } = props;

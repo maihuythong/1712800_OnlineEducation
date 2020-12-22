@@ -2,14 +2,13 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   cardContainer: {
-    aspectRatio: 1,
+    aspectRatio: 0.8,
     marginRight: 15,
     shadowColor: '#000',
     backgroundColor: '#1f242a',
   },
   image: {
-    width: '100%',
-    height: '100%',
+    flex: 1,
   },
   cardImage: {
     height: '50%',
