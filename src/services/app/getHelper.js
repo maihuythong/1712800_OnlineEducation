@@ -3,3 +3,5 @@ export const getLoggedAccount = (state) => {
 };
 
 export const getFlashMessage = (state) => state.app.flashMessage;
+
+export const getCategories = (state) => state.app?.categories ?? [];

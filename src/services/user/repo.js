@@ -23,7 +23,6 @@ const UserRepo = {
 
   signin: async function ({ email, password }) {
     try {
-      console.log(email);
       const data = await Api({
         method: "post",
         url: "/user/login",

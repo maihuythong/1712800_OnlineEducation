@@ -33,7 +33,7 @@ const CourseCard = (props) => {
         </Text>
         <Text style={styles.defaultText}>{data["instructor.user.name"]}</Text>
         <Text style={styles.defaultText}>
-          {moment(data.createdAt).format("DD/MM/yyyy")} - {data.totalHours}{" "}
+          {moment(data.createdAt).format("DD/MM/yyyy")} - {data.totalHours.toFixed(3)}{" "}
           hours
         </Text>
         <View style={styles.rating}>

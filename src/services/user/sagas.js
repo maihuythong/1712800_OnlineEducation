@@ -13,7 +13,9 @@ import {
   UPDATE_PROFILE,
   APP_BOOT,
 } from "./constants";
+import { GET_ALL_CATEGORIES } from '../course/constant';
 import AsyncStorage from "../../utils/storage/asyncStorage";
+
 
 function* getLoggedAccount({ meta: { callback } = {} }) {
   try {
@@ -114,6 +116,9 @@ function* appBoot({
       put({
         type: GET_USER_DATA,
       }),
+      put({
+        type: GET_ALL_CATEGORIES,
+      })
     ]);
     yield call(afterSuccess);
   } catch (e) {

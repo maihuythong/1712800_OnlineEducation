@@ -12,6 +12,7 @@ import styles from "./styles";
 const Home = (props) => {
   const { navigation } = props;
   const [topSells, setTopSells] = useState([]);
+  const [topNews, setTopNews] = useState([]);
   const [loading, setLoading] = useState(false);
   const context = useContext(OfflineDataContext);
   const currentUser = useSelector(getLoggedAccount);
@@ -19,10 +20,14 @@ const Home = (props) => {
   const loadHomeData = async () => {
     try {
       setLoading(true);
-      // const [topSellCourses] = await Promise.all([CourseRepo.getTopSell()]);
-      const topSellCourses = await CourseRepo.getTopSell();
-
+      const [topSellCourses, topNewsCourses] = await Promise.all([
+        CourseRepo.getTopSell(),
+        CourseRepo.getTopNewCourses(),
+      ]);
+      // const topSellCourses = await CourseRepo.getTopSell();
       setTopSells(topSellCourses);
+      setTopNews(topNewsCourses);
+      console.log(topNewsCourses);
     } catch (e) {
       console.log(e);
     } finally {
@@ -31,23 +36,6 @@ const Home = (props) => {
   };
 
   useEffect(() => {
-    // const getToken = async () => {
-    //   const token = await AsyncStorage.getAccessToken();
-    // };
-    // getToken();
-    // const getCourse = async () => {
-    //   console.log('====================================');
-    //   const topSells = await CourseRepo.getTopSell();
-    //   setTopSells(topSells);
-    //   console.log(topSells);
-    //   console.log('====================================');
-    // }
-
-    // getCourse();
-
-    // CourseRepo.getTopSell()
-    // .then(data => setTopSells(data))
-    // .catch(e=> console.log(e.message));
     loadHomeData();
   }, []);
 
@@ -59,34 +47,8 @@ const Home = (props) => {
         </View>
       ) : (
         <ScrollView style={styles.scrollViewContainer}>
-          {/* <Section
-            title="Software Development"
-            navigation={navigation}
-            nav={ScreenName.CourseListScreen}
-          >
-            <FlatList
-              horizontal
-              data={context.course}
-              showsHorizontalScrollIndicator={false}
-              renderItem={({ item }) => (
-                <CourseCard
-                  key={item.id}
-                  id={item.id}
-                  image={item.image}
-                  title={item.title}
-                  author={item.author}
-                  level={item.level}
-                  publishDate={item.publishDate}
-                  vote={item.vote}
-                  voteCount={item.voteCount}
-                  navigation={navigation}
-                />
-              )}
-            />
-          </Section> */}
-
           <Section
-            title="Top Seller"
+            title="Top Selling"
             navigation={navigation}
             nav={ScreenName.CourseListScreen}
           >
@@ -98,15 +60,25 @@ const Home = (props) => {
                 <CourseCard
                   key={item.id}
                   data={item}
-                  // id={item.id}
-                  // image={'item.imageUrl'}
-                  // title={item.title}
-                  // authorId={'a'}
-                  // author={'a'}
-                  // level={'item.description'}
-                  // publishDate={item.createdAt}
-                  // vote={item.formalityPoint}
-                  // voteCount={item.ratedNumber}
+                  navigation={navigation}
+                />
+              )}
+            />
+          </Section>
+
+          <Section
+            title="Top News"
+            navigation={navigation}
+            nav={ScreenName.CourseListScreen}
+          >
+            <FlatList
+              horizontal
+              data={topNews}
+              showsHorizontalScrollIndicator={false}
+              renderItem={({ item }) => (
+                <CourseCard
+                  key={item.id}
+                  data={item}
                   navigation={navigation}
                 />
               )}
