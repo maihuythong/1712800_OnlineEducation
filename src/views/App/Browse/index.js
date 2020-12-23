@@ -1,5 +1,6 @@
-import React from "react";
-import { FlatList } from "react-native";
+import React, { useState, useEffect } from "react";
+import { useSelector } from 'react-redux';
+import { FlatList, View, ActivityIndicator } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import Author from "../../../components/Browse/Author";
 import LargeImageButton from "../../../components/Browse/LargeImageButton";
@@ -14,102 +15,138 @@ import browsejson from "../../../json/browse.json";
 import mypathjson from "../../../json/mypaths.json";
 import popularskilljson from "../../../json/popularskill.json";
 import styles from "./styles";
+import AuthorRepo from "../../../services/author/repo";
+import {getCategories} from '../../../services/app/getHelper';
 
 const Browse = (props) => {
   const { navigation } = props;
+  const [loading, setLoading] = useState(false);
+  const [authors, setAuthors] = useState([]);
+  const categories = useSelector(getCategories);
+  console.log(categories);
+
+  const loadData = async () => {
+    try {
+      setLoading(true);
+      const [listAuthor] = await Promise.all([AuthorRepo.getAllAuthor()]);
+      setAuthors(listAuthor);
+    } catch (e) {
+      console.log(e);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
   return (
-    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-      <LargeImageButton
-        text={`NEW \n RELEASES`}
-        image={images.newrelease.uri}
-        navigation={navigation}
-      />
-      <LargeImageButton
-        text={`RECOMENDED \n FOR YOU`}
-        image={images.recommended.uri}
-        navigation={navigation}
-      />
-      <ScrollView
-        horizontal
-        show
-        style={styles.smallImage}
-        showsVerticalScrollIndicator={false}
-      >
-        <FlatList
-          showsHorizontalScrollIndicator={false}
+    <View style={{ flex: 1 }}>
+      {loading ? (
+        <View style={{ flex: 1, justifyContent: "center" }}>
+          <ActivityIndicator size="large" color="#00ff00" />
+        </View>
+      ) : (
+        <ScrollView
+          style={styles.container}
           showsVerticalScrollIndicator={false}
-          horizontal={false}
-          numColumns={Math.ceil(browsejson.length / 2)}
-          data={browsejson}
-          renderItem={({ item }) => (
-            <SmallImageButton
-              key={item.id}
-              id={item.id}
-              text={item.text}
-              image={images.conference.uri}
-              navigation={navigation}
+        >
+          <LargeImageButton
+            text={`NEW \n RELEASES`}
+            image={images.newrelease.uri}
+            navigation={navigation}
+          />
+          <LargeImageButton
+            text={`RECOMENDED \n FOR YOU`}
+            image={images.recommended.uri}
+            navigation={navigation}
+          />
+          <ScrollView
+            horizontal
+            show
+            style={styles.smallImage}
+            showsVerticalScrollIndicator={false}
+          >
+            <FlatList
+              showsHorizontalScrollIndicator={false}
+              showsVerticalScrollIndicator={false}
+              horizontal={false}
+              numColumns={Math.ceil(browsejson.length / 2)}
+              data={browsejson}
+              renderItem={({ item }) => (
+                <SmallImageButton
+                  key={item.id}
+                  id={item.id}
+                  text={item.text}
+                  image={images.conference.uri}
+                  navigation={navigation}
+                />
+              )}
             />
-          )}
-        />
-      </ScrollView>
+          </ScrollView>
 
-      <Section title="Popular skills" hideSeeall={true}>
-        <FlatList
-          horizontal
-          data={popularskilljson}
-          showsHorizontalScrollIndicator={false}
-          renderItem={({ item }) => (
-            <SkillBadge
-              key={item.id}
-              id={item.id}
-              image={item.image}
-              content={item.title}
+          <Section title="Popular skills" hideSeeall={true}>
+            <FlatList
+              horizontal
+              data={categories}
+              showsHorizontalScrollIndicator={false}
+              renderItem={({ item }) => (
+                <SkillBadge
+                  key={item.id}
+                  id={item.id}
+                  image={images.checked.uri}
+                  content={item.name}
+                  navigation={navigation}
+                />
+              )}
             />
-          )}
-        />
-      </Section>
+          </Section>
 
-      <Section
-        title="Paths"
-        navigation={navigation}
-        nav={ScreenName.CourseListScreen}
-      >
-        <FlatList
-          horizontal
-          data={mypathjson}
-          showsHorizontalScrollIndicator={false}
-          renderItem={({ item }) => (
-            <PathCard
-              key={item.id}
-              id={item.id}
-              image={item.image}
-              pathName={item.pathName}
-              courseCount={item.courseCount}
+          <Section
+            title="Paths"
+            navigation={navigation}
+            nav={ScreenName.CourseListScreen}
+          >
+            <FlatList
+              horizontal
+              data={mypathjson}
+              showsHorizontalScrollIndicator={false}
+              renderItem={({ item }) => (
+                <PathCard
+                  key={item.id}
+                  id={item.id}
+                  image={item.image}
+                  pathName={item.pathName}
+                  courseCount={item.courseCount}
+                />
+              )}
             />
-          )}
-        />
-      </Section>
+          </Section>
 
-      <Section
-        title="Top authors"
-        navigation={navigation}
-        nav={ScreenName.CourseListScreen}
-      >
-        <FlatList
-          horizontal
-          data={authorsjson}
-          showsHorizontalScrollIndicator={false}
-          renderItem={({ item }) => (
-            <Author
-              image={item.avatar}
-              name={item.name}
-              description={item.description}
-              navigation={navigation}
+          <Section
+            title="Top authors"
+            navigation={navigation}
+            nav={ScreenName.CourseListScreen}
+          >
+            <FlatList
+              horizontal
+              data={authors}
+              showsHorizontalScrollIndicator={false}
+              renderItem={({ item }) => (
+                <Author
+                  data = {item}
+                  // image={item.avatar}
+                  // name={item.name}
+                  // description={item.description}
+                  navigation={navigation}
+                />
+              )}
             />
-          )}
-        />
-      </Section>
-    </ScrollView>
+          </Section>
+        </ScrollView>
+      )}
+    </View>
   );
 };
 

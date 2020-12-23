@@ -5,16 +5,15 @@ import styles from './styles';
 import * as ScreenName from '../../../global/constants/screenName';
 
 const Author = (props) => {
-  const { image, name, description, navigation } = props;
+  const { data, navigation } = props;
 
+  // console.log(data.id);
   return (
     <TouchableOpacity
       style={styles.avatarContainer}
       onPress={() =>
         navigation.navigate(ScreenName.AuthorDetailScreen, {
-          image: image,
-          name: name,
-          description,
+          id: data.id,
           navigation,
         })
       }
@@ -23,10 +22,10 @@ const Author = (props) => {
         style={styles.avatar}
         rounded
         size={100}
-        source={{ uri: image }}
+        source={{ uri: data['user.avatar'] }}
       />
       <View style={styles.authorName}>
-        <Text style={styles.name}>{name}</Text>
+        <Text style={styles.name}>{data['user.name']}</Text>
       </View>
     </TouchableOpacity>
   );

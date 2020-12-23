@@ -6,6 +6,7 @@ import AuthorDetail from "../../../views/App/AuthorDetail";
 import Browse from "../../../views/App/Browse";
 import CourseDetail from "../../../views/App/CourseDetail";
 import CourseOfSection from "../../../views/App/CourseOfSection";
+import CourseOfSkill from "../../../views/App/CourseOfSkill";
 
 const Stack = createStackNavigator();
 
@@ -57,6 +58,16 @@ const BrowseStackScreen = () => {
           headerRight: null,
           title: null,
         }}
+      />
+
+      <Stack.Screen
+        name={ScreenName.CourseOfSkillScreen}
+        component={CourseOfSkill}
+        options={({ route }) => ({ title: route.params.title })}
+        // options={{
+        //   headerRight: null,
+          
+        // }}
       />
     </Stack.Navigator>
   );
