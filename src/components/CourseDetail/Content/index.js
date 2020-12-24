@@ -24,7 +24,6 @@ const Content = (props) => {
             <HeaderSection id={index} title={title} totalDuration={sumHours} />
           )}
           renderItem={({ item }) => {
-            console.log(item);
             return (
               <RowDetail
                 key={item.id}

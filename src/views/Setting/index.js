@@ -16,9 +16,6 @@ const Setting = ({ navigation }) => {
   const [downloading, setDownloading] = useState(true);
   const dispatch = useDispatch();
   const loggedAccount = useSelector(getLoggedAccount);
-  console.log("====================================");
-  console.log(loggedAccount);
-  console.log("====================================");
 
   const languageSetting = () => {
     console.log("langue change");

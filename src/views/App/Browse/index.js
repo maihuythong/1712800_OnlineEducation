@@ -23,8 +23,6 @@ const Browse = (props) => {
   const [loading, setLoading] = useState(false);
   const [authors, setAuthors] = useState([]);
   const categories = useSelector(getCategories);
-  console.log(categories);
-
   const loadData = async () => {
     try {
       setLoading(true);
