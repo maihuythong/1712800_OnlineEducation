@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useSelector } from "react-redux";
-import { FlatList, ScrollView, View } from "react-native";
+import { FlatList, ScrollView, View, Text, TouchableOpacity } from "react-native";
 import AccountInfo from "../../../components/AccountInfo";
 import SkillBadge from "../../../components/Browse/SkillBadge";
 import TextInformation from "../../../components/Profile/TextInfomation";
@@ -8,9 +8,18 @@ import Section from "../../../components/Section";
 import interestsjson from "../../../json/interests.json";
 import styles from "./styles";
 import { getLoggedAccount } from "../../../services/app/getHelper";
+import {ChangePasswordScreen, ChangeProfileScreen} from '../../../global/constants/screenName';
 
 const Profile = ({ navigation }) => {
   const loggedAccount = useSelector(getLoggedAccount);
+
+  const changePassword = () => {
+    navigation.navigate(ChangePasswordScreen);
+  }
+
+  const changeProfile = () => {
+    navigation.navigate(ChangeProfileScreen);
+  }
 
   return (
     <ScrollView style={styles.scrollViewContainer}>
@@ -56,6 +65,20 @@ const Profile = ({ navigation }) => {
             />
             <TextInformation title={"MOST VIEWED SUBJECT"} content={"N/A"} />
           </View>
+
+          <TouchableOpacity
+            style={styles.buttonContainer}
+            onPress={() => changePassword()}
+          >
+            <Text style={styles.buttonText}>CHANGE PASSWORD</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.buttonContainer}
+            onPress={() => changeProfile()}
+          >
+            <Text style={styles.buttonText}>EDIT PROFILE</Text>
+          </TouchableOpacity>
         </>
       )}
     </ScrollView>

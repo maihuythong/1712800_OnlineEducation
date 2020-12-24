@@ -17,7 +17,6 @@ const AuthorDetail = (props) => {
   const loadAuthorDetail = async () => {
     try {
       setLoading(true);
-      console.log(id);
       const authorData = await AuthorRepo.getAuthorDetail(id);
       if (authorData) {
         if (authorData.major) {
@@ -29,7 +28,6 @@ const AuthorDetail = (props) => {
           }
         }
         setAuthor(authorData);
-        console.log(authorData);
       }
     } catch (e) {
       console.log(e);

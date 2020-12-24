@@ -1,5 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import { Api } from "../axiosApi";
+import AsyncStorage from "../../utils/storage/asyncStorage";
+import { showFlashMessage } from "../../services/app/actions";
 
 const UserRepo = {
   signup: async function ({ name, email, phone, password }) {
@@ -77,6 +79,49 @@ const UserRepo = {
       return userInfo;
     } catch (e) {
       console.log("Error when update profile: " + e.response);
+      throw e;
+    }
+  },
+
+  changePassword: async function ({ id, oldPass, newPass }) {
+    try {
+      const token = await AsyncStorage.getAccessToken();
+      const data = await Api({
+        method: "post",
+        url: "/user/change-password",
+        body: {
+          token,
+          id,
+          oldPass,
+          newPass,
+        },
+      });
+      return data;
+    } catch (e) {
+      showFlashMessage({
+        description: e?.response?.data?.message ?? "Something went wrong!",
+      });
+      throw e;
+    }
+  },
+
+  changeProfile: async function ({ name, phone }) {
+    try {
+      const token = await AsyncStorage.getAccessToken();
+      const { payload: userInfo } = await Api({
+        method: "put",
+        url: "/user/update-profile",
+        body: {
+          token,
+          name,
+          phone,
+        },
+      });
+      return userInfo;
+    }catch (e) {
+      showFlashMessage({
+        description: e?.response?.data?.message ?? "Something went wrong!",
+      });
       throw e;
     }
   },

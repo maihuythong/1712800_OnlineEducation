@@ -41,12 +41,6 @@ const CourseDetail = (props) => {
           });
         });
         setSection(arr);
-        console.log(
-          "================================================================abcsection"
-        );
-        console.log(section);
-        // console.log('==================================== course');
-        // console.log(course);
       }
     } catch (e) {
       console.log(e);
@@ -58,38 +52,6 @@ const CourseDetail = (props) => {
   useEffect(() => {
     loadCourseDetail();
   }, []);
-
-  // const context = useContext(OfflineDataContext);
-  // console.log(props.route.params.course.id);
-  // const course = context.courseDetailList.find(
-  //   (el) => el.id === props.route.params.course.id
-  // );
-  // const {
-  //   id,
-  //   courseName,
-  //   author,
-  //   level,
-  //   publishDate,
-  //   duration,
-  //   vote,
-  //   voteCount,
-  //   description,
-  //   content,
-  //   transcript,
-  // } = course;
-
-  // const courseCard = context.course.find((el) => el.id === id);
-
-  // const addToBookmark = () => {
-  //   if (!context.bookmark.find((el) => el.id === id))
-  //     context.setBookmark([...context.bookmark, courseCard]);
-  // };
-
-  console.log("1aaa");
-  if (!loading && section.length > 0) {
-    console.log("sectionxxxx");
-    console.log(section);
-  }
 
   return (
     <View style={{ flex: 1 }}>

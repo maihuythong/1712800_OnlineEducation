@@ -21,4 +21,19 @@ export default StyleSheet.create({
   textInfo: {
     marginTop: 10,
   },
+  buttonContainer: {
+    marginTop: 10,
+    borderColor: '#009dc4',
+    flex: 1,
+    borderWidth: 2,
+    borderRadius: 3,
+  },
+  buttonText: {
+    color: '#009dc4',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    paddingVertical: 7,
+  },
 });

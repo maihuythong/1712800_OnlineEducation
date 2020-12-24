@@ -1,18 +1,19 @@
-import React from 'react';
-import { NavigationContainer, DarkTheme } from '@react-navigation/native';
+import { DarkTheme, NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react';
 import * as ScreenName from '../global/constants/screenName';
-import SignIn from '../views/Authentication/SignIn';
-import SignUp from '../views/Authentication/SignUp';
+import { AuthenticationProvider } from '../provider/authentication-provider';
+import { OfflineDataProvider } from '../provider/offlinedata-provider';
+import ChangePassword from '../views/App/ChangePassword';
+import ChangeProfile from '../views/App/ChangeProfile';
+import Profile from '../views/App/Profile';
 import ForgotPassword from '../views/Authentication/ForgotPassword';
 import RecoveryPassword from '../views/Authentication/RecoveryPassword';
-import AppNavigator from './AppNav';
-import Profile from '../views/App/Profile';
+import SignIn from '../views/Authentication/SignIn';
+import SignUp from '../views/Authentication/SignUp';
 import Setting from '../views/Setting';
 import SplashScreen from '../views/SplashScreen';
-import { OfflineDataProvider } from '../provider/offlinedata-provider';
-import { AuthenticationProvider } from '../provider/authentication-provider';
-import CourseDetail from '../views/App/CourseDetail';
+import AppNavigator from './AppNav';
 
 const Stack = createStackNavigator();
 
@@ -78,6 +79,16 @@ const RootAppScreen = () => {
         name={ScreenName.SettingScreen}
         component={Setting}
         options={{ title: 'Setting' }}
+      />
+      <Stack.Screen
+        name={ScreenName.ChangePasswordScreen}
+        component={ChangePassword}
+        options={{ title: 'Change password' }}
+      />
+      <Stack.Screen
+        name={ScreenName.ChangeProfileScreen}
+        component={ChangeProfile}
+        options={{ title: 'Change password' }}
       />
       {/* <Stack.Screen
         name={ScreenName.CourseDetailScreen}

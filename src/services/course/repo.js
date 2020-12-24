@@ -53,8 +53,6 @@ const CourseRepo = {
       console.log('Error when get top new courses ' + e?.response.data.message);
       throw e;
     } finally {
-      console.log('top news');
-      console.log(data);
       return data;
     }
   },

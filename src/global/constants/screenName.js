@@ -13,6 +13,8 @@ export const BrowseScreen = 'BrowseScreen';
 export const SearchScreen = 'SearchScreen';
 
 export const ProfileScreen = 'ProfileScreen';
+export const ChangePasswordScreen = 'ChangePasswordScreen';
+export const ChangeProfileScreen = 'ChangeProfileScreen';
 
 export const CourseDetailScreen = 'CourseDetailScreen';
 export const CourseListScreen = 'CourseListScreen';

@@ -27,7 +27,6 @@ const Home = (props) => {
       // const topSellCourses = await CourseRepo.getTopSell();
       setTopSells(topSellCourses);
       setTopNews(topNewsCourses);
-      console.log(topNewsCourses);
     } catch (e) {
       console.log(e);
     } finally {
