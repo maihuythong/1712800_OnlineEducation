@@ -9,6 +9,7 @@ import { View } from "react-native";
 import CustomIcon from "react-native-vector-icons/FontAwesome";
 import YoutubePlayer, { getYoutubeMeta } from "react-native-youtube-iframe";
 import styles from "./styles";
+import { Video } from 'expo-av';
 
 const LoadingVideoIndicator = ({ isYoutubeVideo }) => {
   const icon = () => (isYoutubeVideo ? "youtube" : "film");
@@ -18,6 +19,24 @@ const LoadingVideoIndicator = ({ isYoutubeVideo }) => {
     </View>
   );
 };
+
+const ExpoVideoPlayer = (props) => {
+  const { url, height } = props;
+
+  return (
+    <Video
+      shouldPlay
+      rate={1.0}
+      volume={1.0}
+      isMuted={false}
+      progressUpdateIntervalMillis={500}
+      isLooping={false}
+      source={{ uri: url }}
+      useNativeControls
+      style={[styles.containerVideo, {height: height}]}
+    />
+  );
+}
 
 const YoutubeVideoPlayer = (props) => {
   const {
@@ -99,11 +118,13 @@ const VideoPlayer = (props) => {
     currentTime,
   } = props;
   const url = "https://youtu.be/Zfl_WXFqSeg";
+  // const url = "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4";
   const [isLoading, setLoading] = useState(true);
   const [height, setHeight] = useState(300);
 
   return (
     <View style={[styles.containerVideo, { height }]}>
+    {/* <ExpoVideoPlayer url={url} height={height}/> */}
       <YoutubeVideoPlayer
         courseData={courseData}
         autoPlay={autoPlay}

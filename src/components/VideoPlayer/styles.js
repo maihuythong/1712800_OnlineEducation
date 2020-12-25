@@ -15,5 +15,7 @@ export default StyleSheet.create({
   },
   containerVideo: {
     width: '100%',
+    flex: 1,
+    justifyContent: 'center',
   },
 });
