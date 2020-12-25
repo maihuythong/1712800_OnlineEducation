@@ -49,6 +49,14 @@ const CourseDetail = (props) => {
     }
   };
 
+  const onStopVideo = () => {
+
+  }
+
+  const onVideoEnded = () => {
+
+  }
+
   useEffect(() => {
     loadCourseDetail();
   }, []);
@@ -62,8 +70,11 @@ const CourseDetail = (props) => {
       ) : (
         <View style={styles.courseDetailContainer}>
           <View style={styles.video}>
-            <Text>This is video</Text>
-            <VideoPlayer />
+            <VideoPlayer
+              courseData={course}
+              onStopVideo={onStopVideo}
+              onVideoEnded={onVideoEnded}
+            />
           </View>
           <View style={styles.other}>
             <ScrollView showsVerticalScrollIndicator={false}>

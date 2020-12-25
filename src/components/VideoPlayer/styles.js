@@ -8,4 +8,12 @@ export default StyleSheet.create({
     bottom: 0,
     right: 0,
   },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  containerVideo: {
+    width: '100%',
+  },
 });

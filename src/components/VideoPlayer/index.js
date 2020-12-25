@@ -1,29 +1,123 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-// import styles from './styles';
-import { Video } from 'expo-av';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import { View } from "react-native";
+import CustomIcon from "react-native-vector-icons/FontAwesome";
+import YoutubePlayer, { getYoutubeMeta } from "react-native-youtube-iframe";
+import styles from "./styles";
 
-const VideoPlayer = () => {
-  const url = 'https://www.youtube.com/watch?v=bt1F7AxSyTw';
+const LoadingVideoIndicator = ({ isYoutubeVideo }) => {
+  const icon = () => (isYoutubeVideo ? "youtube" : "film");
   return (
     <View style={styles.container}>
-      <Video
-        source={{ uri: url }}
-        shouldPlay
-        useNativeControls
-        style={{ width: '100%', height: '50%', backgroundColor: 'white' }}
+      <CustomIcon name={icon} size={48} />
+    </View>
+  );
+};
+
+const YoutubeVideoPlayer = (props) => {
+  const {
+    url,
+    setHeight,
+    height,
+    setLoading,
+    isLoading,
+    currentTime,
+    autoPlay,
+    onStopVideo,
+    onVideoEnded,
+    courseData,
+  } = props;
+
+  console.log(props);
+  const videoRef = useRef(null);
+  const videoId = useMemo(() => {
+    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+    var match = url.match(regExp);
+    return match && match[7].length == 11 ? match[7] : false;
+  }, [url]);
+
+  const onVideoPlayerStageChanged = async (event) => {
+    if (event === "ended") {
+      await onVideoEnded();
+    }
+    if (event === "paused") {
+      const time = await videoRef.current?.getCurrentTime();
+      await onStopVideo(time);
+    }
+  };
+
+  const onVideoReady = useCallback(() => {
+    if (videoRef.current) {
+      videoRef.current.seekTo(currentTime);
+    }
+  }, [currentTime]);
+
+  useEffect(() => {
+    const setMeta = async () => {
+      setLoading(true);
+      try {
+        const meta = await getYoutubeMeta(videoId);
+        if (meta) {
+          if (meta.height) {
+            meta.height ? setHeight(meta.height * 2) : null;
+          }
+        }
+      } catch (e) {
+        console.log(e);
+      } finally {
+        setLoading(false);
+      }
+    };
+    setMeta();
+  }, [videoId]);
+
+  return isLoading ? (
+    <LoadingVideoIndicator />
+  ) : (
+    <YoutubePlayer
+      ref={videoRef}
+      play={autoPlay}
+      onChangeState={onVideoPlayerStageChanged}
+      onReady={onVideoReady}
+      videoId={videoId}
+      height={height}
+    />
+  );
+};
+
+const VideoPlayer = (props) => {
+  const {
+    courseData,
+    autoPlay = true,
+    onStopVideo,
+    onVideoEnded,
+    currentTime,
+  } = props;
+  const url = "https://youtu.be/Zfl_WXFqSeg";
+  const [isLoading, setLoading] = useState(true);
+  const [height, setHeight] = useState(300);
+
+  return (
+    <View style={[styles.containerVideo, { height }]}>
+      <YoutubeVideoPlayer
+        courseData={courseData}
+        autoPlay={autoPlay}
+        url={url}
+        height={height}
+        setHeight={setHeight}
+        onStopVideo={onStopVideo}
+        onVideoEnded={onVideoEnded}
+        isLoading={isLoading}
+        setLoading={setLoading}
+        currentTime={currentTime}
       />
     </View>
   );
 };
 
 export default VideoPlayer;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
