@@ -6,7 +6,7 @@ import CustomRatingBar from "../../components/shared/CustomRatingBar";
 import moment from "moment";
 
 const CourseCard = (props) => {
-  const { data, navigation } = props;
+  const { data, navigation, navigationScreen } = props;
   const course = {
     id: data.id,
   };
@@ -15,7 +15,7 @@ const CourseCard = (props) => {
     <TouchableOpacity
       style={styles.cardContainer}
       onPress={() =>
-        navigation.navigate(ScreenName.CourseDetailScreen, { course: course })
+        navigation.navigate(navigationScreen, { course: course })
       }
     >
       <View style={styles.cardImage}>

@@ -9,10 +9,10 @@ import { View } from "react-native";
 import CustomIcon from "react-native-vector-icons/FontAwesome";
 import YoutubePlayer, { getYoutubeMeta } from "react-native-youtube-iframe";
 import styles from "./styles";
-import { Video } from 'expo-av';
+import { Video } from "expo-av";
 
 const LoadingVideoIndicator = ({ isYoutubeVideo }) => {
-  const icon = () => (isYoutubeVideo ? "youtube" : "film");
+  const icon = isYoutubeVideo ? "youtube" : "film";
   return (
     <View style={styles.container}>
       <CustomIcon name={icon} size={48} />
@@ -22,6 +22,8 @@ const LoadingVideoIndicator = ({ isYoutubeVideo }) => {
 
 const ExpoVideoPlayer = (props) => {
   const { url, height } = props;
+  console.log(url);
+  url = 'https://storage.googleapis.com/itedu-bucket/Courses/7844e73e-f61b-4f1b-82ce-f98f120a7c46/promo/6c45f15c-6165-4353-89a7-658a58934703.mp4'
 
   return (
     <Video
@@ -33,10 +35,10 @@ const ExpoVideoPlayer = (props) => {
       isLooping={false}
       source={{ uri: url }}
       useNativeControls
-      style={[styles.containerVideo, {height: height}]}
+      style={[styles.containerVideo, { height: height }]}
     />
   );
-}
+};
 
 const YoutubeVideoPlayer = (props) => {
   const {
@@ -52,11 +54,10 @@ const YoutubeVideoPlayer = (props) => {
     courseData,
   } = props;
 
-  console.log(props);
   const videoRef = useRef(null);
   const videoId = useMemo(() => {
-    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
-    var match = url.match(regExp);
+    const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+    const match = url.match(regExp);
     return match && match[7].length == 11 ? match[7] : false;
   }, [url]);
 
@@ -111,32 +112,35 @@ const YoutubeVideoPlayer = (props) => {
 
 const VideoPlayer = (props) => {
   const {
+    isYoutubeVideo,
     courseData,
+    url,
     autoPlay = true,
     onStopVideo,
     onVideoEnded,
     currentTime,
   } = props;
-  const url = "https://youtu.be/Zfl_WXFqSeg";
-  // const url = "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4";
   const [isLoading, setLoading] = useState(true);
   const [height, setHeight] = useState(300);
 
   return (
     <View style={[styles.containerVideo, { height }]}>
-    {/* <ExpoVideoPlayer url={url} height={height}/> */}
-      <YoutubeVideoPlayer
-        courseData={courseData}
-        autoPlay={autoPlay}
-        url={url}
-        height={height}
-        setHeight={setHeight}
-        onStopVideo={onStopVideo}
-        onVideoEnded={onVideoEnded}
-        isLoading={isLoading}
-        setLoading={setLoading}
-        currentTime={currentTime}
-      />
+      {isYoutubeVideo ? (
+        <YoutubeVideoPlayer
+          courseData={courseData}
+          autoPlay={autoPlay}
+          url={url}
+          height={height}
+          setHeight={setHeight}
+          onStopVideo={onStopVideo}
+          onVideoEnded={onVideoEnded}
+          isLoading={isLoading}
+          setLoading={setLoading}
+          currentTime={currentTime}
+        />
+      ) : (
+        <ExpoVideoPlayer url={url} height={height} />
+      )}
     </View>
   );
 };

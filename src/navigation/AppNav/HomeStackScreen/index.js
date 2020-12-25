@@ -5,6 +5,7 @@ import * as ScreenName from "../../../global/constants/screenName";
 import CourseDetail from "../../../views/App/CourseDetail";
 import CourseOfSection from "../../../views/App/CourseOfSection";
 import Home from "../../../views/App/Home";
+import CourseIntro from "../../../views/App/CourseIntro";
 
 const Stack = createStackNavigator();
 
@@ -50,6 +51,15 @@ const HomeStackScreen = () => {
       <Stack.Screen
         name={ScreenName.CourseDetailScreen}
         component={CourseDetail}
+        options={{
+          headerRight: null,
+          title: null,
+        }}
+      />
+      
+      <Stack.Screen
+        name={ScreenName.CourseIntroScreen}
+        component={CourseIntro}
         options={{
           headerRight: null,
           title: null,

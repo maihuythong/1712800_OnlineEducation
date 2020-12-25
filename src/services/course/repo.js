@@ -38,6 +38,40 @@ const CourseRepo = {
     }
   },
 
+  getCourseIntro: async function (courseId) {
+    // let data = [];
+    try {
+      const {payload: data} = await Api({
+        method: 'get',
+        url: `/course/get-course-info`,
+        params: {id: courseId}
+      });
+      return data;
+    } catch (e) {
+      console.log('Error when get course detail intro ' + e?.response.data.message);
+      throw e;
+    } finally {
+      // console.log(data);
+      // return data;
+    }
+  },
+
+  getCourseDetailWithLesson: async function(courseId) {
+    let data = [];
+    try {
+      ({ payload: data } = await Api({
+        method: 'get',
+        url: `/course/detail-with-lesson/${courseId}`,
+      }));
+    } catch (e) {
+      console.log('Error when get course detail with lesson' + e?.response.data.message);
+      throw e;
+    } finally {
+      console.log(data);
+      return data;
+    }
+  },
+
   getTopNewCourses: async function ({ limit = 10, page = 1 } = {}){
     let data = [];
     try {

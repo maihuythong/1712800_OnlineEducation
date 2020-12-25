@@ -17,6 +17,7 @@ export const ChangePasswordScreen = 'ChangePasswordScreen';
 export const ChangeProfileScreen = 'ChangeProfileScreen';
 
 export const CourseDetailScreen = 'CourseDetailScreen';
+export const CourseIntroScreen = 'CourseIntroScreen';
 export const CourseListScreen = 'CourseListScreen';
 export const CourseOfSkillScreen = 'CourseOfSkillScreen';
 export const AuthorDetailScreen = 'AuthorDetailScreen';

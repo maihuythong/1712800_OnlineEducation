@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FlatList, Text, TouchableOpacity, View } from "react-native";
 import BigBadge from "../../BigBadge";
 import LargeButton from "../../LargeButton";
@@ -6,9 +6,31 @@ import MediumButton from "../../MediumButton";
 import CustomRatingBar from "../../shared/CustomRatingBar";
 import { images } from "../../shared/image";
 import styles from "./styles";
+import moment from 'moment';
+import AuthorRepo from "../../../services/author/repo";
 
 const Header = (props) => {
   const { data } = props;
+  const [instructor, setInstructor] = useState();
+
+  useEffect(() => {
+    const getInstructor = async () => {
+      try {
+        const res = await AuthorRepo.getAuthorDetail(data.instructorId);
+        if (res) {
+          setInstructor(res);
+        }
+      } catch (e) {
+        console.log(e);
+      }
+    };
+
+    if (data?.instructor) {
+      setInstructor(data.instructor);
+    } else {
+      getInstructor();
+    }
+  }, []);
 
   const addToBookmark = () => {
     console.log("add to bookmark " + data.id);
@@ -18,18 +40,20 @@ const Header = (props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{data.title}</Text>
-      <View style={styles.author}>
-        <FlatList
-          horizontal
-          data={[data.instructor]}
-          renderItem={({ item }) => (
-            <BigBadge image={item.avatar} content={item.name} />
-          )}
-        />
-      </View>
+      {instructor ? (
+        <View style={styles.author}>
+          <FlatList
+            horizontal
+            data={[instructor]}
+            renderItem={({ item }) => (
+              <BigBadge image={item.avatar} content={item.name} />
+            )}
+          />
+        </View>
+      ) : null}
       <View style={styles.courseInfo}>
         <Text style={styles.textNormalColor}>
-          {data.createdAt} • {data.totalHours}
+          {moment(data.createdAt).format("DD/MM/yyyy")} • {data.totalHours.toFixed(3)}
         </Text>
         <View style={styles.vote}>
           <CustomRatingBar star={data.formalityPoint} />
