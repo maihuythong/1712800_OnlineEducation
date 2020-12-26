@@ -92,7 +92,7 @@ const CourseRepo = {
       );
       throw e;
     } finally {
-      console.log(data);
+      // console.log(data);
       return data;
     }
   },

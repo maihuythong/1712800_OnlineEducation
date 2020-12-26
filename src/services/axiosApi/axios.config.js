@@ -19,8 +19,6 @@ const requestInterceptor = AxiosInstance.interceptors.request.use(
       console.log(token);
     } catch (e) {
     } finally {
-      console.log('ccccccc');
-      console.log(request);
       return request;
     }
   },

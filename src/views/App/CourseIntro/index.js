@@ -6,14 +6,14 @@ import {
   ScrollView,
   View
 } from "react-native";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Header from "../../../components/CourseDetail/Header";
 import VideoPlayer from "../../../components/VideoPlayer";
+import { showFlashMessage } from "../../../services/app/actions";
 import { getLoggedAccount } from "../../../services/app/getHelper";
+import MessageType from "../../../services/app/MessageType";
 import CourseRepo from "../../../services/course/repo";
 import UserRepo from "../../../services/user/repo";
-import { showFlashMessage } from '../../../services/app/actions';
-import MessageType from '../../../services/app/MessageType';
 import styles from "./styles";
 
 const Tab = createMaterialTopTabNavigator();
@@ -25,6 +25,7 @@ const CourseIntro = (props) => {
   const [course, setCourse] = useState({});
   const [introIsVideo, setIntroIsVideo] = useState(false);
   const [isYoutubeVideo, setIsYoutubeVideo] = useState(false);
+  const dispatch = useDispatch();
 
   const loadCourseDetail = async () => {
     try {
@@ -67,29 +68,35 @@ const CourseIntro = (props) => {
 
   const enrollCourse = async () => {
     try {
-      console.log(id);
       const res = await CourseRepo.getFreeCourse(id);
-      if(res) {
+      if (res) {
         console.log(res);
       }
-    }catch (e) {
+    } catch (e) {
       console.log(e);
     }
-  }
+  };
 
   const favoriteCourse = async () => {
-    try{
+    try {
       const res = await UserRepo.likeCourse(id);
-      if(res){
-        showFlashMessage({
-          type: MessageType.Type.SUCCESS,
-          description: 'Khóa học đã được thêm vào mục yêu thích',
-        });
+      if (res) {
+        dispatch(
+          showFlashMessage({
+            type: MessageType.Type.SUCCESS,
+            description: "Khóa học đã được thêm vào mục yêu thích",
+          })
+        );
       }
-    }catch (e) {
-      console.log(e);
+    } catch (e) {
+      dispatch(
+        showFlashMessage({
+          type: MessageType.Type.DANGER,
+          description: e?.response?.data?.message,
+        })
+      );
     }
-  }
+  };
 
   useEffect(() => {
     loadCourseDetail();
@@ -120,7 +127,11 @@ const CourseIntro = (props) => {
           </View>
           <View style={styles.other}>
             <ScrollView showsVerticalScrollIndicator={false}>
-              <Header data={course} favoriteCourse = {favoriteCourse}  enrollCourse = {enrollCourse}/>
+              <Header
+                data={course}
+                favoriteCourse={favoriteCourse}
+                enrollCourse={enrollCourse}
+              />
             </ScrollView>
           </View>
         </View>

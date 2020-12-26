@@ -34,7 +34,10 @@ const Setting = ({ navigation }) => {
     dispatch({
       type: SIGNOUT,
     });
-    navigation.replace(SignInScreen);
+    navigation.reset({
+      routes: [{ name: SignInScreen }]
+    });
+    // navigation.replace();
   };
 
   return (
