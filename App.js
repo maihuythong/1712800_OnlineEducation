@@ -10,6 +10,9 @@ import {
   requestInterceptor,
   responseInterceptor,
 } from "./src/services/axiosApi/axios.config";
+import { LogBox } from 'react-native';
+console.disableYellowBox = true;
+LogBox.ignoreLogs(['Warning: ...']);
 
 export default function App() {
   useEffect(() => {

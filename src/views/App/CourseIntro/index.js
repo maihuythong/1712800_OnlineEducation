@@ -11,6 +11,9 @@ import Header from "../../../components/CourseDetail/Header";
 import VideoPlayer from "../../../components/VideoPlayer";
 import { getLoggedAccount } from "../../../services/app/getHelper";
 import CourseRepo from "../../../services/course/repo";
+import UserRepo from "../../../services/user/repo";
+import { showFlashMessage } from '../../../services/app/actions';
+import MessageType from '../../../services/app/MessageType';
 import styles from "./styles";
 
 const Tab = createMaterialTopTabNavigator();
@@ -62,6 +65,32 @@ const CourseIntro = (props) => {
 
   const onVideoEnded = () => {};
 
+  const enrollCourse = async () => {
+    try {
+      console.log(id);
+      const res = await CourseRepo.getFreeCourse(id);
+      if(res) {
+        console.log(res);
+      }
+    }catch (e) {
+      console.log(e);
+    }
+  }
+
+  const favoriteCourse = async () => {
+    try{
+      const res = await UserRepo.likeCourse(id);
+      if(res){
+        showFlashMessage({
+          type: MessageType.Type.SUCCESS,
+          description: 'Khóa học đã được thêm vào mục yêu thích',
+        });
+      }
+    }catch (e) {
+      console.log(e);
+    }
+  }
+
   useEffect(() => {
     loadCourseDetail();
   }, []);
@@ -91,7 +120,7 @@ const CourseIntro = (props) => {
           </View>
           <View style={styles.other}>
             <ScrollView showsVerticalScrollIndicator={false}>
-              <Header data={course} />
+              <Header data={course} favoriteCourse = {favoriteCourse}  enrollCourse = {enrollCourse}/>
             </ScrollView>
           </View>
         </View>

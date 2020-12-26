@@ -4,12 +4,11 @@ import { FlatList } from "react-native-gesture-handler";
 import LargeCardCourse from "../../LargeCardCourse";
 import LargeCardDefault from "../../LargeCardDefault";
 
-const Content = ({ data, navigation, navigationScreen, isAuthor }) => {
+const Content = ({ data, navigation, navigationScreen, isAuthor = false }) => {
   const card = (item) => {
-    console.log(item);
     if (isAuthor)
-      return (
-        <LargeCardDefault
+    return (
+      <LargeCardDefault
           key={item.id}
           id={item.id}
           image={item["user.avatar"]}
@@ -20,17 +19,20 @@ const Content = ({ data, navigation, navigationScreen, isAuthor }) => {
           navigationScreen={navigationScreen}
         />
       );
-    else
-      return (
-        <LargeCardCourse
-          key={item.id}
-          id={item.id}
-          data={item}
-          authorName={data["instructor.user.name"]}
-          navigation={navigation}
-          navigationScreen={navigationScreen}
-        />
-      );
+      else{
+        console.log('bbbbbbb');
+        console.log(item['instructor.user.name']);
+        return (
+          <LargeCardCourse
+            key={item.id}
+            id={item.id}
+            data={item}
+            authorName={item["instructor.user.name"]}
+            navigation={navigation}
+            navigationScreen={navigationScreen}
+          />
+        );
+      }
   };
   return (
     <View>

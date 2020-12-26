@@ -6,11 +6,11 @@ import MediumButton from "../../MediumButton";
 import CustomRatingBar from "../../shared/CustomRatingBar";
 import { images } from "../../shared/image";
 import styles from "./styles";
-import moment from 'moment';
+import moment from "moment";
 import AuthorRepo from "../../../services/author/repo";
 
 const Header = (props) => {
-  const { data } = props;
+  const { data, favoriteCourse, enrollCourse } = props;
   const [instructor, setInstructor] = useState();
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Header = (props) => {
   }, []);
 
   const addToBookmark = () => {
-    console.log("add to bookmark " + data.id);
+    enrollCourse();
   };
   const [isFull, setIsFull] = useState(true);
 
@@ -53,7 +53,8 @@ const Header = (props) => {
       ) : null}
       <View style={styles.courseInfo}>
         <Text style={styles.textNormalColor}>
-          {moment(data.createdAt).format("DD/MM/yyyy")} • {data.totalHours?.toFixed(3)}
+          {moment(data.createdAt).format("DD/MM/yyyy")} • {" "}
+          {data.totalHours?.toFixed(3)}
         </Text>
         <View style={styles.vote}>
           <CustomRatingBar star={data.formalityPoint} />
@@ -62,11 +63,15 @@ const Header = (props) => {
       </View>
       <View style={styles.operation}>
         <MediumButton
-          text={"Bookmark"}
+          text={"Enroll"}
           uri={images.bookmark.uri}
           action={addToBookmark}
         />
-        <MediumButton text={"Add to Channel"} uri={images.addtochannel.uri} />
+        <MediumButton
+          text={"Like course"}
+          uri={images.love.uri}
+          action={favoriteCourse}
+        />
         <MediumButton text={"Download"} uri={images.download.uri} />
       </View>
       <View style={styles.descriptionContainer}>

@@ -23,6 +23,9 @@ const Home = (props) => {
         CourseRepo.getProcessingCourses(),
         CourseRepo.getFavoriteCourses(),
       ]);
+
+      console.log('processing courses');
+      console.log(processingCourses);
       setProcessCourses(processingCourses);
       setFavoriteCourse(favoriteCourses);
     } catch (e) {
@@ -33,8 +36,14 @@ const Home = (props) => {
   };
 
   useEffect(() => {
-    loadHomeData();
-  }, []);
+    // const unsubscribe = navigation.addListener('focus', () => {
+      loadHomeData();
+      console.log('cc gi the');
+      console.log(processCourses);
+    // });
+
+    // return unsubscribe;
+  }, [navigation]);
 
   return (
     <View style={{ flex: 1 }}>

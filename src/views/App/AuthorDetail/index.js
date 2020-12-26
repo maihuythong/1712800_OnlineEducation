@@ -10,7 +10,9 @@ import LargeCardCourse from "../../../components/LargeCardCourse";
 import { CourseIntroScreen } from "../../../global/constants/screenName";
 import AuthorRepo from "../../../services/author/repo";
 import styles from "./styles";
+import { LogBox } from 'react-native';
 
+LogBox.ignoreLogs(['Warning: ...']);
 const AuthorDetail = (props) => {
   const { id, navigation } = props.route.params;
   const [isFull, setIsFull] = useState(true);

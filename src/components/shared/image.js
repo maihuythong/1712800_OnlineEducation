@@ -14,6 +14,9 @@ export const images = {
   addtochannel: {
     uri: require('../../../assets/add-to-channel.svg'),
   },
+  love: {
+    uri: require('../../../assets/love.svg'),
+  },
   bookmark: {
     uri: require('../../../assets/bookmark.svg'),
   },
@@ -25,6 +28,9 @@ export const images = {
   },
   starfill: {
     uri: require('../../../assets/star-fill.svg'),
+  },
+  google: {
+    uri: require('../../../assets/google.svg'),
   },
   newrelease: {
     uri:

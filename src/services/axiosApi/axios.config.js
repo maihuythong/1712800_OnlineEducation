@@ -16,8 +16,11 @@ const requestInterceptor = AxiosInstance.interceptors.request.use(
       const token = await AsyncStorage.getAccessToken();
       request.headers["Content-Type"] = "application/json";
       request.headers.Authorization = `Bearer ${token}`;
+      console.log(token);
     } catch (e) {
     } finally {
+      console.log('ccccccc');
+      console.log(request);
       return request;
     }
   },

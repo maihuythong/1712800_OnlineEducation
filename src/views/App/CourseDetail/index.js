@@ -8,6 +8,8 @@ import Transcript from "../../../components/CourseDetail/Transcript";
 import VideoPlayer from "../../../components/VideoPlayer";
 import { getLoggedAccount } from "../../../services/app/getHelper";
 import CourseRepo from "../../../services/course/repo";
+import { showFlashMessage } from '../../../services/app/actions';
+import MessageType from '../../../services/app/MessageType';
 import styles from "./styles";
 
 const Tab = createMaterialTopTabNavigator();
@@ -61,7 +63,7 @@ const CourseDetail = (props) => {
     const lesson = await CourseRepo.getLessonInfo(courseId, lessonId);
     if (lesson) {
       setPlayingVideo(lesson.videoUrl);
-      setCurrent(lesson.currentTime);
+      setCurrentTime(lesson.currentTime);
     }
   };
 

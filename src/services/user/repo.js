@@ -125,6 +125,22 @@ const UserRepo = {
       throw e;
     }
   },
+  
+  likeCourse: async function(courseId){
+    try {
+      const { likeStatus: likeStatus } = await Api({
+        method: 'post',
+        url: '/user/like-course',
+        body: {
+          courseId,
+        },
+      });
+      return likeStatus;
+    } catch (e) {
+      console.log('Error when like course ' + e);
+      throw e;
+    }
+  }
 };
 
 export default UserRepo;

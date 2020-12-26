@@ -156,6 +156,8 @@ const CourseRepo = {
         url: "/user/get-process-courses",
       });
       if (courses) {
+        console.log('???');
+        console.log(courses);
         const res = await Promise.all(
           (courses || []).map((course) => CourseRepo.getCourseIntro(course.id))
         );
@@ -192,6 +194,26 @@ const CourseRepo = {
       throw e;
     }
   },
+
+  getFreeCourse: async function(courseId) {
+    console.log(courseId);
+    try {
+      const { freeCourseLink } = await Api({
+        method: 'post',
+        url: '/payment/get-free-courses',
+        body: {
+          courseId,
+        },
+      });
+
+      console.log(freeCourseLink);
+
+      return freeCourseLink;
+    } catch (e) {
+      console.log('Error when get free course ' + e?.response?.data?.message);
+      throw e;
+    }
+  }
 };
 
 export default CourseRepo;

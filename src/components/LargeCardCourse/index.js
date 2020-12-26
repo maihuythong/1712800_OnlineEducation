@@ -7,7 +7,8 @@ import styles from "./styles";
 
 const LargeCardCourse = (props) => {
   const { id, data, authorName, navigation, navigationScreen } = props;
-
+  console.log('aaab');
+  console.log(authorName);
   const course = { id: id };
 
   return (
