@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import { ActivityIndicator, Text, View } from "react-native";
 import { Avatar } from "react-native-elements";
 import {
-  FlatList, ScrollView, TouchableOpacity
+  FlatList,
+  ScrollView,
+  TouchableOpacity,
 } from "react-native-gesture-handler";
 import LargeCardCourse from "../../../components/LargeCardCourse";
+import { CourseIntroScreen } from "../../../global/constants/screenName";
 import AuthorRepo from "../../../services/author/repo";
 import styles from "./styles";
 
@@ -101,6 +104,7 @@ const AuthorDetail = (props) => {
                   // vote={item.vote}
                   // voteCount={item.voteCount}
                   navigation={navigation}
+                  navigationScreen={CourseIntroScreen}
                 />
               )}
             />

@@ -7,7 +7,7 @@ import Browse from "../../../views/App/Browse";
 import CourseDetail from "../../../views/App/CourseDetail";
 import CourseOfSection from "../../../views/App/CourseOfSection";
 import CourseOfSkill from "../../../views/App/CourseOfSkill";
-
+import CourseIntro from '../../../views/App/CourseIntro';
 const Stack = createStackNavigator();
 
 const BrowseStackScreen = () => {
@@ -54,6 +54,15 @@ const BrowseStackScreen = () => {
       <Stack.Screen
         name={ScreenName.CourseDetailScreen}
         component={CourseDetail}
+        options={{
+          headerRight: null,
+          title: null,
+        }}
+      />
+
+      <Stack.Screen
+        name={ScreenName.CourseIntroScreen}
+        component={CourseIntro}
         options={{
           headerRight: null,
           title: null,

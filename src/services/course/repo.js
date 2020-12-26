@@ -71,6 +71,22 @@ const CourseRepo = {
       return data;
     }
   },
+  
+  getRecommendedCourses: async function({ id = "1364530c-90a2-4546-9be2-21f309d4e2db", limit = 10, page = 0 } = {}) {
+    let data = [];
+    try {
+      ({ payload: data } = await Api({
+        method: 'get',
+        url: `/user/recommend-course/${id}/${limit}/${page}`,
+      }));
+    } catch (e) {
+      console.log('Error when get course detail with lesson' + e?.response.data.message);
+      throw e;
+    } finally {
+      console.log(data);
+      return data;
+    }
+  },
 
   getTopNewCourses: async function ({ limit = 10, page = 1 } = {}){
     let data = [];

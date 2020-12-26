@@ -1,33 +1,45 @@
-import React, { useState, useEffect } from "react";
-import { useSelector } from 'react-redux';
-import { FlatList, View, ActivityIndicator } from "react-native";
+import React, { useEffect, useState } from "react";
+import { ActivityIndicator, FlatList, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
+import { useSelector } from "react-redux";
 import Author from "../../../components/Browse/Author";
 import LargeImageButton from "../../../components/Browse/LargeImageButton";
 import SkillBadge from "../../../components/Browse/SkillBadge";
-import SmallImageButton from "../../../components/Browse/SmallImageButton";
-import PathCard from "../../../components/PathCard";
+import CourseCard from "../../../components/CourseCard";
 import Section from "../../../components/Section";
 import { images } from "../../../components/shared/image";
 import * as ScreenName from "../../../global/constants/screenName";
-import authorsjson from "../../../json/authors.json";
-import browsejson from "../../../json/browse.json";
-import mypathjson from "../../../json/mypaths.json";
-import popularskilljson from "../../../json/popularskill.json";
-import styles from "./styles";
+import { getCategories } from "../../../services/app/getHelper";
 import AuthorRepo from "../../../services/author/repo";
-import {getCategories} from '../../../services/app/getHelper';
+import CourseRepo from "../../../services/course/repo";
+import styles from "./styles";
 
 const Browse = (props) => {
   const { navigation } = props;
   const [loading, setLoading] = useState(false);
   const [authors, setAuthors] = useState([]);
+  const [topSells, setTopSells] = useState([]);
+  const [topNews, setTopNews] = useState([]);
+  const [recommended, setRecommended] = useState([]);
   const categories = useSelector(getCategories);
   const loadData = async () => {
     try {
       setLoading(true);
-      const [listAuthor] = await Promise.all([AuthorRepo.getAllAuthor()]);
+      const [
+        listAuthor,
+        recommendedCourses,
+        topSellCourses,
+        topNewsCourses,
+      ] = await Promise.all([
+        AuthorRepo.getAllAuthor(),
+        CourseRepo.getRecommendedCourses(),
+        CourseRepo.getTopSell(),
+        CourseRepo.getTopNewCourses(),
+      ]);
       setAuthors(listAuthor);
+      setRecommended(recommendedCourses);
+      setTopSells(topSellCourses);
+      setTopNews(topNewsCourses);
     } catch (e) {
       console.log(e);
     } finally {
@@ -54,13 +66,17 @@ const Browse = (props) => {
             text={`NEW \n RELEASES`}
             image={images.newrelease.uri}
             navigation={navigation}
+            data={topNews}
+            navigationScreen={ScreenName.CourseIntroScreen}
           />
           <LargeImageButton
             text={`RECOMENDED \n FOR YOU`}
             image={images.recommended.uri}
             navigation={navigation}
+            data={topSells}
+            navigationScreen={ScreenName.CourseIntroScreen}
           />
-          <ScrollView
+          {/* <ScrollView
             horizontal
             show
             style={styles.smallImage}
@@ -82,7 +98,7 @@ const Browse = (props) => {
                 />
               )}
             />
-          </ScrollView>
+          </ScrollView> */}
 
           <Section title="Popular skills" hideSeeall={true}>
             <FlatList
@@ -102,6 +118,22 @@ const Browse = (props) => {
           </Section>
 
           <Section
+            title="Recommend for you"
+            navigation={navigation}
+            nav={ScreenName.CourseListScreen}
+          >
+            <FlatList
+              horizontal
+              data={recommended}
+              showsHorizontalScrollIndicator={false}
+              renderItem={({ item }) => (
+                <CourseCard key={item.id} data={item} navigation={navigation} />
+              )}
+            />
+          </Section>
+
+          {/* 
+          <Section
             title="Paths"
             navigation={navigation}
             nav={ScreenName.CourseListScreen}
@@ -120,7 +152,7 @@ const Browse = (props) => {
                 />
               )}
             />
-          </Section>
+          </Section> */}
 
           <Section
             title="Top authors"
@@ -133,10 +165,7 @@ const Browse = (props) => {
               showsHorizontalScrollIndicator={false}
               renderItem={({ item }) => (
                 <Author
-                  data = {item}
-                  // image={item.avatar}
-                  // name={item.name}
-                  // description={item.description}
+                  data={item}
                   navigation={navigation}
                 />
               )}

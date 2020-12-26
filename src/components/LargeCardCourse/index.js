@@ -1,13 +1,12 @@
-import React from "react";
-import { View, Image, Text } from "react-native";
 import Moment from "moment";
-import styles from "./styles";
+import React from "react";
+import { Image, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import * as ScreenName from "../../global/constants/screenName";
 import CustomRatingBar from "../../components/shared/CustomRatingBar";
+import styles from "./styles";
 
 const LargeCardCourse = (props) => {
-  const { id, data, authorName, navigation } = props;
+  const { id, data, authorName, navigation, navigationScreen } = props;
 
   const course = { id: id };
 
@@ -16,9 +15,7 @@ const LargeCardCourse = (props) => {
       {data ? (
         <TouchableOpacity
           style={styles.container}
-          onPress={() =>
-            navigation.navigate(ScreenName.CourseDetailScreen, { course })
-          }
+          onPress={() => navigation.navigate(navigationScreen, { course })}
         >
           <Image
             style={[styles.image, styles.left]}

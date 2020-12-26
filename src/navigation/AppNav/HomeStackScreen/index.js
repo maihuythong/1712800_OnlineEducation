@@ -57,14 +57,14 @@ const HomeStackScreen = () => {
         }}
       />
       
-      <Stack.Screen
+      {/* <Stack.Screen
         name={ScreenName.CourseIntroScreen}
         component={CourseIntro}
         options={{
           headerRight: null,
           title: null,
         }}
-      />
+      /> */}
     </Stack.Navigator>
   );
 };
