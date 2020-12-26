@@ -7,26 +7,24 @@ import * as ScreenName from "../../../global/constants/screenName";
 import { OfflineDataContext } from "../../../provider/offlinedata-provider";
 import { getLoggedAccount } from "../../../services/app/getHelper";
 import CourseRepo from "../../../services/course/repo";
+import * as SeeAllScreenName from '../../../global/constants/seeAllScreenName';
 import styles from "./styles";
 
 const Home = (props) => {
   const { navigation } = props;
-  const [topSells, setTopSells] = useState([]);
-  const [topNews, setTopNews] = useState([]);
+  const [processCourses, setProcessCourses] = useState([]);
+  const [favoriteCourse, setFavoriteCourse] = useState([]);
   const [loading, setLoading] = useState(false);
-  const context = useContext(OfflineDataContext);
-  const currentUser = useSelector(getLoggedAccount);
 
   const loadHomeData = async () => {
     try {
       setLoading(true);
-      const [topSellCourses, topNewsCourses] = await Promise.all([
-        CourseRepo.getTopSell(),
-        CourseRepo.getTopNewCourses(),
+      const [processingCourses, favoriteCourses] = await Promise.all([
+        CourseRepo.getProcessingCourses(),
+        CourseRepo.getFavoriteCourses(),
       ]);
-      // const topSellCourses = await CourseRepo.getTopSell();
-      setTopSells(topSellCourses);
-      setTopNews(topNewsCourses);
+      setProcessCourses(processingCourses);
+      setFavoriteCourse(favoriteCourses);
     } catch (e) {
       console.log(e);
     } finally {
@@ -47,40 +45,44 @@ const Home = (props) => {
       ) : (
         <ScrollView style={styles.scrollViewContainer}>
           <Section
-            title="Top Selling"
+            title="Processing Courses"
             navigation={navigation}
             nav={ScreenName.CourseListScreen}
+            navChildren={ScreenName.CourseDetailScreen}
+            seeAllScreenName = {SeeAllScreenName.PROCESSING}
           >
             <FlatList
               horizontal
-              data={topSells}
+              data={processCourses}
               showsHorizontalScrollIndicator={false}
               renderItem={({ item }) => (
                 <CourseCard
                   key={item.id}
                   data={item}
                   navigation={navigation}
-                  navigationScreen = {ScreenName.CourseIntroScreen}
+                  navigationScreen = {ScreenName.CourseDetailScreen}
                 />
               )}
             />
           </Section>
 
           <Section
-            title="Top News"
+            title="Favorite Courses"
             navigation={navigation}
             nav={ScreenName.CourseListScreen}
+            navChildren={ScreenName.CourseDetailScreen}
+            seeAllScreenName = {SeeAllScreenName.FAVORITE}
           >
             <FlatList
               horizontal
-              data={topNews}
+              data={favoriteCourse}
               showsHorizontalScrollIndicator={false}
               renderItem={({ item }) => (
                 <CourseCard
                   key={item.id}
                   data={item}
                   navigation={navigation}
-                  navigationScreen = {ScreenName.CourseIntroScreen}
+                  navigationScreen = {ScreenName.CourseDetailScreen}
                 />
               )}
             />

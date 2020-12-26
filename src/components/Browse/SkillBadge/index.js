@@ -9,7 +9,7 @@ const SkillBadge = ({ id, image, content, navigation }) => {
   return (
     <TouchableOpacity
       style={styles.skillContainer}
-      onPress={() => navigation.navigate(CourseOfSkillScreen, { id, title: content})}
+      onPress={() => navigation.navigate(CourseOfSkillScreen, { id, title: content, navigation})}
     >
       {image ? (
         <View>

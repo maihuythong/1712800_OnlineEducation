@@ -53,7 +53,7 @@ const Header = (props) => {
       ) : null}
       <View style={styles.courseInfo}>
         <Text style={styles.textNormalColor}>
-          {moment(data.createdAt).format("DD/MM/yyyy")} • {data.totalHours.toFixed(3)}
+          {moment(data.createdAt).format("DD/MM/yyyy")} • {data.totalHours?.toFixed(3)}
         </Text>
         <View style={styles.vote}>
           <CustomRatingBar star={data.formalityPoint} />

@@ -118,6 +118,44 @@ const CourseRepo = {
       console.log('Error when get category' + e?.response.data.message);
       throw e;
     }
+  },
+
+  getFavoriteCourses: async function() {
+    try {
+      const { payload: courses } = await Api({
+        method: 'get',
+        url: '/user/get-favorite-courses',
+      });
+      if(courses){
+        const res = await Promise.all(
+          (courses || []).map((course) => CourseRepo.getCourseIntro(course.id))
+        );
+        if(res) {
+          return res;
+        }
+      }
+    } catch (e) {
+      console.log('Error when get favorite courses ' + e);
+      throw e;
+    }
+  },
+  
+  getProcessingCourses: async function () {
+    try {
+      const { payload: courses } = await Api({
+        method: 'get',
+        url: '/user/get-process-courses',
+      });
+      if(courses){
+        const res = await Promise.all(
+          (courses || []).map((course) => CourseRepo.getCourseIntro(course.id))
+        );
+        if(res) return res;
+      }
+    } catch (e) {
+      console.log('Error when get processing courses ' + e);
+      throw e;
+    }
   }
 };
 

@@ -2,15 +2,15 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import React, { useEffect, useState } from "react";
 import {
   ActivityIndicator,
-  ScrollView,
-  Text,
-  View,
-  ImageBackground,
+
+
+
+  ImageBackground, ScrollView,
+
+  View
 } from "react-native";
 import { useSelector } from "react-redux";
-import Content from "../../../components/CourseDetail/Content";
 import Header from "../../../components/CourseDetail/Header";
-import Transcript from "../../../components/CourseDetail/Transcript";
 import VideoPlayer from "../../../components/VideoPlayer";
 import { getLoggedAccount } from "../../../services/app/getHelper";
 import CourseRepo from "../../../services/course/repo";
@@ -80,7 +80,7 @@ const CourseIntro = (props) => {
           <View style={styles.video}>
             {!introIsVideo ? (
               <ImageBackground
-                source={course.promoVidUrl}
+                source={{uri: course.imageUrl}}
                 style={styles.image}
               />
             ) : (

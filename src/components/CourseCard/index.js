@@ -15,7 +15,7 @@ const CourseCard = (props) => {
     <TouchableOpacity
       style={styles.cardContainer}
       onPress={() =>
-        navigation.navigate(navigationScreen, { course: course })
+        navigation?.navigate(navigationScreen, { course: course })
       }
     >
       <View style={styles.cardImage}>

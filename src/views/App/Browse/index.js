@@ -9,6 +9,7 @@ import CourseCard from "../../../components/CourseCard";
 import Section from "../../../components/Section";
 import { images } from "../../../components/shared/image";
 import * as ScreenName from "../../../global/constants/screenName";
+import * as SeeAllScreenName from "../../../global/constants/seeAllScreenName";
 import { getCategories } from "../../../services/app/getHelper";
 import AuthorRepo from "../../../services/author/repo";
 import CourseRepo from "../../../services/course/repo";
@@ -16,7 +17,7 @@ import styles from "./styles";
 
 const Browse = (props) => {
   const { navigation } = props;
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [authors, setAuthors] = useState([]);
   const [topSells, setTopSells] = useState([]);
   const [topNews, setTopNews] = useState([]);
@@ -70,7 +71,7 @@ const Browse = (props) => {
             navigationScreen={ScreenName.CourseIntroScreen}
           />
           <LargeImageButton
-            text={`RECOMENDED \n FOR YOU`}
+            text={`TOP \n SELLING`}
             image={images.recommended.uri}
             navigation={navigation}
             data={topSells}
@@ -121,13 +122,20 @@ const Browse = (props) => {
             title="Recommend for you"
             navigation={navigation}
             nav={ScreenName.CourseListScreen}
+            navChildren={ScreenName.CourseIntroScreen}
+            seeAllScreenName={SeeAllScreenName.RECOMMENDED}
           >
             <FlatList
               horizontal
               data={recommended}
               showsHorizontalScrollIndicator={false}
               renderItem={({ item }) => (
-                <CourseCard key={item.id} data={item} navigation={navigation} />
+                <CourseCard
+                  key={item.id}
+                  data={item}
+                  navigation={navigation}
+                  navigationScreen={ScreenName.CourseIntroScreen}
+                />
               )}
             />
           </Section>
@@ -164,10 +172,7 @@ const Browse = (props) => {
               data={authors}
               showsHorizontalScrollIndicator={false}
               renderItem={({ item }) => (
-                <Author
-                  data={item}
-                  navigation={navigation}
-                />
+                <Author data={item} navigation={navigation} />
               )}
             />
           </Section>
