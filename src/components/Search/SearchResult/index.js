@@ -9,80 +9,84 @@ import authors from '../../../json/authors.json';
 import styles from './styles';
 import LargeCardDefault from '../../LargeCardDefault';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import * as ScreenName from '../../../global/constants/screenName';
+
 const Tab = createMaterialTopTabNavigator();
 
 const SearchResult = (props) => {
-  const { navigation } = props;
+  const { navigation, data } = props;
   const ALL = () => (
     <ScrollView style={styles.container}>
       {COURSE()}
-      {PATH()}
+      {/* {PATH()} */}
       {AUTHOR()}
     </ScrollView>
   );
 
   const COURSE = () => (
     <View style={styles.container}>
-      <Section title='Courses'>
+    {data ? (
+      <Section title='Courses' hideSeeall={true}>
         <FlatList
-          data={homejson}
+          data={data.courses ? data.courses?.data ?? [] : []}
           renderItem={({ item }) => (
             <LargeCardCourse
               key={item.id}
               id={item.id}
-              image={item.image}
-              coursename={item.title}
-              level={item.level}
-              publishDate={item.publishDate}
-              duration={item.duration}
-              vote={item.vote}
-              voteCount={item.voteCount}
+              authorName = {item.name}
+              data = {item}
               navigation={navigation}
+              navigationScreen = {ScreenName.CourseIntroScreen}
             />
           )}
         />
       </Section>
+    ): null }
     </View>
   );
 
-  const PATH = () => (
-    <View style={styles.container}>
-      <Section title='Paths'>
-        <FlatList
-          data={mypathsjson}
-          renderItem={({ item }) => (
-            <LargeCardDefault
-              key={item.id}
-              id={item.id}
-              image={item.image}
-              title={item.pathName}
-              count={item.courseCount}
-              type={1}
-            />
-          )}
-        />
-      </Section>
-    </View>
-  );
+  // const PATH = () => (
+  //   <View style={styles.container}>
+  //     <Section title='Paths'>
+  //       <FlatList
+  //         data={mypathsjson}
+  //         renderItem={({ item }) => (
+  //           <LargeCardDefault
+  //             key={item.id}
+  //             id={item.id}
+  //             image={item.image}
+  //             title={item.pathName}
+  //             count={item.courseCount}
+  //             type={1}
+  //           />
+  //         )}
+  //       />
+  //     </Section>
+  //   </View>
+  // );
 
   const AUTHOR = () => (
     <View style={styles.container}>
-      <Section title='Authors'>
+    {data ? (
+      <Section title='Authors' hideSeeall={true}>
         <FlatList
           maxToRenderPerBatch={3}
-          data={authors}
+          data={data.instructors ? data.instructors?.data ?? [] : []}
           renderItem={({ item }) => (
             <LargeCardDefault
               key={item.id}
               id={item.id}
               image={item.avatar}
-              title={item.pathName}
-              count={item.courseCount}
+              title={item.name}
+              count={item.numcourses}
               type={2}
+              navigation = {navigation}
+              navigationScreen = {ScreenName.AuthorDetailScreen}
             />
           )}
         />
       </Section>
+    ): null}
     </View>
   );
 
@@ -107,11 +111,11 @@ const SearchResult = (props) => {
           component={COURSE}
           // options={{ tabBarLabel: 'Updates' }}
         />
-        <Tab.Screen
+        {/* <Tab.Screen
           name='PATHS'
           component={PATH}
           // options={{ tabBarLabel: 'Updates' }}
-        />
+        /> */}
         <Tab.Screen
           name='AUTHORS'
           component={AUTHOR}

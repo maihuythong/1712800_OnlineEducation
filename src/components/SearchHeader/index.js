@@ -1,20 +1,39 @@
-import React from 'react';
-import { TextInput, View } from 'react-native';
-import styles from './styles';
+import SvgUri from "expo-svg-uri";
+import React from "react";
+import { TextInput, TouchableOpacity, View } from "react-native";
+import styles from "./styles";
 
 const SearchHeader = (props) => {
-  const { text, onChange } = props;
+  const { text, onSubmit, onChange } = props;
+
+  // const [searchText, setSearchText] = useState('');
+
+  // const onChange = (value) => {
+  //   setSearchText(value);
+  // }
+
+  // if(searchText === ''){
+  //   clearText();
+  // }
 
   return (
     <View style={styles.container}>
       <TextInput
-        autoCapitalize={'none'}
+        style={styles.textContainer}
+        autoCapitalize={"none"}
         value={text}
         onChangeText={onChange}
         style={styles.text}
-        placeholder='Search...'
-        placeholderTextColor='#A9A9A9'
+        placeholder="Search..."
+        placeholderTextColor="#A9A9A9"
       />
+      <TouchableOpacity style={styles.icon} onPress={() => onSubmit(text)}>
+        <SvgUri
+          width="32"
+          height="32"
+          source={require("../../../assets/magnify.svg")}
+        />
+      </TouchableOpacity>
     </View>
   );
 };

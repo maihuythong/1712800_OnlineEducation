@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    justifyContent: 'flex-start',
+    // justifyContent: 'flex-start',
   },
   head: {
     flexDirection: 'row',

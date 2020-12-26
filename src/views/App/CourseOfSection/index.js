@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { View, ActivityIndicator } from "react-native";
+import React, { useEffect, useState } from "react";
+import { ActivityIndicator, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import Content from "../../../components/CourseOfSection/Content";
 import Header from "../../../components/CourseOfSection/Header";
-import styles from "./styles";
 import * as SeeAllScreenName from "../../../global/constants/seeAllScreenName";
+import AuthorRepo from "../../../services/author/repo";
 import CourseRepo from "../../../services/course/repo";
-import { log } from "react-native-reanimated";
+import styles from "./styles";
 
 const CourseOfSection = (props) => {
   const {
@@ -14,7 +14,7 @@ const CourseOfSection = (props) => {
     data,
     navigation,
     seeAllScreenName,
-    navChildren
+    navChildren,
   } = props.route.params;
   const [loading, setLoading] = useState(seeAllScreenName ? false : true);
   const [newData, setNewData] = useState([]);
@@ -25,25 +25,29 @@ const CourseOfSection = (props) => {
         switch (seeAllScreenName) {
           case SeeAllScreenName.RECOMMENDED:
             CourseRepo.getRecommendedCourses()
-              .then(data => {
+              .then((data) => {
                 setNewData(data);
               })
-              .catch( e => console.log(e))
+              .catch((e) => console.log(e));
             break;
           case SeeAllScreenName.PROCESSING:
             CourseRepo.getProcessingCourses()
-              .then(data => {
+              .then((data) => {
                 setNewData(data);
               })
-              .catch( e => console.log(e))
+              .catch((e) => console.log(e));
             break;
           case SeeAllScreenName.FAVORITE:
             CourseRepo.getFavoriteCourses()
-              .then(data => {
+              .then((data) => {
                 setNewData(data);
               })
-              .catch( e => console.log(e))
+              .catch((e) => console.log(e));
             break;
+          case SeeAllScreenName.AUTHOR:
+            AuthorRepo.getAllAuthor().then((data) => {
+              setNewData(data);
+            });
           default:
             break;
         }
@@ -78,6 +82,9 @@ const CourseOfSection = (props) => {
           </View>
           <ScrollView style={styles.content}>
             <Content
+              isAuthor={
+                seeAllScreenName === SeeAllScreenName.AUTHOR ? true : false
+              }
               data={seeAllScreenName ? newData : data}
               navigation={navigation}
               navigationScreen={navChildren}

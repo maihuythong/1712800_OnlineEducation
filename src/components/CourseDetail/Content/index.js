@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionList, Text, View } from "react-native";
+import { SectionList, Text, TouchableOpacity, View } from "react-native";
 import HeaderSection from "../HeaderSection";
 import RowDetail from "../RowDetail";
 import styles from "./styles";
@@ -11,7 +11,7 @@ const Item = ({ title }) => (
 );
 
 const Content = (props) => {
-  const { DATA } = props;
+  const { DATA, onSelectSection } = props;
   return (
     <View style={styles.container}>
       {DATA ? (
@@ -25,13 +25,18 @@ const Content = (props) => {
           )}
           renderItem={({ item }) => {
             return (
-              <RowDetail
-                key={item.id}
-                id={item.id}
-                title={item.name}
-                completed={true}
-                duration={item.hours}
-              />
+              <TouchableOpacity
+                onPress={() => onSelectSection(item.courseId, item.id)}
+              >
+                <RowDetail
+                  key={item.id}
+                  id={item.id}
+                  title={item.name}
+                  completed={true}
+                  duration={item.hours}
+                  onSelectSection={onSelectSection}
+                />
+              </TouchableOpacity>
             );
           }}
         />

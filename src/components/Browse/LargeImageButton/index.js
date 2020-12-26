@@ -19,7 +19,7 @@ const LargeImageButton = ({
           title: text.replace("\n", ""),
           data,
           navigation,
-          navigationScreen,
+          navChildren: navigationScreen,
         })
       }
     >

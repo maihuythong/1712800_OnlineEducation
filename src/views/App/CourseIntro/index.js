@@ -2,11 +2,8 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import React, { useEffect, useState } from "react";
 import {
   ActivityIndicator,
-
-
-
-  ImageBackground, ScrollView,
-
+  ImageBackground,
+  ScrollView,
   View
 } from "react-native";
 import { useSelector } from "react-redux";
@@ -32,7 +29,7 @@ const CourseIntro = (props) => {
       const courseData = await CourseRepo.getCourseIntro(id);
       if (courseData) {
         setCourse(courseData);
-        const url = courseData?.promoVidUrl?? null;
+        const url = courseData?.promoVidUrl ?? null;
         if (courseData.promoVidUrl) {
           let index = url.lastIndexOf(".");
           const extension = url.substring(index + 1, url.length).toLowerCase();
@@ -80,13 +77,12 @@ const CourseIntro = (props) => {
           <View style={styles.video}>
             {!introIsVideo ? (
               <ImageBackground
-                source={{uri: course.imageUrl}}
+                source={{ uri: course.imageUrl }}
                 style={styles.image}
               />
             ) : (
               <VideoPlayer
                 isYoutubeVideo={isYoutubeVideo}
-                courseData={course}
                 url={course.promoVidUrl}
                 onStopVideo={onStopVideo}
                 onVideoEnded={onVideoEnded}

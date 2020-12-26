@@ -1,9 +1,8 @@
-import React from "react";
-import { TouchableOpacity, View, Text, Image } from "react-native";
-import styles from "./styles";
-import * as ScreenName from "../../global/constants/screenName";
-import CustomRatingBar from "../../components/shared/CustomRatingBar";
 import moment from "moment";
+import React from "react";
+import { Image, Text, TouchableOpacity, View } from "react-native";
+import CustomRatingBar from "../../components/shared/CustomRatingBar";
+import styles from "./styles";
 
 const CourseCard = (props) => {
   const { data, navigation, navigationScreen } = props;
@@ -14,9 +13,7 @@ const CourseCard = (props) => {
   return (
     <TouchableOpacity
       style={styles.cardContainer}
-      onPress={() =>
-        navigation?.navigate(navigationScreen, { course: course })
-      }
+      onPress={() => navigation?.navigate(navigationScreen, { course: course })}
     >
       <View style={styles.cardImage}>
         <Image
@@ -33,8 +30,8 @@ const CourseCard = (props) => {
         </Text>
         <Text style={styles.defaultText}>{data["instructor.user.name"]}</Text>
         <Text style={styles.defaultText}>
-          {moment(data.createdAt).format("DD/MM/yyyy")} - {data.totalHours.toFixed(3)}{" "}
-          hours
+          {moment(data.createdAt).format("DD/MM/yyyy")} -{" "}
+          {data?.totalHours?.toFixed(3) ?? null} hours
         </Text>
         <View style={styles.rating}>
           <CustomRatingBar

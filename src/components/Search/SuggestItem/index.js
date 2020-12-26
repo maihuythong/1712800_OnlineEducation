@@ -1,27 +1,22 @@
-import React from 'react';
-import { TouchableOpacity, View, Text } from 'react-native';
-import SvgUri from 'expo-svg-uri';
-import styles from './styles';
-import * as ScreenName from '../../../global/constants/screenName';
+import SvgUri from "expo-svg-uri";
+import React from "react";
+import { Text, View } from "react-native";
+import styles from "./styles";
 
-const SuggestItem = ({ isRecent, text, navigation }) => {
+const SuggestItem = ({ isRecent, text }) => {
   let imgsrc;
   if (isRecent) {
-    imgsrc = require('../../../../assets/recent.svg');
+    imgsrc = require("../../../../assets/recent.svg");
   } else {
-    imgsrc = require('../../../../assets/search.svg');
+    imgsrc = require("../../../../assets/search.svg");
   }
   return (
-    <TouchableOpacity
-      onPress={() => navigation.navigate(ScreenName.SearchResultScreen)}
-    >
-      <View style={styles.container}>
-        <View>
-          <SvgUri width='25' height='25' source={imgsrc} />
-        </View>
-        <Text style={styles.text}>{text}</Text>
+    <View style={styles.container}>
+      <View>
+        <SvgUri width="25" height="25" source={imgsrc} />
       </View>
-    </TouchableOpacity>
+      <Text style={styles.text}>{text}</Text>
+    </View>
   );
 };
 

@@ -1,10 +1,19 @@
-import React from 'react';
-import { TouchableOpacity, View, Text, Image } from 'react-native';
-import styles from './styles';
-import { Avatar } from 'react-native-elements';
+import React from "react";
+import { Image, Text, TouchableOpacity, View } from "react-native";
+import { Avatar } from "react-native-elements";
+import styles from "./styles";
 
 const LargeCardDefault = (props) => {
-  const { id, image, title, count, progress, type } = props;
+  const {
+    id,
+    image,
+    title,
+    count,
+    progress,
+    type,
+    navigation,
+    navigationScreen,
+  } = props;
 
   const getImage = (type, path) => {
     switch (type) {
@@ -23,11 +32,14 @@ const LargeCardDefault = (props) => {
 
   let img = getImage(type, image);
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => navigation.navigate(navigationScreen, { id, navigation })}
+    >
       <View style={styles.left}>{img}</View>
       <View style={styles.right}>
         <Text style={styles.title}>{title}</Text>
-        <Text style={styles.text}>{count} courses</Text>
+        {count ? <Text style={styles.text}>{count} courses</Text> : null}
       </View>
     </TouchableOpacity>
   );

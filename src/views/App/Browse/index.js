@@ -166,6 +166,8 @@ const Browse = (props) => {
             title="Top authors"
             navigation={navigation}
             nav={ScreenName.CourseListScreen}
+            navChildren={ScreenName.AuthorDetailScreen}
+            seeAllScreenName={SeeAllScreenName.AUTHOR}
           >
             <FlatList
               horizontal

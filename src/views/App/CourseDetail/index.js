@@ -1,6 +1,6 @@
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import React, { useEffect, useState } from "react";
-import { ActivityIndicator, ScrollView, Text, View } from "react-native";
+import { ActivityIndicator, ScrollView, View } from "react-native";
 import { useSelector } from "react-redux";
 import Content from "../../../components/CourseDetail/Content";
 import Header from "../../../components/CourseDetail/Header";
@@ -18,6 +18,9 @@ const CourseDetail = (props) => {
   const [loading, setLoading] = useState(true);
   const [course, setCourse] = useState({});
   const [section, setSection] = useState([]);
+  const [playingVideo, setPlayingVideo] = useState("");
+  const [currentTime, setCurrentTime] = useState("");
+  const [isYoutubeVideo, setIsYoutubeVideo] = useState(false);
 
   const loadCourseDetail = async () => {
     try {
@@ -49,13 +52,18 @@ const CourseDetail = (props) => {
     }
   };
 
-  const onStopVideo = () => {
+  const onStopVideo = () => {};
 
-  }
+  const onVideoEnded = () => {};
 
-  const onVideoEnded = () => {
-
-  }
+  const onSelectSection = async (courseId, lessonId) => {
+    console.log("select " + courseId + lessonId);
+    const lesson = await CourseRepo.getLessonInfo(courseId, lessonId);
+    if (lesson) {
+      setPlayingVideo(lesson.videoUrl);
+      setCurrent(lesson.currentTime);
+    }
+  };
 
   useEffect(() => {
     loadCourseDetail();
@@ -71,7 +79,8 @@ const CourseDetail = (props) => {
         <View style={styles.courseDetailContainer}>
           <View style={styles.video}>
             <VideoPlayer
-              courseData={course}
+              isYoutubeVideo={isYoutubeVideo}
+              url={playingVideo}
               onStopVideo={onStopVideo}
               onVideoEnded={onVideoEnded}
             />
@@ -92,7 +101,13 @@ const CourseDetail = (props) => {
               >
                 <Tab.Screen
                   name="CONTENTS"
-                  component={() => <Content DATA={section} />}
+                  component={() => (
+                    <Content
+                      DATA={section}
+                      onSelectSection={onSelectSection}
+                      currentTime={currentTime}
+                    />
+                  )}
                   // options={{ DATA: content }}
                 />
                 <Tab.Screen

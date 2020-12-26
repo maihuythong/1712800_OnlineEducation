@@ -1,3 +1,4 @@
+import { Video } from "expo-av";
 import React, {
   useCallback,
   useEffect,
@@ -9,7 +10,6 @@ import { View } from "react-native";
 import CustomIcon from "react-native-vector-icons/FontAwesome";
 import YoutubePlayer, { getYoutubeMeta } from "react-native-youtube-iframe";
 import styles from "./styles";
-import { Video } from "expo-av";
 
 const LoadingVideoIndicator = ({ isYoutubeVideo }) => {
   const icon = isYoutubeVideo ? "youtube" : "youtube";
@@ -21,17 +21,18 @@ const LoadingVideoIndicator = ({ isYoutubeVideo }) => {
 };
 
 const ExpoVideoPlayer = (props) => {
-  const { url, height } = props;
+  const { url, height, currentTime } = props;
   return (
     <Video
       shouldPlay
       rate={1.0}
-      volume={1.0}
       isMuted={false}
+      volume={1.0}
       progressUpdateIntervalMillis={500}
       isLooping={false}
       source={{ uri: url }}
       useNativeControls
+      positionMillis={currentTime}
       style={[styles.containerVideo, { height: height }]}
     />
   );
@@ -48,7 +49,6 @@ const YoutubeVideoPlayer = (props) => {
     autoPlay,
     onStopVideo,
     onVideoEnded,
-    courseData,
   } = props;
 
   const videoRef = useRef(null);
@@ -110,21 +110,18 @@ const YoutubeVideoPlayer = (props) => {
 const VideoPlayer = (props) => {
   const {
     isYoutubeVideo,
-    courseData,
     url,
     autoPlay = true,
     onStopVideo,
     onVideoEnded,
-    currentTime,
+    currentTime = 0,
   } = props;
   const [isLoading, setLoading] = useState(true);
   const [height, setHeight] = useState(300);
-  console.log(isYoutubeVideo);
   return (
     <View style={[styles.containerVideo, { height }]}>
       {isYoutubeVideo ? (
         <YoutubeVideoPlayer
-          courseData={courseData}
           autoPlay={autoPlay}
           url={url}
           height={height}
@@ -136,7 +133,7 @@ const VideoPlayer = (props) => {
           currentTime={currentTime}
         />
       ) : (
-        <ExpoVideoPlayer url={url} height={height} />
+        <ExpoVideoPlayer url={url} height={height} currentTime={currentTime} />
       )}
     </View>
   );

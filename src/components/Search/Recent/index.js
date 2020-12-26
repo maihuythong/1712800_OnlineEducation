@@ -1,28 +1,30 @@
-import React from 'react';
-import { Text, View } from 'react-native';
-import { TouchableOpacity, FlatList } from 'react-native-gesture-handler';
-import recentjson from '../../../json/recent.json';
-import SuggestItem from '../SuggestItem';
-import styles from './styles';
+import React from "react";
+import { ScrollView, Text, View } from "react-native";
+import { FlatList, TouchableOpacity } from "react-native-gesture-handler";
+import SuggestItem from "../SuggestItem";
+import styles from "./styles";
 
-const Recent = () => {
+const Recent = (props) => {
+  const { data, onHistoryClick, clearAll } = props;
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.head}>
         <Text style={styles.title}>Recent searches</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => clearAll()}>
           <Text style={styles.clear}>CLEAR ALL</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.list}>
         <FlatList
-          data={recentjson}
+          data={data}
           renderItem={({ item }) => (
-            <SuggestItem text={item.text} isRecent={true} />
+            <TouchableOpacity onPress={() => onHistoryClick(item.content)}>
+              <SuggestItem id={item.id} text={item.content} isRecent={true} />
+            </TouchableOpacity>
           )}
         />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
