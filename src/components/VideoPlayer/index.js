@@ -12,7 +12,7 @@ import styles from "./styles";
 import { Video } from "expo-av";
 
 const LoadingVideoIndicator = ({ isYoutubeVideo }) => {
-  const icon = isYoutubeVideo ? "youtube" : "film";
+  const icon = isYoutubeVideo ? "youtube" : "youtube";
   return (
     <View style={styles.container}>
       <CustomIcon name={icon} size={48} />
@@ -22,9 +22,6 @@ const LoadingVideoIndicator = ({ isYoutubeVideo }) => {
 
 const ExpoVideoPlayer = (props) => {
   const { url, height } = props;
-  console.log(url);
-  url = 'https://storage.googleapis.com/itedu-bucket/Courses/7844e73e-f61b-4f1b-82ce-f98f120a7c46/promo/6c45f15c-6165-4353-89a7-658a58934703.mp4'
-
   return (
     <Video
       shouldPlay
@@ -122,7 +119,7 @@ const VideoPlayer = (props) => {
   } = props;
   const [isLoading, setLoading] = useState(true);
   const [height, setHeight] = useState(300);
-
+  console.log(isYoutubeVideo);
   return (
     <View style={[styles.containerVideo, { height }]}>
       {isYoutubeVideo ? (

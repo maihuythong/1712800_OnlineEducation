@@ -33,7 +33,6 @@ const CourseIntro = (props) => {
       if (courseData) {
         setCourse(courseData);
         const url = courseData?.promoVidUrl?? null;
-        console.log(url);
         if (courseData.promoVidUrl) {
           let index = url.lastIndexOf(".");
           const extension = url.substring(index + 1, url.length).toLowerCase();
@@ -79,7 +78,7 @@ const CourseIntro = (props) => {
       ) : (
         <View style={styles.courseDetailContainer}>
           <View style={styles.video}>
-            {introIsVideo ? (
+            {!introIsVideo ? (
               <ImageBackground
                 source={course.promoVidUrl}
                 style={styles.image}

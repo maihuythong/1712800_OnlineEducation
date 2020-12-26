@@ -60,6 +60,7 @@ const Home = (props) => {
                   key={item.id}
                   data={item}
                   navigation={navigation}
+                  navigationScreen = {ScreenName.CourseIntroScreen}
                 />
               )}
             />
@@ -79,6 +80,7 @@ const Home = (props) => {
                   key={item.id}
                   data={item}
                   navigation={navigation}
+                  navigationScreen = {ScreenName.CourseIntroScreen}
                 />
               )}
             />
