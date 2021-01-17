@@ -10,9 +10,12 @@ import {
   requestInterceptor,
   responseInterceptor,
 } from "./src/services/axiosApi/axios.config";
-import { LogBox } from 'react-native';
+import { LogBox } from "react-native";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./src/i18n/i18n";
+
 console.disableYellowBox = true;
-LogBox.ignoreLogs(['Warning: ...']);
+LogBox.ignoreLogs(["Warning: ..."]);
 
 export default function App() {
   useEffect(() => {
@@ -23,13 +26,15 @@ export default function App() {
   }, []);
 
   return (
-    <Provider store={store}>
-      <SafeAreaView style={styles.container}>
-        <StatusBar hidden={false} />
-        <FlashMessage />
-        <RootAppNavigation />
-      </SafeAreaView>
-    </Provider>
+    <I18nextProvider i18n={i18n}>
+      <Provider store={store}>
+        <SafeAreaView style={styles.container}>
+          <StatusBar hidden={false} />
+          <FlashMessage />
+          <RootAppNavigation />
+        </SafeAreaView>
+      </Provider>
+    </I18nextProvider>
   );
 }
 

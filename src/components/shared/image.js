@@ -29,6 +29,9 @@ export const images = {
   starfill: {
     uri: require('../../../assets/star-fill.svg'),
   },
+  send: {
+    uri: require('../../../assets/send.svg'),
+  },
   google: {
     uri: require('../../../assets/google.svg'),
   },

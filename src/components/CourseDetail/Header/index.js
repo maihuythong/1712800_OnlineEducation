@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FlatList, Text, TouchableOpacity, View } from "react-native";
+import { FlatList, Text, TouchableOpacity, View, Share } from "react-native";
 import BigBadge from "../../BigBadge";
 import LargeButton from "../../LargeButton";
 import MediumButton from "../../MediumButton";
@@ -8,10 +8,25 @@ import { images } from "../../shared/image";
 import styles from "./styles";
 import moment from "moment";
 import AuthorRepo from "../../../services/author/repo";
+import { showFlashMessage } from "../../../services/app/actions";
+import MessageType from "../../../services/app/MessageType";
+import { useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
+import { BASE_URL } from "../../../constants";
 
 const Header = (props) => {
-  const { data, favoriteCourse, enrollCourse } = props;
+  const {
+    isOwner,
+    data,
+    favoriteCourse,
+    enrollCourse,
+    similarCourseData,
+    navigation,
+    navigationScreen,
+  } = props;
   const [instructor, setInstructor] = useState();
+  const dispatch = useDispatch();
+  const { t } = useTranslation(["course", "notification"]);
 
   useEffect(() => {
     const getInstructor = async () => {
@@ -35,6 +50,38 @@ const Header = (props) => {
   const addToBookmark = () => {
     enrollCourse();
   };
+
+  const shareCourse = async () => {
+    if (data) {
+      try {
+        const url = `${BASE_URL}/course-detail/${data.id}`;
+        const res = await Share.share({
+          title: t("course:share_title"),
+          message: url,
+        });
+
+        if (res.action === Share.sharedAction) {
+          // shared
+          dispatch(
+            showFlashMessage({
+              type: MessageType.Type.SUCCESS,
+              description: t("notification:share_course_success"),
+            })
+          );
+        } else if (res.action === Share.dismissedAction) {
+          // dismissed
+        }
+      } catch (e) {
+        dispatch(
+          showFlashMessage({
+            type: MessageType.Type.DANGER,
+            description: t("notification:share_course_fail"),
+          })
+        );
+      }
+    }
+  };
+
   const [isFull, setIsFull] = useState(true);
 
   return (
@@ -53,7 +100,7 @@ const Header = (props) => {
       ) : null}
       <View style={styles.courseInfo}>
         <Text style={styles.textNormalColor}>
-          {moment(data.createdAt).format("DD/MM/yyyy")} • {" "}
+          {moment(data.createdAt).format("DD/MM/yyyy")} •{" "}
           {data.totalHours?.toFixed(3)}
         </Text>
         <View style={styles.vote}>
@@ -62,17 +109,26 @@ const Header = (props) => {
         </View>
       </View>
       <View style={styles.operation}>
+          {!isOwner ? 
         <MediumButton
-          text={"Enroll"}
+          text={t("course:buy_course")}
           uri={images.bookmark.uri}
           action={addToBookmark}
-        />
+        /> : null}
         <MediumButton
-          text={"Like course"}
+          text={t("course:like_course")}
           uri={images.love.uri}
           action={favoriteCourse}
         />
-        <MediumButton text={"Download"} uri={images.download.uri} />
+        <MediumButton
+          text={t("course:download_course")}
+          uri={images.download.uri}
+        />
+        <MediumButton
+          text={t("course:share_course")}
+          uri={images.download.uri}
+          action={shareCourse}
+        />
       </View>
       <View style={styles.descriptionContainer}>
         <View style={styles.textDescription}>
@@ -96,13 +152,17 @@ const Header = (props) => {
         </TouchableOpacity>
       </View>
       <View style={styles.bottom}>
-        <LargeButton
+        {/* <LargeButton
           uri={images.takealearn.uri}
           text={"Take a learning check"}
-        />
+        /> */}
         <LargeButton
           uri={images.viewmore.uri}
-          text={"View related paths & courses"}
+          text={t("course:course_similar")}
+          data={similarCourseData}
+          navigation={navigation}
+          navigationScreen={navigationScreen}
+          hideCover={true}
         />
       </View>
     </View>

@@ -2,6 +2,7 @@ import AsyncStorageComp from "@react-native-community/async-storage";
 
 export const ASYNC_STORAGE_CONSTANTS = {
   ACCESS_TOKEN: "ACCESS_TOKEN",
+  LANGUAGE: "LANGUAGE",
 };
 
 const AsyncStorage = {
@@ -39,6 +40,26 @@ const AsyncStorage = {
       return false;
     }
   },
+
+  getLanguage: async function() {
+    try {
+      const language = await AsyncStorageComp.getItem(ASYNC_STORAGE_CONSTANTS.LANGUAGE);
+      return language;
+    } catch (e) {
+      console.log('Error when get language ' + e);
+      return null;
+    }
+  },
+
+  setLanguage:  async function(language) {
+    try {
+      await AsyncStorageComp.setItem(AsyncStorage.ASYNC_STORAGE_CONSTANTS.LANGUAGE, language);
+      return true;
+    } catch (e) {
+      console.log('Error when get language ' + e);
+      return false;
+    }
+  }
 };
 
 export default AsyncStorage;
