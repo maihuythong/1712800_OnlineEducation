@@ -24,11 +24,21 @@ export default StyleSheet.create({
   foot: {
     marginTop: 20,
   },
-  signupContainer: {
+  suggestion: {
     flexDirection: 'row',
+    alignSelf: 'center',
+    marginTop: 20
+  },
+  signupContainer: {
+    flexDirection: 'column',
     marginTop: 20,
-    alignContent: 'center',
-    justifyContent: 'center',
+    alignSelf: 'center',
+  },
+  googleSignIn: {
+    fontSize: 18,
+    color: '#009dc4',
+    alignSelf: 'center',
+    paddingVertical: 7,
   },
   text: {
     fontSize: 14,
