@@ -9,6 +9,8 @@ import MessageType from "../../../services/app/MessageType";
 import { UPDATE_PROFILE } from "../../../services/user/constants";
 import UserRepo from "../../../services/user/repo";
 import styles from "./styles";
+import { useTranslation } from 'react-i18next';
+
 
 const ChangeProfile = (props) => {
   const { navigation } = props;
@@ -17,6 +19,7 @@ const ChangeProfile = (props) => {
   const [phone, setPhone] = React.useState(loggedAccount.phone);
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
+  const { t } = useTranslation(['authentication', 'notification']);
 
   const handleSubmit = async () => {
     if(!loading) {
@@ -28,7 +31,7 @@ const ChangeProfile = (props) => {
           dispatch(
             showFlashMessage({
               type: MessageType.Type.INFO,
-              description: "Cập nhật thông tin thành công",
+              description: t('notification:update_profile_success'),
             })
           );
           dispatch({
@@ -40,7 +43,7 @@ const ChangeProfile = (props) => {
         dispatch(
           showFlashMessage({
             type: MessageType.Type.DANGER,
-            description: e?.response?.data?.message,
+            description: t('authentication:update_profile_fail'),
           })
         );
       } finally {
@@ -56,7 +59,7 @@ const ChangeProfile = (props) => {
       <ScrollView style={styles.container}>
         <TextInput
           style={{}}
-          label="Name"
+          label={t('authentication:full_name')}
           value={name}
           onChangeText={(name) => setName(name)}
           theme={{
@@ -71,7 +74,7 @@ const ChangeProfile = (props) => {
         />
         <TextInput
           style={{}}
-          label="Phone number"
+          label={t('authentication:phone')}
           value={phone}
           onChangeText={(text) => setPhone(text)}
           theme={{
@@ -85,7 +88,7 @@ const ChangeProfile = (props) => {
           }}
         />
         <TouchableOpacity style={styles.foot} onPress={() => handleSubmit()}>
-          <Text style={styles.submit}>SUBMIT</Text>
+          <Text style={styles.submit}>{t('authentication:submit')}</Text>
         </TouchableOpacity>
       </ScrollView>
     );

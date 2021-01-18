@@ -10,10 +10,13 @@ import styles from './styles';
 import LargeCardDefault from '../../LargeCardDefault';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import * as ScreenName from '../../../global/constants/screenName';
+import { useTranslation } from 'react-i18next';
 
 const Tab = createMaterialTopTabNavigator();
 
 const SearchResult = (props) => {
+  const { t } = useTranslation('search');
+
   const { navigation, data } = props;
   const ALL = () => (
     <ScrollView style={styles.container}>
@@ -26,7 +29,7 @@ const SearchResult = (props) => {
   const COURSE = () => (
     <View style={styles.container}>
     {data ? (
-      <Section title='Courses' hideSeeall={true}>
+      <Section title={t('tab_course')} hideSeeall={true}>
         <FlatList
           data={data.courses ? data.courses?.data ?? [] : []}
           renderItem={({ item }) => (
@@ -68,7 +71,7 @@ const SearchResult = (props) => {
   const AUTHOR = () => (
     <View style={styles.container}>
     {data ? (
-      <Section title='Authors' hideSeeall={true}>
+      <Section title={t('tab_instructor')} hideSeeall={true}>
         <FlatList
           maxToRenderPerBatch={3}
           data={data.instructors ? data.instructors?.data ?? [] : []}
@@ -102,12 +105,12 @@ const SearchResult = (props) => {
         }}
       >
         <Tab.Screen
-          name='ALL'
+          name={t('tab_all')}
           component={ALL}
           // options={{ DATA: content }}
         />
         <Tab.Screen
-          name='COURSES'
+          name={t('tab_course')}
           component={COURSE}
           // options={{ tabBarLabel: 'Updates' }}
         />
@@ -117,7 +120,7 @@ const SearchResult = (props) => {
           // options={{ tabBarLabel: 'Updates' }}
         /> */}
         <Tab.Screen
-          name='AUTHORS'
+          name={t('tab_instructor')}
           component={AUTHOR}
           // options={{ tabBarLabel: 'Updates' }}
         />

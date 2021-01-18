@@ -5,10 +5,13 @@ import BrowseStackScreen from './BrowseStackScreen';
 import SearchStackScreen from './SearchStackScreen';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import CategoryStackScreen from './CategoryStackScreen';
+import { useTranslation } from 'react-i18next';
 
 const Tab = createBottomTabNavigator();
 
 const AppNavigator = () => {
+  const { t } = useTranslation('tab_navigator', { useSuspense: false });
+
   return (
     <Tab.Navigator
       tabBarOptions={{
@@ -28,7 +31,7 @@ const AppNavigator = () => {
       }}
     >
       <Tab.Screen
-        name='Home'
+        name={t('home')}
         component={HomeStackScreen}
         options={{
           // title: 'Home',
@@ -38,10 +41,10 @@ const AppNavigator = () => {
         }}
       />
       <Tab.Screen
-        name='Category'
+        name={t('download')}
         component={CategoryStackScreen}
         options={{
-          title: 'Category',
+          title: t('download'),
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons
               name='certificate'
@@ -52,20 +55,20 @@ const AppNavigator = () => {
         }}
       />
       <Tab.Screen
-        name='Browse'
+        name={t('browse')}
         component={BrowseStackScreen}
         options={{
-          title: 'Browse',
+          title: t('browse'),
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name='folder' color={'#009dc4'} size={30} />
           ),
         }}
       />
       <Tab.Screen
-        name='Search'
+        name={t('search')}
         component={SearchStackScreen}
         options={{
-          title: 'Search',
+          title: t('search'),
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons
               name='magnify'

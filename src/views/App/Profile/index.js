@@ -9,9 +9,11 @@ import interestsjson from "../../../json/interests.json";
 import styles from "./styles";
 import { getLoggedAccount } from "../../../services/app/getHelper";
 import {ChangePasswordScreen, ChangeProfileScreen} from '../../../global/constants/screenName';
+import { useTranslation } from 'react-i18next';
 
 const Profile = ({ navigation }) => {
   const loggedAccount = useSelector(getLoggedAccount);
+  const { t } = useTranslation('profile');
 
   const changePassword = () => {
     navigation.navigate(ChangePasswordScreen);
@@ -36,7 +38,7 @@ const Profile = ({ navigation }) => {
             />
           </View>
           <View style={styles.interest}>
-            <Section title="Interests" hideSeeall={true}>
+            <Section title={t('interest')} hideSeeall={true}>
               <FlatList
                 horizontal
                 data={interestsjson}
@@ -53,31 +55,31 @@ const Profile = ({ navigation }) => {
             </Section>
           </View>
           <View style={styles.textInfo}>
-            <TextInformation content={"Activity insights (last 30 days)"} />
+            <TextInformation content={t('activity_insight')} />
             <TextInformation
-              title={"TOTAL ACTIVE DAYS)"}
+              title={t('total_active')}
               content={"1"}
-              note={"1 day streak"}
+              note={""}
             />
             <TextInformation
-              title={"MOST ACTIVE TIME OF DAY"}
-              content={"10:00 PM"}
+              title={t('most_active')}
+              content={"10:00"}
             />
-            <TextInformation title={"MOST VIEWED SUBJECT"} content={"N/A"} />
+            {/* <TextInformation title={"MOST VIEWED SUBJECT"} content={"N/A"} /> */}
           </View>
 
           <TouchableOpacity
             style={styles.buttonContainer}
             onPress={() => changePassword()}
           >
-            <Text style={styles.buttonText}>CHANGE PASSWORD</Text>
+            <Text style={styles.buttonText}>{t('change_password')}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             style={styles.buttonContainer}
             onPress={() => changeProfile()}
           >
-            <Text style={styles.buttonText}>EDIT PROFILE</Text>
+            <Text style={styles.buttonText}>{t('edit_profile')}</Text>
           </TouchableOpacity>
         </>
       )}

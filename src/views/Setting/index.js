@@ -1,14 +1,16 @@
 import React, { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import { Text, View } from "react-native";
-import { useSelector } from "react-redux";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import AccountInfo from "../../components/AccountInfo";
 import SwitchSetting from "../../components/Setting/SwitchSetting";
+import { LANGUAGE } from '../../constants';
 import { SignInScreen } from "../../global/constants/screenName";
-import { SIGNOUT } from "../../services/user/constants";
-import styles from "./styles";
 import { getLoggedAccount } from "../../services/app/getHelper";
+import { SIGNOUT, UPDATE_LANGUAGE } from "../../services/user/constants";
+import styles from "./styles";
+
 
 const Setting = ({ navigation }) => {
   const [lang, setLang] = useState(true);
@@ -16,10 +18,16 @@ const Setting = ({ navigation }) => {
   const [downloading, setDownloading] = useState(true);
   const dispatch = useDispatch();
   const loggedAccount = useSelector(getLoggedAccount);
+  const { t } = useTranslation('settings');
 
   const languageSetting = () => {
-    console.log("langue change");
     setLang(!lang);
+    dispatch({
+      type: UPDATE_LANGUAGE,
+      payload: {
+        language: lang ? LANGUAGE.VI : LANGUAGE.EN
+      },
+    });
   };
   const streamingSetting = () => {
     console.log("stream change");
@@ -54,18 +62,18 @@ const Setting = ({ navigation }) => {
             nickname={loggedAccount.email}
           />
           <View style={styles.section}>
-            <Text style={styles.text}>Account</Text>
-            <Text style={styles.text}>Subscription</Text>
-            <Text style={styles.text}>Communication Preferences</Text>
+            <Text style={styles.text}>{t('setting')}</Text>
+            {/* <Text style={styles.text}>Subscription</Text> */}
+            {/* <Text style={styles.text}>Communication Preferences</Text> */}
           </View>
           <View style={styles.section}>
             <SwitchSetting
-              content={"Default caption language"}
-              note={"English"}
+              content={t('change_language')}
+              note={lang ? "English": "Tiếng Việt"}
               isEnabled={lang}
               toggleSwitch={languageSetting}
             />
-            <SwitchSetting
+            {/* <SwitchSetting
               content={"Require Wi-Fi for streaming"}
               isEnabled={streaming}
               toggleSwitch={streamingSetting}
@@ -73,14 +81,17 @@ const Setting = ({ navigation }) => {
             <SwitchSetting
               content={"Require Wi-Fi for downloading"}
               isEnabled={downloading}
-              toggleSwitch={downloadingSetting}
-            />
+              toggleSwitch={downloadingSetting} */}
+            {/* /> */}
+          </View>
+          <View style={styles.section}>
+            <Text style={styles.text}>App version: 1.0.0</Text>
           </View>
           <TouchableOpacity
             style={styles.signoutContainer}
             onPress={() => onSignOutPress()}
           >
-            <Text style={styles.signoutText}>SIGN OUT</Text>
+            <Text style={styles.signoutText}>{t('logout')}</Text>
           </TouchableOpacity>
         </>
       )}

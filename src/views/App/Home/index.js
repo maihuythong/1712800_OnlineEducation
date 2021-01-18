@@ -9,12 +9,14 @@ import { getLoggedAccount } from "../../../services/app/getHelper";
 import CourseRepo from "../../../services/course/repo";
 import * as SeeAllScreenName from '../../../global/constants/seeAllScreenName';
 import styles from "./styles";
+import { useTranslation } from 'react-i18next';
 
 const Home = (props) => {
   const { navigation } = props;
   const [processCourses, setProcessCourses] = useState([]);
   const [favoriteCourse, setFavoriteCourse] = useState([]);
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation('home');
 
   const loadHomeData = async () => {
     try {
@@ -23,9 +25,6 @@ const Home = (props) => {
         CourseRepo.getProcessingCourses(),
         CourseRepo.getFavoriteCourses(),
       ]);
-
-      console.log('processing courses');
-      console.log(processingCourses);
       setProcessCourses(processingCourses);
       setFavoriteCourse(favoriteCourses);
     } catch (e) {
@@ -36,13 +35,11 @@ const Home = (props) => {
   };
 
   useEffect(() => {
-    // const unsubscribe = navigation.addListener('focus', () => {
+    const unsubscribe = navigation.addListener('focus', () => {
       loadHomeData();
-      console.log('cc gi the');
-      console.log(processCourses);
-    // });
+    });
 
-    // return unsubscribe;
+    return unsubscribe;
   }, [navigation]);
 
   return (
@@ -54,7 +51,7 @@ const Home = (props) => {
       ) : (
         <ScrollView style={styles.scrollViewContainer}>
           <Section
-            title="Processing Courses"
+            title={t('processing_courses')}
             navigation={navigation}
             nav={ScreenName.CourseListScreen}
             navChildren={ScreenName.CourseDetailScreen}
@@ -76,7 +73,7 @@ const Home = (props) => {
           </Section>
 
           <Section
-            title="Favorite Courses"
+            title={t('favorite_course')}
             navigation={navigation}
             nav={ScreenName.CourseListScreen}
             navChildren={ScreenName.CourseDetailScreen}

@@ -8,6 +8,7 @@ import { getLoggedAccount } from "../../../services/app/getHelper";
 import MessageType from "../../../services/app/MessageType";
 import UserRepo from "../../../services/user/repo";
 import styles from "./styles";
+import { useTranslation } from 'react-i18next';
 
 const ChangePassword = (props) => {
   const { navigation } = props;
@@ -16,6 +17,7 @@ const ChangePassword = (props) => {
   const [confirmPassword, setConfirmPassword] = React.useState("");
   const loggedAccount = useSelector(getLoggedAccount);
   const dispatch = useDispatch();
+  const { t } = useTranslation(['authentication', 'notification']);
 
   const handleSubmit = async () => {
     if (password === confirmPassword) {
@@ -49,7 +51,7 @@ const ChangePassword = (props) => {
       dispatch(
         showFlashMessage({
           type: MessageType.Type.DANGER,
-          description: "Password and Confirm password not match!",
+          description: t('notification:password_not_match'),
         })
       );
     }
@@ -63,7 +65,7 @@ const ChangePassword = (props) => {
         <TextInput
           style={{}}
           secureTextEntry={true}
-          label="Old Password"
+          label= {t('authentication:old_pw')}
           value={oldPassword}
           onChangeText={(password) => setOldPassword(password)}
           theme={{
@@ -79,7 +81,7 @@ const ChangePassword = (props) => {
         <TextInput
           style={{}}
           secureTextEntry={true}
-          label="New Password"
+          label={t('authentication:new_pw')}
           value={password}
           onChangeText={(password) => setPassword(password)}
           theme={{
@@ -95,7 +97,7 @@ const ChangePassword = (props) => {
         <TextInput
           style={{}}
           secureTextEntry={true}
-          label="Confirm New Password"
+          label={t('authentication:confirm_password')}
           value={confirmPassword}
           onChangeText={(password) => setConfirmPassword(password)}
           theme={{
@@ -110,7 +112,7 @@ const ChangePassword = (props) => {
         />
 
         <TouchableOpacity style={styles.foot} onPress={() => handleSubmit()}>
-          <Text style={styles.submit}>SUBMIT</Text>
+          <Text style={styles.submit}>{t('submit')}</Text>
         </TouchableOpacity>
       </ScrollView>
     );

@@ -14,6 +14,7 @@ import { getCategories } from "../../../services/app/getHelper";
 import AuthorRepo from "../../../services/author/repo";
 import CourseRepo from "../../../services/course/repo";
 import styles from "./styles";
+import { useTranslation } from 'react-i18next';
 
 const Browse = (props) => {
   const { navigation } = props;
@@ -23,6 +24,8 @@ const Browse = (props) => {
   const [topNews, setTopNews] = useState([]);
   const [recommended, setRecommended] = useState([]);
   const categories = useSelector(getCategories);
+  const { t } = useTranslation('browse');
+
   const loadData = async () => {
     try {
       setLoading(true);
@@ -64,14 +67,14 @@ const Browse = (props) => {
           showsVerticalScrollIndicator={false}
         >
           <LargeImageButton
-            text={`NEW \n RELEASES`}
+            text={t('new_release')}
             image={images.newrelease.uri}
             navigation={navigation}
             data={topNews}
             navigationScreen={ScreenName.CourseIntroScreen}
           />
           <LargeImageButton
-            text={`TOP \n SELLING`}
+            text={t('top_sell')}
             image={images.recommended.uri}
             navigation={navigation}
             data={topSells}
@@ -101,7 +104,7 @@ const Browse = (props) => {
             />
           </ScrollView> */}
 
-          <Section title="Popular skills" hideSeeall={true}>
+          <Section title={t('popular_skill')} hideSeeall={true}>
             <FlatList
               horizontal
               data={categories}
@@ -119,7 +122,7 @@ const Browse = (props) => {
           </Section>
 
           <Section
-            title="Recommend for you"
+            title={t('recommended')}
             navigation={navigation}
             nav={ScreenName.CourseListScreen}
             navChildren={ScreenName.CourseIntroScreen}
@@ -163,7 +166,7 @@ const Browse = (props) => {
           </Section> */}
 
           <Section
-            title="Top authors"
+            title={t('top_author')}
             navigation={navigation}
             nav={ScreenName.CourseListScreen}
             navChildren={ScreenName.AuthorDetailScreen}

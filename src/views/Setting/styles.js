@@ -26,7 +26,7 @@ export default StyleSheet.create({
     marginTop: 10,
   },
   text: {
-    fontSize: 18,
+    fontSize: 16,
     color: 'white',
     fontWeight: 'bold',
     marginTop: 10,
