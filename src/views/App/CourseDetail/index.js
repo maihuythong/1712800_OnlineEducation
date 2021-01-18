@@ -8,21 +8,30 @@ import Transcript from "../../../components/CourseDetail/Transcript";
 import VideoPlayer from "../../../components/VideoPlayer";
 import { getLoggedAccount } from "../../../services/app/getHelper";
 import CourseRepo from "../../../services/course/repo";
-import { showFlashMessage } from '../../../services/app/actions';
-import MessageType from '../../../services/app/MessageType';
+import { showFlashMessage } from "../../../services/app/actions";
+import MessageType from "../../../services/app/MessageType";
+import Reviews from "../../../components/CourseDetail/Reviews";
 import styles from "./styles";
+import {CourseIntroScreen} from '../../../global/constants/screenName';
+import { useTranslation } from "react-i18next";
 
 const Tab = createMaterialTopTabNavigator();
 
 const CourseDetail = (props) => {
   const loggedAccount = useSelector(getLoggedAccount);
+  const {navigation} = props;
   const id = props.route.params.course.id;
+  console.log('====================================');
+  console.log(id);
+  console.log('====================================');
   const [loading, setLoading] = useState(true);
   const [course, setCourse] = useState({});
+  const [courseReview, setCourseReview] = useState([]);
   const [section, setSection] = useState([]);
   const [playingVideo, setPlayingVideo] = useState("");
   const [currentTime, setCurrentTime] = useState("");
   const [isYoutubeVideo, setIsYoutubeVideo] = useState(false);
+  const { t } = useTranslation('course');
 
   const loadCourseDetail = async () => {
     try {
@@ -33,6 +42,7 @@ const CourseDetail = (props) => {
       );
       if (courseData) {
         setCourse(courseData);
+        setCourseReview(courseData.ratings.ratingList);
         let arr = [];
         courseData.section.map((item, index) => {
           arr.push({
@@ -57,6 +67,8 @@ const CourseDetail = (props) => {
   const onStopVideo = () => {};
 
   const onVideoEnded = () => {};
+
+  const handleSubmit = (comment) => {};
 
   const onSelectSection = async (courseId, lessonId) => {
     console.log("select " + courseId + lessonId);
@@ -89,7 +101,12 @@ const CourseDetail = (props) => {
           </View>
           <View style={styles.other}>
             <ScrollView showsVerticalScrollIndicator={false}>
-              <Header data={course} />
+              <Header
+                data={course}
+                similarCourseData={course.coursesLikeCategory}
+                navigation = {navigation}
+                navigationScreen = {CourseIntroScreen}
+              />
               <Tab.Navigator
                 initialRouteName="CONTENTS"
                 tabBarOptions={{
@@ -102,7 +119,7 @@ const CourseDetail = (props) => {
                 }}
               >
                 <Tab.Screen
-                  name="CONTENTS"
+                  name={t('lesson_list')}
                   component={() => (
                     <Content
                       DATA={section}
@@ -113,8 +130,20 @@ const CourseDetail = (props) => {
                   // options={{ DATA: content }}
                 />
                 <Tab.Screen
-                  name="TRANSCRIPT"
+                  name={t('course_assignment')}
                   component={() => <Transcript />}
+                  // options={{ tabBarLabel: 'Updates' }}
+                />
+                <Tab.Screen
+                  name={t('course_rating')}
+                  component={() => (
+                    <Reviews
+                      user={loggedAccount}
+                      courseId={id}
+                      courseReview={courseReview}
+                      setCourseReview={setCourseReview}
+                    />
+                  )}
                   // options={{ tabBarLabel: 'Updates' }}
                 />
               </Tab.Navigator>

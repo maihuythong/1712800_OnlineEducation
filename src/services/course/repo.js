@@ -213,7 +213,44 @@ const CourseRepo = {
       console.log('Error when get free course ' + e?.response?.data?.message);
       throw e;
     }
-  }
+  },
+
+  rateCourse: async function ({ courseId, star1, star2, star3, content = '' }) {
+    try {
+      const { payload: ratedData } = await Api({
+        method: 'post',
+        url: '/course/rating-course',
+        body: {
+          courseId,
+          formalityPoint: star1,
+          contentPoint: star2,
+          presentationPoint: star2,
+          content: content,
+        },
+      });
+
+      return ratedData;
+    } catch (e) {
+      console.log('Error when rating course', e);
+      throw e;
+    }
+  },
+
+  getCourseReview: async function ({ courseId }) {
+    let data = [];
+    try {
+      ({ payload: data } = await Api({
+        method: 'get',
+        url: `/course/get-rating/${courseId}`,
+      }));
+    } catch (e) {
+      console.log('Error when get course review', e?.response.data.message);
+      throw e;
+    } finally {
+      return data;
+    }
+  },
+
 };
 
 export default CourseRepo;
