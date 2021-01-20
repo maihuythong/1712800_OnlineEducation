@@ -24,7 +24,6 @@ async function Api({
     headers,
     ...extra,
   });
-
   return data;
 }
 

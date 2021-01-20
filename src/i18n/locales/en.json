@@ -12,7 +12,10 @@
     "rate_course_fail": "Failed to rate course! Please try again later!",
     "rate_course_success": "Send review course successfully",
     "share_course_success": "Share course successfully.",
-  "share_course_fail": "Failed to share this course. Please try again later!"
+    "share_course_fail": "Failed to share this course. Please try again later!",
+    "success_like": "Course added to favorite list",
+    "success_enroll": "Enroll course successfully!"
+
   },
   "authentication": {
     "login": "Login",
@@ -67,7 +70,6 @@
     "content_point": "Content point",
     "presentation_point": "Presentation point",
     "rating_course": "Reviews",
-    "course_rating": "Comment to this course",
     "review_content": "Your review about this course"
   },
   "download": {

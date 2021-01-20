@@ -23,6 +23,8 @@ const Header = (props) => {
     similarCourseData,
     navigation,
     navigationScreen,
+    canDownload,
+    handleDownload
   } = props;
   const [instructor, setInstructor] = useState();
   const dispatch = useDispatch();
@@ -109,21 +111,25 @@ const Header = (props) => {
         </View>
       </View>
       <View style={styles.operation}>
-          {!isOwner ? 
-        <MediumButton
-          text={t("course:buy_course")}
-          uri={images.bookmark.uri}
-          action={addToBookmark}
-        /> : null}
+        {!isOwner ? (
+          <MediumButton
+            text={t("course:buy_course")}
+            uri={images.bookmark.uri}
+            action={addToBookmark}
+          />
+        ) : null}
         <MediumButton
           text={t("course:like_course")}
           uri={images.love.uri}
           action={favoriteCourse}
         />
-        <MediumButton
-          text={t("course:download_course")}
-          uri={images.download.uri}
-        />
+        {canDownload ? (
+          <MediumButton
+            text={t("course:download_course")}
+            uri={images.download.uri}
+            action={handleDownload}
+          />
+        ) : null}
         <MediumButton
           text={t("course:share_course")}
           uri={images.download.uri}

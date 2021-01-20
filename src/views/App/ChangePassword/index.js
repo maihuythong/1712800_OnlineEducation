@@ -22,7 +22,7 @@ const ChangePassword = (props) => {
   const handleSubmit = async () => {
     if (password === confirmPassword) {
       const values = {
-        id: loggedAccount.id,
+        id: loggedAccount?.id,
         oldPass: oldPassword,
         newPass: confirmPassword,
       };

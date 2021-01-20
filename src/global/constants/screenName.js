@@ -7,6 +7,8 @@ export const AppNavigatorScreen = 'AppNavigatorScreen';
 
 export const SettingScreen = 'SettingScreen';
 
+export const CourseDownloadScreen = 'CourseDownloadScreen';
+
 export const HomeScreen = 'HomeScreen';
 export const DownloadScreen = 'DownloadScreen';
 export const BrowseScreen = 'BrowseScreen';

@@ -24,7 +24,7 @@ const ChangeProfile = (props) => {
   const handleSubmit = async () => {
     if(!loading) {
       setLoading(true);
-      const values = { id: loggedAccount.id, name, phone };
+      const values = { id: loggedAccount?.id, name, phone };
       try {
         const res = await UserRepo.changeProfile(values);
         if (res) {

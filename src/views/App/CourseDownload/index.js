@@ -1,25 +1,23 @@
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import * as FileSystem from "expo-file-system";
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ActivityIndicator, ScrollView, View } from "react-native";
 import { useSelector } from "react-redux";
 import Content from "../../../components/CourseDetail/Content";
 import Header from "../../../components/CourseDetail/Header";
+import Reviews from "../../../components/CourseDetail/Reviews";
 import Transcript from "../../../components/CourseDetail/Transcript";
 import VideoPlayer from "../../../components/VideoPlayer";
+import { CourseIntroScreen } from "../../../global/constants/screenName";
 import { getLoggedAccount } from "../../../services/app/getHelper";
 import CourseRepo from "../../../services/course/repo";
-import { showFlashMessage } from "../../../services/app/actions";
-import MessageType from "../../../services/app/MessageType";
-import Reviews from "../../../components/CourseDetail/Reviews";
-import styles from "./styles";
-import { CourseIntroScreen } from "../../../global/constants/screenName";
-import { useTranslation } from "react-i18next";
-import * as FileSystem from "expo-file-system";
 import AsyncStorage from '../../../utils/storage/asyncStorage';
+import styles from "./styles";
 
 const Tab = createMaterialTopTabNavigator();
 
-const CourseDetail = (props) => {
+const CourseDownload = (props) => {
   const loggedAccount = useSelector(getLoggedAccount);
   const { navigation } = props;
   const id = props.route.params.course.id;
@@ -75,14 +73,14 @@ const CourseDetail = (props) => {
 
   const onVideoEnded = () => {};
 
-  const handleSubmit = (comment) => {};
-
+  // different
   const onSelectSection = async (courseId, lessonId) => {
     console.log("select " + courseId + lessonId);
-    const lesson = await CourseRepo.getLessonInfo(courseId, lessonId);
-    if (lesson) {
-      setPlayingVideo(lesson.videoUrl);
-      setCurrentTime(lesson.currentTime);
+    const video = FileSystem.documentDirectory + "/" + lessonId+".mp4";
+    console.log(video);
+    if (video) {
+      setPlayingVideo(video);
+      setCurrentTime(0);
     }
   };
 
@@ -154,20 +152,7 @@ const CourseDetail = (props) => {
         if (downloadedResponse) {
           AsyncStorage.addNewCourseDownloaded(id);
         }
-
-        // FileSystem.downloadAsync(
-        //   'http://techslides.com/demos/sample-videos/small.mp4',
-        //   FileSystem.documentDirectory + 'small.mp4'
-        // )
-        //   .then(({ uri }) => {
-        //     console.log('Finished downloading to ', uri);
-        //   })
-        //   .catch(error => {
-        //     console.error(error);
-        //   });
       }
-
-      //  await CourseRepo.getLessonInfo(courseId, lessonId);
     }
   };
 
@@ -195,14 +180,6 @@ const CourseDetail = (props) => {
           </View>
           <View style={styles.other}>
             <ScrollView showsVerticalScrollIndicator={false}>
-              <Header
-                data={course}
-                similarCourseData={course.coursesLikeCategory}
-                navigation={navigation}
-                navigationScreen={CourseIntroScreen}
-                canDownload={canDownload}
-                handleDownload={handleDownload}
-              />
               <Tab.Navigator
                 initialRouteName="CONTENTS"
                 tabBarOptions={{
@@ -251,4 +228,4 @@ const CourseDetail = (props) => {
   );
 };
 
-export default CourseDetail;
+export default CourseDownload;
