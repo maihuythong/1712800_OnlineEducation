@@ -4,7 +4,7 @@ import {
   ActivityIndicator,
   ImageBackground,
   ScrollView,
-  View
+  View,
 } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import Header from "../../../components/CourseDetail/Header";
@@ -15,16 +15,19 @@ import MessageType from "../../../services/app/MessageType";
 import CourseRepo from "../../../services/course/repo";
 import UserRepo from "../../../services/user/repo";
 import styles from "./styles";
-import {CourseListScreen, CourseIntroScreen} from '../../../global/constants/screenName'
+import {
+  CourseListScreen,
+  CourseIntroScreen,
+} from "../../../global/constants/screenName";
 import { useTranslation } from "react-i18next";
-import * as Linking from 'expo-linking';
-import { BASE_URL } from '../../../constants';
+import * as Linking from "expo-linking";
+import { BASE_URL } from "../../../constants";
 
 const Tab = createMaterialTopTabNavigator();
 
 const CourseIntro = (props) => {
   const loggedAccount = useSelector(getLoggedAccount);
-  const {navigation} = props;
+  const { navigation } = props;
   const id = props.route.params.course.id;
   const [loading, setLoading] = useState(true);
   const [course, setCourse] = useState({});
@@ -33,7 +36,7 @@ const CourseIntro = (props) => {
   const [isYoutubeVideo, setIsYoutubeVideo] = useState(false);
   const dispatch = useDispatch();
   const [isOwner, setIsOwner] = useState(false);
-  const { t } = useTranslation('notification');
+  const { t } = useTranslation("notification");
 
   const loadCourseDetail = async () => {
     try {
@@ -81,13 +84,18 @@ const CourseIntro = (props) => {
 
   const enrollCourse = async () => {
     try {
-      if(course.price === 0){
+      if (course.price === 0) {
         const res = await CourseRepo.getFreeCourse(id);
         if (res) {
-          console.log(res);
+          dispatch(
+            showFlashMessage({
+              type: MessageType.Type.SUCCESS,
+              description: t("success_enroll"),
+            })
+          );
         }
-      }else{
-        console.log('fee');
+      } else {
+        console.log("fee");
         Linking.openURL(`${BASE_URL}/payment/${course.id}`);
       }
     } catch (e) {
@@ -102,7 +110,7 @@ const CourseIntro = (props) => {
         dispatch(
           showFlashMessage({
             type: MessageType.Type.SUCCESS,
-            description: t('success_enroll'),
+            description: t("success_like"),
           })
         );
       }
@@ -115,13 +123,13 @@ const CourseIntro = (props) => {
       );
     }
   };
-  
+
   const checkOwner = async () => {
     const isOwner = await UserRepo.checkOwnerCourse(id);
-    if(isOwner) {
+    if (isOwner) {
       setIsOwner(true);
     }
-  }
+  };
 
   useEffect(() => {
     loadCourseDetail();
@@ -153,14 +161,14 @@ const CourseIntro = (props) => {
           </View>
           <View style={styles.other}>
             <ScrollView showsVerticalScrollIndicator={false}>
-                            <Header
+              <Header
                 favoriteCourse={favoriteCourse}
                 enrollCourse={enrollCourse}
                 data={courseDetail}
                 similarCourseData={courseDetail.coursesLikeCategory}
-                navigation = {navigation}
-                navigationScreen = {CourseIntroScreen}
-                isOwner = {isOwner}
+                navigation={navigation}
+                navigationScreen={CourseIntroScreen}
+                isOwner={isOwner}
               />
             </ScrollView>
           </View>

@@ -32,6 +32,9 @@ export const images = {
   send: {
     uri: require('../../../assets/send.svg'),
   },
+  share: {
+    uri: require('../../../assets/share.svg'),
+  },
   google: {
     uri: require('../../../assets/google.svg'),
   },
