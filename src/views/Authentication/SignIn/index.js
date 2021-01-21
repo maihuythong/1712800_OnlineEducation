@@ -15,8 +15,8 @@ import * as Google from "expo-google-app-auth";
 
 const SignIn = (props) => {
   const { navigation } = props;
-  const [username, setUsername] = React.useState("maihuythong99@gmail.com");
-  const [password, setPassword] = React.useState("123123");
+  const [username, setUsername] = React.useState("");
+  const [password, setPassword] = React.useState("");
   const { setAuthentication } = useContext(AuthenticationContext);
   const dispatch = useDispatch();
   const { t } = useTranslation("authentication", { useSuspense: false });
@@ -41,8 +41,8 @@ const SignIn = (props) => {
           "835898859944-ucab3i7rpci7bmd35mssdl7hk06o9kpl.apps.googleusercontent.com",
         iosClientId:
           "835898859944-24henjntovj7pbo1asbvrq1qha3uua5v.apps.googleusercontent.com",
-        iosStandaloneAppClientId: '',
-        androidStandaloneAppClientId: ''
+        iosStandaloneAppClientId: '835898859944-24henjntovj7pbo1asbvrq1qha3uua5v.apps.googleusercontent.com',
+        androidStandaloneAppClientId: '835898859944-e4r018n4nl6979bofqvg00blou73hb0b.apps.googleusercontent.com',
         scopes: ["profile", "email"],
       });
 
