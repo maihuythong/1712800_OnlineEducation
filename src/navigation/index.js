@@ -1,19 +1,19 @@
-import { DarkTheme, NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import React from 'react';
-import * as ScreenName from '../global/constants/screenName';
-import { AuthenticationProvider } from '../provider/authentication-provider';
-import { OfflineDataProvider } from '../provider/offlinedata-provider';
-import ChangePassword from '../views/App/ChangePassword';
-import ChangeProfile from '../views/App/ChangeProfile';
-import Profile from '../views/App/Profile';
-import ForgotPassword from '../views/Authentication/ForgotPassword';
-import RecoveryPassword from '../views/Authentication/RecoveryPassword';
-import SignIn from '../views/Authentication/SignIn';
-import SignUp from '../views/Authentication/SignUp';
-import Setting from '../views/Setting';
-import SplashScreen from '../views/SplashScreen';
-import AppNavigator from './AppNav';
+import { DarkTheme, NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import React from "react";
+import * as ScreenName from "../global/constants/screenName";
+import { AuthenticationProvider } from "../provider/authentication-provider";
+import { OfflineDataProvider } from "../provider/offlinedata-provider";
+import ChangePassword from "../views/App/ChangePassword";
+import ChangeProfile from "../views/App/ChangeProfile";
+import Profile from "../views/App/Profile";
+import ForgotPassword from "../views/Authentication/ForgotPassword";
+import RecoveryPassword from "../views/Authentication/RecoveryPassword";
+import SignIn from "../views/Authentication/SignIn";
+import SignUp from "../views/Authentication/SignUp";
+import Setting from "../views/Setting";
+import SplashScreen from "../views/SplashScreen";
+import AppNavigator from "./AppNav";
 
 const Stack = createStackNavigator();
 
@@ -32,14 +32,14 @@ const RootAppNavigation = () => {
 const RootAppScreen = () => {
   const screenOptions = {
     headerStyle: {
-      backgroundColor: '#000',
+      backgroundColor: "#000",
     },
-    headerTintColor: 'white',
-    headerTitleAlign: 'center',
+    headerTintColor: "white",
+    headerTitleAlign: "center",
   };
 
   return (
-    <Stack.Navigator mode='modal' screenOptions={screenOptions}>
+    <Stack.Navigator mode="modal" screenOptions={screenOptions}>
       <Stack.Screen
         name={ScreenName.SplashScreen}
         component={SplashScreen}
@@ -73,22 +73,22 @@ const RootAppScreen = () => {
       <Stack.Screen
         name={ScreenName.ProfileScreen}
         component={Profile}
-        options={{ title: 'Profile' }}
+        options={{ title: "Profile" }}
       />
       <Stack.Screen
         name={ScreenName.SettingScreen}
         component={Setting}
-        options={{ title: 'Setting' }}
+        options={{ title: "Setting" }}
       />
       <Stack.Screen
         name={ScreenName.ChangePasswordScreen}
         component={ChangePassword}
-        options={{ title: 'Change password' }}
+        options={{ title: "Change password" }}
       />
       <Stack.Screen
         name={ScreenName.ChangeProfileScreen}
         component={ChangeProfile}
-        options={{ title: 'Change password' }}
+        options={{ title: "Change password" }}
       />
       {/* <Stack.Screen
         name={ScreenName.CourseDetailScreen}
