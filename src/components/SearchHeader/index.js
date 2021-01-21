@@ -2,9 +2,11 @@ import SvgUri from "expo-svg-uri";
 import React from "react";
 import { TextInput, TouchableOpacity, View } from "react-native";
 import styles from "./styles";
+import { useTranslation } from 'react-i18next';
 
 const SearchHeader = (props) => {
   const { text, onSubmit, onChange } = props;
+  const { t } = useTranslation('search');
 
   // const [searchText, setSearchText] = useState('');
 
@@ -24,7 +26,7 @@ const SearchHeader = (props) => {
         value={text}
         onChangeText={onChange}
         style={styles.text}
-        placeholder="Search..."
+        placeholder={t('search_placeholder')}
         placeholderTextColor="#A9A9A9"
       />
       <TouchableOpacity style={styles.icon} onPress={() => onSubmit(text)}>

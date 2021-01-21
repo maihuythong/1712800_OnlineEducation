@@ -44,6 +44,7 @@ export default StyleSheet.create({
   bottom: {
     flex: 1,
     marginTop: 15,
+    marginBottom: 10
   },
   descriptionContainer: {
     flex: 0.95,
@@ -64,7 +65,8 @@ export default StyleSheet.create({
   toggleIcon: {
     fontSize: 24,
     color: 'white',
-    fontWeight: 'bold',
+    fontWeight: '300',
+    fontSize: 16
   },
   textDescription: {
     color: 'white',

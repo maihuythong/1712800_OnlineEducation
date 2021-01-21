@@ -12,10 +12,12 @@ import {
   SIGNOUT,
   UPDATE_PROFILE,
   APP_BOOT,
+  UPDATE_LANGUAGE,
+  AFTER_SIGN_IN_GOOGLE
 } from "./constants";
 import { GET_ALL_CATEGORIES } from '../course/constant';
 import AsyncStorage from "../../utils/storage/asyncStorage";
-
+import i18n, { initI18n } from '../../i18n/i18n';
 
 function* getLoggedAccount({ meta: { callback } = {} }) {
   try {
@@ -118,11 +120,47 @@ function* appBoot({
       }),
       put({
         type: GET_ALL_CATEGORIES,
-      })
+      }),
+      call(initI18n),
     ]);
     yield call(afterSuccess);
   } catch (e) {
     yield call(afterFail);
+  }
+}
+
+function * changeLanguage({ payload: { language } }){ 
+  try {
+    const changeLanguage = (lng) => {
+      console.log(lng);
+      return new Promise((resolve, reject) => {
+        i18n.changeLanguage(lng).then(resolve).catch(reject);
+      });
+    };
+    yield call(changeLanguage, language);
+    yield call(AsyncStorage.setLanguage, language);
+  } catch (e) {
+    console.log('Error when change language! ' + e);
+  }
+}
+
+function * afterSignInGoogle(  {payload: { data } = {},
+  meta: { callback } = {}}){ 
+  try {
+    yield all([
+      call(AsyncStorage.setAccessToken, data?.token),
+      put(setLoggedAccount(data?.userInfo ?? null)),
+    ]);
+
+    if (typeof callback === "function") {
+      yield call(callback);
+    }
+  } catch (e) {
+    yield put(
+      showFlashMessage({
+        description: e?.response?.data?.message ?? null,
+      })
+    );
   }
 }
 
@@ -134,4 +172,6 @@ export default function* () {
   yield takeEvery(SIGNOUT, signout);
   yield takeLatest(UPDATE_PROFILE, updateProfile);
   yield takeLatest(APP_BOOT, appBoot);
+  yield takeLatest(UPDATE_LANGUAGE, changeLanguage);
+  yield takeLatest(AFTER_SIGN_IN_GOOGLE, afterSignInGoogle);
 }

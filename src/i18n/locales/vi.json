@@ -1,0 +1,111 @@
+{
+  "notification": {
+    "password_not_match": "Mật khẩu và xác nhận mật khẩu không khớp!",
+    "check_email": "Vui lòng kiểm tra email để kích hoạt tài khoản!",
+    "not_buy_course": "Vui lòng mua hoặc tham gia miễn phí khóa học",
+    "request_password_fail": "Không thể gửi mail để khôi phục mật khẩu.",
+    "request_password_success": "Gửi mail quên mật khẩu thành công.\nVui lòng kiểm tra email.",
+    "update_profile_fail": "Cập nhật thông tin không thành công! Vui lòng thử lại sau!",
+    "update_profile_success": "Cập nhật thông tin thành công.",
+    "success": "Thành công",
+    "fail": "Có lỗi",
+    "rate_course_fail": "Đã xảy ra lỗi khi đánh giá khóa học! Vui lòng thử lại sau",
+    "rate_course_success": "Đánh giá khoá học thành công.",
+    "share_course_success": "Chia sẻ khoá học thành công.",
+    "share_course_fail": "Có lỗi khi chia sẻ khoá học",
+    "success_like": "Đã thêm khóa học vào danh sách yêu thích",
+    "success_enroll": "Đăng ký tham gia khóa học miễn phí thành công"
+  },
+  "authentication": {
+    "login": "Đăng nhập",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "sign_in": "ĐĂNG NHẬP",
+    "sign_up": "ĐĂNG KÝ",
+    "dont_have": "Chưa có tài khoản? ",
+    "already_have": "Đã có tài khoản? ",
+    "forgot_password": "Quên mật khẩu",
+    "sign_up_free": "Đăng ký miễn phí",
+    "submit": "Gửi",
+    "username": "Tên đăng nhập",
+    "full_name": "Họ tên",
+    "phone": "Số điện thoại",
+    "confirm_password": "Nhập lại mật khẩu",
+    "avatar": "Đường dẫn ảnh đại diện",
+    "old_pw": "Mật khẩu cũ",
+    "new_pw": "Mật khẩu mới"
+  },
+  "tab_navigator": {
+    "home": "Trang chủ",
+    "download": "Tải về",
+    "browse": "Khám phá",
+    "search": "Tìm kiếm",
+    "settings": "Cài đặt",
+    "profile": "Thông tin cá nhân",
+    "change_pw": "Đổi mật khẩu",
+    "change_pf": "Đổi thông tin cá nhân"
+  },
+  "home": {
+    "processing_courses": "Các khóa đang học",
+    "show_all": "Xem tất cả",
+    "favorite_course": "Các khóa học yêu thích"
+  },
+  "browse":{
+    "new_release": "MỚI \n PHÁT HÀNH",
+    "top_sell": "TOP \n BÁN CHẠY",
+    "popular_skill": "Các thể loại phổ biến",
+    "recommended": "Gợi ý cho bạn",
+    "top_author": "Top các giảng viên"
+  },
+  "course": {
+    "buy_course": "Mua",
+    "like_course": "Thích",
+    "download_course": "Tải về",
+    "share_course": "Chia sẻ",
+    "describe_course": "Mô tả",
+    "lesson_list": "Bài học",
+    "course_assignment": "Bài tập",
+    "like_course_success": "Bạn đã thích khoá học.",
+    "course_similar": "Các khoá học cùng chủ đề",
+    "formality_point": "Điểm hình thức",
+    "content_point": "Điểm nội dung",
+    "presentation_point": "Điểm trình bày",
+    "rating_course": "Đánh giá",
+    "review_content": "Bạn nghĩ gì về khoá học này?"
+  },
+  "download": {
+  },
+  "search": {
+    "search_placeholder": "Nhập từ khóa tìm kiếm...",
+    "search_history": "Tìm kiếm gần đây",
+    "delete_history": "Xoá lịch sử",
+    "tab_all": "Tất cả",
+    "tab_course": "Khoá học",
+    "tab_instructor": "Giảng viên",
+    "empty_search": "Xin lỗi, chúng tôi không thể tìm kiếm thông tin khớp với với từ khóa "
+  },
+  "settings": {
+    "setting": "Cài đặt",
+    "logout": "ĐĂNG XUẤT",
+    "change_theme": "Thay đổi giao diện",
+    "change_language": "Thay đổi ngôn ngữ",
+    "update_profile": "Cập nhật thông tin cá nhân",
+    "about_us": "Về chúng tôi",
+    "dark_mode": "Giao diện tối",
+    "light_mode": "Giao diện sáng",
+    "vietnamese": "Tiếng việt",
+    "english": "Tiếng anh",
+    "change_avatar": "Thay đổi\nảnh đại diện"
+  },
+  "profile": {
+    "interest": "Sở thích",
+    "activity_insight": "Thông tin thời gian hoạt động trong 30 ngày",
+    "total_active": "Số ngày hoạt động",
+    "most_active": "Thời gian hoạt động nhiều nhất 1 ngày",
+    "change_password": "ĐỔI MẬT KHẨU",
+    "edit_profile": "THAY ĐỔI THÔNG TIN"
+  },
+  "common": {
+    "free_course": "Miễn phí"
+  }
+}

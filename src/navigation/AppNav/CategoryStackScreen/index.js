@@ -3,7 +3,7 @@ import React from "react";
 import HeaderRight from "../../../components/shared/HeaderRight";
 import * as ScreenName from "../../../global/constants/screenName";
 import Category from "../../../views/App/Category";
-import CourseDetail from "../../../views/App/CourseDetail";
+import CourseDownload from "../../../views/App/CourseDownload";
 
 const Stack = createStackNavigator();
 
@@ -31,8 +31,8 @@ const CategoryStackScreen = () => {
       />
 
       <Stack.Screen
-        name={ScreenName.CourseDetailScreen}
-        component={CourseDetail}
+        name={ScreenName.CourseDownloadScreen}
+        component={CourseDownload}
         options={{
           headerRight: null,
           title: null,

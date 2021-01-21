@@ -20,8 +20,6 @@ const Content = ({ data, navigation, navigationScreen, isAuthor = false }) => {
         />
       );
       else{
-        console.log('bbbbbbb');
-        console.log(item['instructor.user.name']);
         return (
           <LargeCardCourse
             key={item.id}

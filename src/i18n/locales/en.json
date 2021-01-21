@@ -1,0 +1,111 @@
+{
+  "notification": {
+    "password_not_match": "Password and confirm password not match!",
+    "check_email": "Please check your email to activate your new account!",
+    "not_buy_course": "Please buy or enroll this course",
+    "request_password_fail": "Can't send mail to reset password.",
+    "request_password_success": "Request password successfully\nPlease check email and follow steps!",
+    "update_profile_fail": "Update profile failed! Please try again later",
+    "update_profile_success": "Update profile successfully.",
+    "success": "Success",
+    "fail": "Error",
+    "rate_course_fail": "Failed to rate course! Please try again later!",
+    "rate_course_success": "Send review course successfully",
+    "share_course_success": "Share course successfully.",
+    "share_course_fail": "Failed to share this course. Please try again later!",
+    "success_like": "Course added to favorite list",
+    "success_enroll": "Enroll course successfully!"
+
+  },
+  "authentication": {
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "dont_have": "Don't have account? ",
+    "already_have": "Already have an account? ",
+    "sign_in": "SIGN IN",
+    "sign_up": "SIGN UP",
+    "forgot_password": "Forgot password",
+    "sign_up_free": "Sign up for free",
+    "submit": "Submit",
+    "username": "Username",
+    "full_name": "Full name",
+    "phone": "Phone number",
+    "confirm_password": "Re-type password",
+    "avatar": "Avatar url",
+    "old_pw": "Old password",
+    "new_pw": "New password"
+  },
+  "tab_navigator": {
+    "home": "Home",
+    "download": "Downloads",
+    "browse": "Browse",
+    "search": "Search",
+    "settings": "Settings",
+    "change_pw": "Profile",
+    "change_pf": "Profile"
+  },
+  "home": {
+    "processing_courses": "Processing Courses",
+    "show_all": "Show all",
+    "favorite_course": "Favorite Course"
+  },
+  "browse":{
+    "new_release": "NEW \n RELEASES",
+    "top_sell": "TOP \n SELLING",
+    "popular_skill": "Popular skills",
+    "recommended": "Recommend for you",
+    "top_author": "Top authors"
+  },
+  "course": {
+    "buy_course": "Buy",
+    "like_course": "Like",
+    "download_course": "Download",
+    "share_course": "Share",
+    "describe_course": "Description",
+    "lesson_list": "Lesson",
+    "course_assignment": "Assignment",
+    "course_similar": "Related course",
+    "formality_point": "Formality point",
+    "content_point": "Content point",
+    "presentation_point": "Presentation point",
+    "rating_course": "Reviews",
+    "review_content": "Your review about this course"
+  },
+  "download": {
+    
+  },
+  "search": {
+    "search_placeholder": "Type your keyword...",
+    "search_history": "Recent searches",
+    "delete_history": "Remove history",
+    "tab_all": "All",
+    "tab_course": "Courses",
+    "tab_instructor": "Instructors",
+    "empty_search": "Sorry, we couldn't find any matches for "
+  },
+  "settings": {
+    "setting": "Setting",
+    "logout": "LOGOUT",
+    "change_theme": "Change theme",
+    "change_language": "Change language",
+    "update_profile": "Update personal information",
+    "about_us": "About us",
+    "dark_mode": "Dark mode",
+    "light_mode": "Light mode",
+    "vietnamese": "Vietnamese",
+    "english": "English",
+    "change_avatar": "Change avatar"
+  },
+  "profile": {
+    "interest": "Interests",
+    "activity_insight": "Activity insight (last 30 days)",
+    "total_active": "Total active days",
+    "most_active": "Most active time of day",
+    "change_password": "CHANGE PASSWORD",
+    "edit_profile": "EDIT PROFILE"
+  },
+  "common": {
+    "free_course": "Free"
+  }
+}

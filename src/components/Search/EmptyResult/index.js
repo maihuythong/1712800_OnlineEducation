@@ -2,8 +2,11 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import SvgUri from 'expo-svg-uri';
 import styles from './styles';
+import { useTranslation } from 'react-i18next';
 
 const EmptySearch = ({ text }) => {
+  const { t } = useTranslation('search');
+
   return (
     <View style={styles.container}>
       <View>
@@ -15,7 +18,7 @@ const EmptySearch = ({ text }) => {
       </View>
       <View>
         <Text style={styles.text}>
-          Sorry, we couldn't find any matches for "{text}"
+          {t('empty_search')}'{text}'
         </Text>
       </View>
     </View>

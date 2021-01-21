@@ -140,6 +140,37 @@ const UserRepo = {
       console.log('Error when like course ' + e);
       throw e;
     }
+  },
+
+  loginGoogle: async function(user) {
+    try {
+      const data = await Api({
+        method: "post",
+        url: "/user/login-google-mobile",
+        body: {
+          user
+        },
+      });
+      return data;
+    } catch (e) {
+      console.log("Error when sign in with google: " + e);
+      throw e;
+    }
+  },
+
+  checkOwnerCourse: async function (courseId ) {
+    try {
+      const {
+        payload: { isUserOwnCourse },
+      } = await Api({
+        method: 'get',
+        url: `/user/check-own-course/${courseId}`,
+      });
+      return isUserOwnCourse;
+    } catch (e) {
+      console.log('Error when check course owner' + e);
+      throw e;
+    }
   }
 };
 

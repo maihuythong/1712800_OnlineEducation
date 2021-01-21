@@ -7,6 +7,7 @@ import { showFlashMessage } from "../../../services/app/actions";
 import MessageType from "../../../services/app/MessageType";
 import { SIGNUP } from "../../../services/user/constants";
 import * as ScreenName from '../../../global/constants/screenName';
+import { useTranslation } from 'react-i18next';
 import styles from "./styles";
 
 const SignUp = (props) => {
@@ -17,14 +18,14 @@ const SignUp = (props) => {
   const [password, setPassword] = React.useState("");
   const [confirmPassword, setConfirmPassword] = React.useState("");
   const dispatch = useDispatch();
+  const { t } = useTranslation(['authentication', 'notification']);
 
   const onSignUpPress = useCallback(() => {
     if(password !== confirmPassword){
       dispatch(
         showFlashMessage({
           type: MessageType.Type.DANGER,
-          description:
-            "Password and Confirm password not match!",
+          description: t("notification:password_not_match"),
         })
       );
       return;
@@ -38,8 +39,7 @@ const SignUp = (props) => {
           dispatch(
             showFlashMessage({
               type: MessageType.Type.SUCCESS,
-              description:
-                "Please check your email to activate your new account!.",
+              description: t("notification:check_email"),
             })
           );
           navigation.navigate(ScreenName.SignInScreen);
@@ -52,7 +52,7 @@ const SignUp = (props) => {
     <ScrollView style={styles.container}>
       <TextInput
         autoCapitalize={"none"}
-        label="Username"
+        label= {t("authentication:username")}
         value={username}
         onChangeText={(text) => setUsername(text)}
         theme={{
@@ -65,7 +65,7 @@ const SignUp = (props) => {
       />
       <TextInput
         autoCapitalize={"none"}
-        label="Email"
+        label={t("authentication:email")}
         value={email}
         onChangeText={(text) => setEmail(text)}
         theme={{
@@ -78,7 +78,7 @@ const SignUp = (props) => {
       />
       <TextInput
         autoCapitalize={"none"}
-        label="Phone number"
+        label={t("authentication:phone")}
         value={phone}
         onChangeText={(text) => setPhone(text)}
         theme={{
@@ -92,7 +92,7 @@ const SignUp = (props) => {
       <TextInput
         style={{}}
         secureTextEntry={true}
-        label="Password"
+        label={t("authentication:password")}
         value={password}
         onChangeText={(password) => setPassword(password)}
         theme={{
@@ -108,7 +108,7 @@ const SignUp = (props) => {
       <TextInput
         style={{}}
         secureTextEntry={true}
-        label="Confirm password"
+        label={t("authentication:confirm_password")}
         value={confirmPassword}
         onChangeText={(password) => setConfirmPassword(password)}
         theme={{
@@ -123,12 +123,12 @@ const SignUp = (props) => {
       />
 
       <TouchableOpacity style={styles.foot} onPress={() => onSignUpPress()}>
-        <Text style={styles.signin}>SIGN UP</Text>
+        <Text style={styles.signin}>{t("authentication:sign_up")}</Text>
       </TouchableOpacity>
       <View style={styles.signupContainer}>
-        <Text style={styles.text}>Already have an account?</Text>
+        <Text style={styles.text}>{t("authentication:already_have")}</Text>
         <TouchableOpacity onPress={() => navigation.navigate("SignInScreen")}>
-          <Text style={styles.signup}> Sign in</Text>
+          <Text style={styles.signup}>{t("authentication:sign_in")}</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>

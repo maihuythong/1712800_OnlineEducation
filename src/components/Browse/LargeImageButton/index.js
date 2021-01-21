@@ -16,7 +16,7 @@ const LargeImageButton = ({
       style={styles.container}
       onPress={() =>
         navigation.navigate(ScreenName.CourseListScreen, {
-          title: text.replace("\n", ""),
+          title: text?.replace("\n", ""),
           data,
           navigation,
           navChildren: navigationScreen,

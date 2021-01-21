@@ -15,10 +15,11 @@ const CourseOfSection = (props) => {
     navigation,
     seeAllScreenName,
     navChildren,
+    hideCover
   } = props.route.params;
   const [loading, setLoading] = useState(seeAllScreenName ? false : true);
   const [newData, setNewData] = useState([]);
-
+  
   const loadSeeAllData = async () => {
     if (seeAllScreenName) {
       try {
@@ -72,6 +73,7 @@ const CourseOfSection = (props) => {
         </View>
       ) : (
         <View style={styles.container}>
+        {!hideCover ? (
           <View style={styles.head}>
             <Header
               title={title}
@@ -79,7 +81,7 @@ const CourseOfSection = (props) => {
                 "https://vnn-imgs-a1.vgcloud.vn/img2.infonet.vn/w660/Uploaded/2020/bnx_mjxuh/2019_07_18/san_ho_la_thuc_vat_hay_dong_vat.jpg"
               }
             />
-          </View>
+          </View>): null }
           <ScrollView style={styles.content}>
             <Content
               isAuthor={

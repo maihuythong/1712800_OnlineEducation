@@ -15,24 +15,37 @@ import MessageType from "../../../services/app/MessageType";
 import CourseRepo from "../../../services/course/repo";
 import UserRepo from "../../../services/user/repo";
 import styles from "./styles";
+import {CourseListScreen, CourseIntroScreen} from '../../../global/constants/screenName'
+import { useTranslation } from "react-i18next";
+import * as Linking from 'expo-linking';
+import { BASE_URL } from '../../../constants';
 
 const Tab = createMaterialTopTabNavigator();
 
 const CourseIntro = (props) => {
   const loggedAccount = useSelector(getLoggedAccount);
+  const {navigation} = props;
   const id = props.route.params.course.id;
   const [loading, setLoading] = useState(true);
   const [course, setCourse] = useState({});
+  const [courseDetail, setCourseDetail] = useState({});
   const [introIsVideo, setIntroIsVideo] = useState(false);
   const [isYoutubeVideo, setIsYoutubeVideo] = useState(false);
   const dispatch = useDispatch();
+  const [isOwner, setIsOwner] = useState(false);
+  const { t } = useTranslation('notification');
 
   const loadCourseDetail = async () => {
     try {
       setLoading(true);
       const courseData = await CourseRepo.getCourseIntro(id);
-      if (courseData) {
+      const courseDetail = await CourseRepo.getCourseDetailAccount(
+        id,
+        loggedAccount?.id ?? null
+      );
+      if (courseData && courseDetail) {
         setCourse(courseData);
+        setCourseDetail(courseDetail);
         const url = courseData?.promoVidUrl ?? null;
         if (courseData.promoVidUrl) {
           let index = url.lastIndexOf(".");
@@ -68,9 +81,14 @@ const CourseIntro = (props) => {
 
   const enrollCourse = async () => {
     try {
-      const res = await CourseRepo.getFreeCourse(id);
-      if (res) {
-        console.log(res);
+      if(course.price === 0){
+        const res = await CourseRepo.getFreeCourse(id);
+        if (res) {
+          console.log(res);
+        }
+      }else{
+        console.log('fee');
+        Linking.openURL(`${BASE_URL}/payment/${course.id}`);
       }
     } catch (e) {
       console.log(e);
@@ -84,7 +102,7 @@ const CourseIntro = (props) => {
         dispatch(
           showFlashMessage({
             type: MessageType.Type.SUCCESS,
-            description: "Khóa học đã được thêm vào mục yêu thích",
+            description: t('success_enroll'),
           })
         );
       }
@@ -97,9 +115,17 @@ const CourseIntro = (props) => {
       );
     }
   };
+  
+  const checkOwner = async () => {
+    const isOwner = await UserRepo.checkOwnerCourse(id);
+    if(isOwner) {
+      setIsOwner(true);
+    }
+  }
 
   useEffect(() => {
     loadCourseDetail();
+    checkOwner();
   }, []);
 
   return (
@@ -127,10 +153,14 @@ const CourseIntro = (props) => {
           </View>
           <View style={styles.other}>
             <ScrollView showsVerticalScrollIndicator={false}>
-              <Header
-                data={course}
+                            <Header
                 favoriteCourse={favoriteCourse}
                 enrollCourse={enrollCourse}
+                data={courseDetail}
+                similarCourseData={courseDetail.coursesLikeCategory}
+                navigation = {navigation}
+                navigationScreen = {CourseIntroScreen}
+                isOwner = {isOwner}
               />
             </ScrollView>
           </View>

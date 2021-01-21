@@ -3,15 +3,18 @@ import { ScrollView, Text, View } from "react-native";
 import { FlatList, TouchableOpacity } from "react-native-gesture-handler";
 import SuggestItem from "../SuggestItem";
 import styles from "./styles";
+import { useTranslation } from 'react-i18next';
 
 const Recent = (props) => {
   const { data, onHistoryClick, clearAll } = props;
+  const { t } = useTranslation('search');
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.head}>
-        <Text style={styles.title}>Recent searches</Text>
+        <Text style={styles.title}>{t('search_history')}</Text>
         <TouchableOpacity onPress={() => clearAll()}>
-          <Text style={styles.clear}>CLEAR ALL</Text>
+          <Text style={styles.clear}>{t('delete_history')}</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.list}>
