@@ -41,13 +41,8 @@ const SignIn = (props) => {
           "835898859944-ucab3i7rpci7bmd35mssdl7hk06o9kpl.apps.googleusercontent.com",
         iosClientId:
           "835898859944-24henjntovj7pbo1asbvrq1qha3uua5v.apps.googleusercontent.com",
-<<<<<<< Updated upstream
-        iosStandaloneAppClientId: '',
-        androidStandaloneAppClientId: ''
-=======
         // iosStandaloneAppClientId: '835898859944-24henjntovj7pbo1asbvrq1qha3uua5v.apps.googleusercontent.com',
         // androidStandaloneAppClientId: '835898859944-e4r018n4nl6979bofqvg00blou73hb0b.apps.googleusercontent.com',
->>>>>>> Stashed changes
         scopes: ["profile", "email"],
       });
 

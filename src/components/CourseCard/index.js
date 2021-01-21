@@ -28,7 +28,7 @@ const CourseCard = (props) => {
             ? `${data.title}`
             : `${data.title.substring(0, 30)}...`}
         </Text>
-        <Text style={styles.defaultText}>{data["instructor.user.name"]}</Text>
+        <Text style={styles.defaultText}>{data?.instructor?.name}</Text>
         <Text style={styles.defaultText}>
           {moment(data.createdAt).format("DD/MM/yyyy")} -{" "}
           {data?.totalHours?.toFixed(3) ?? null} hours

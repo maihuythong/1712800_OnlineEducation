@@ -1,3 +1,4 @@
+import AuthorRepo from "../author/repo";
 import { Api } from "../axiosApi";
 
 const CourseRepo = {
@@ -86,6 +87,20 @@ const CourseRepo = {
         method: "get",
         url: `/user/recommend-course/${id}/${limit}/${page}`,
       }));
+
+      console.log('reco');
+      console.log(data);
+      const res = await Promise.all(
+        (data || []).map(async (course) => {
+          const authorDoc = await AuthorRepo.getAuthorDetail(
+            course.instructorId
+          );
+          course.instructor = authorDoc;
+          return course;
+        })
+      );
+      if (res) return res;
+
     } catch (e) {
       console.log(
         "Error when get course detail with lesson" + e?.response.data.message
@@ -137,8 +152,16 @@ const CourseRepo = {
       });
       if (courses) {
         const res = await Promise.all(
-          (courses || []).map((course) => CourseRepo.getCourseIntro(course.id))
+          (courses || []).map(async (course) => {
+            const courseDoc = await CourseRepo.getCourseIntro(course.id);
+            const authorDoc = await AuthorRepo.getAuthorDetail(
+              course.instructorId
+            );
+            courseDoc.instructor = authorDoc;
+            return courseDoc;
+          })
         );
+
         if (res) {
           return res;
         }
@@ -156,10 +179,15 @@ const CourseRepo = {
         url: "/user/get-process-courses",
       });
       if (courses) {
-        console.log('???');
-        console.log(courses);
         const res = await Promise.all(
-          (courses || []).map((course) => CourseRepo.getCourseIntro(course.id))
+          (courses || []).map(async (course) => {
+            const courseDoc = await CourseRepo.getCourseIntro(course.id);
+            const authorDoc = await AuthorRepo.getAuthorDetail(
+              course.instructorId
+            );
+            courseDoc.instructor = authorDoc;
+            return courseDoc;
+          })
         );
         if (res) return res;
       }
@@ -195,12 +223,12 @@ const CourseRepo = {
     }
   },
 
-  getFreeCourse: async function(courseId) {
+  getFreeCourse: async function (courseId) {
     console.log(courseId);
     try {
       const { freeCourseLink } = await Api({
-        method: 'post',
-        url: '/payment/get-free-courses',
+        method: "post",
+        url: "/payment/get-free-courses",
         body: {
           courseId,
         },
@@ -210,16 +238,16 @@ const CourseRepo = {
 
       return freeCourseLink;
     } catch (e) {
-      console.log('Error when get free course ' + e?.response?.data?.message);
+      console.log("Error when get free course " + e?.response?.data?.message);
       throw e;
     }
   },
 
-  rateCourse: async function ({ courseId, star1, star2, star3, content = '' }) {
+  rateCourse: async function ({ courseId, star1, star2, star3, content = "" }) {
     try {
       const { payload: ratedData } = await Api({
-        method: 'post',
-        url: '/course/rating-course',
+        method: "post",
+        url: "/course/rating-course",
         body: {
           courseId,
           formalityPoint: star1,
@@ -231,7 +259,7 @@ const CourseRepo = {
 
       return ratedData;
     } catch (e) {
-      console.log('Error when rating course', e);
+      console.log("Error when rating course", e);
       throw e;
     }
   },
@@ -240,17 +268,80 @@ const CourseRepo = {
     let data = [];
     try {
       ({ payload: data } = await Api({
-        method: 'get',
+        method: "get",
         url: `/course/get-rating/${courseId}`,
       }));
     } catch (e) {
-      console.log('Error when get course review', e?.response.data.message);
+      console.log("Error when get course review", e?.response.data.message);
       throw e;
     } finally {
       return data;
     }
   },
 
+  getCourseProcess: async function (courseId) {
+    let data = null;
+    try {
+      ({ payload: data } = await Api({
+        method: "get",
+        url: `/course/process-course/${courseId}`,
+      }));
+    } catch (e) {
+      console.log(
+        "Error when get course process " + e?.response?.data?.message
+      );
+      throw e;
+    } finally {
+      return data;
+    }
+  },
+
+  lessonFinish: async function (lessonId) {
+    try {
+      await Api({
+        method: "post",
+        url: "/lesson/update-status",
+        body: {
+          lessonId,
+        },
+      });
+    } catch (e) {
+      console.log(
+        "Error when update lesson finish " + e?.response?.data?.message
+      );
+      throw e;
+    }
+  },
+
+  updateProcessTime: async function ({ lessonId, currentTime = 0 } = {}) {
+    try {
+      await Api({
+        method: "put",
+        url: "/lesson/update-current-time-learn-video",
+        body: {
+          lessonId,
+          currentTime,
+        },
+      });
+    } catch (e) {
+      console.log("Error when update process time " + e);
+      throw e;
+    }
+  },
+
+  getLastWatched: async function (courseId) {
+    try {
+      const { payload } = await Api({
+        method: "get",
+        url: `/course/last-watched-lesson/${courseId}`,
+      });
+
+      return payload;
+    } catch (e) {
+      console.log("Error when get last watched " + e);
+      throw e;
+    }
+  },
 };
 
 export default CourseRepo;

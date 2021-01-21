@@ -25,6 +25,8 @@ const Home = (props) => {
         CourseRepo.getProcessingCourses(),
         CourseRepo.getFavoriteCourses(),
       ]);
+      console.log('====================================processingCourses');
+      console.log(processingCourses);
       setProcessCourses(processingCourses);
       setFavoriteCourse(favoriteCourses);
     } catch (e) {
@@ -59,7 +61,7 @@ const Home = (props) => {
           >
             <FlatList
               horizontal
-              data={processCourses}
+              data={processCourses?? null}
               showsHorizontalScrollIndicator={false}
               renderItem={({ item }) => (
                 <CourseCard
@@ -88,7 +90,7 @@ const Home = (props) => {
                   key={item.id}
                   data={item}
                   navigation={navigation}
-                  navigationScreen = {ScreenName.CourseDetailScreen}
+                  navigationScreen = {ScreenName.CourseIntroScreen}
                 />
               )}
             />

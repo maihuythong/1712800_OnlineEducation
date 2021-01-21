@@ -73,22 +73,22 @@ const RootAppScreen = () => {
       <Stack.Screen
         name={ScreenName.ProfileScreen}
         component={Profile}
-        options={{ title: "Profile" }}
+        options={{ title: "" }}
       />
       <Stack.Screen
         name={ScreenName.SettingScreen}
         component={Setting}
-        options={{ title: "Setting" }}
+        options={{ title: "" }}
       />
       <Stack.Screen
         name={ScreenName.ChangePasswordScreen}
         component={ChangePassword}
-        options={{ title: "Change password" }}
+        options={{ title: "" }}
       />
       <Stack.Screen
         name={ScreenName.ChangeProfileScreen}
         component={ChangeProfile}
-        options={{ title: "Change password" }}
+        options={{ title: "" }}
       />
       {/* <Stack.Screen
         name={ScreenName.CourseDetailScreen}

@@ -16,9 +16,6 @@ const HeaderSection = (props) => {
           <Text style={styles.textDuration}>{totalDuration}</Text>
         </View>
       </View>
-      <View>
-        <Text>Operation</Text>
-      </View>
     </View>
   );
 };

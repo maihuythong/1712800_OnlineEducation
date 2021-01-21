@@ -14,7 +14,7 @@ const LargeCardCourse = (props) => {
       {data ? (
         <TouchableOpacity
           style={styles.container}
-          onPress={() => navigation.navigate(navigationScreen, { course })}
+          onPress={() => navigation.push(navigationScreen, { course })}
         >
           <Image
             style={[styles.image, styles.left]}
