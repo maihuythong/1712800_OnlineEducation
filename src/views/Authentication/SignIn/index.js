@@ -41,6 +41,8 @@ const SignIn = (props) => {
           "835898859944-ucab3i7rpci7bmd35mssdl7hk06o9kpl.apps.googleusercontent.com",
         iosClientId:
           "835898859944-24henjntovj7pbo1asbvrq1qha3uua5v.apps.googleusercontent.com",
+        iosStandaloneAppClientId: '',
+        androidStandaloneAppClientId: ''
         scopes: ["profile", "email"],
       });
 
