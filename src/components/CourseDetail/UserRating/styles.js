@@ -8,11 +8,17 @@ export default StyleSheet.create({
     marginVertical: 15
   },
   containerAvatar: {
-    flex: 2
+    flex: 2,
   },
   userReviews: {
     flex: 8,
     flexDirection: 'column'
+  },
+  authorName: {
+    color: 'white',
+    marginTop: 5,
+    alignSelf: 'center',
+    
   },
   avatar: {
     width: 50,

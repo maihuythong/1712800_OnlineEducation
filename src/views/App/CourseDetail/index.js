@@ -1,21 +1,20 @@
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import * as FileSystem from "expo-file-system";
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ActivityIndicator, ScrollView, View } from "react-native";
 import { useSelector } from "react-redux";
 import Content from "../../../components/CourseDetail/Content";
 import Header from "../../../components/CourseDetail/Header";
+import Reviews from "../../../components/CourseDetail/Reviews";
 import Transcript from "../../../components/CourseDetail/Transcript";
 import VideoPlayer from "../../../components/VideoPlayer";
+import { CourseIntroScreen } from "../../../global/constants/screenName";
 import { getLoggedAccount } from "../../../services/app/getHelper";
 import CourseRepo from "../../../services/course/repo";
-import { showFlashMessage } from "../../../services/app/actions";
-import MessageType from "../../../services/app/MessageType";
-import Reviews from "../../../components/CourseDetail/Reviews";
+import UserRepo from "../../../services/user/repo";
+import AsyncStorage from "../../../utils/storage/asyncStorage";
 import styles from "./styles";
-import { CourseIntroScreen } from "../../../global/constants/screenName";
-import { useTranslation } from "react-i18next";
-import * as FileSystem from "expo-file-system";
-import AsyncStorage from '../../../utils/storage/asyncStorage';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -28,11 +27,13 @@ const CourseDetail = (props) => {
   const [courseReview, setCourseReview] = useState([]);
   const [section, setSection] = useState([]);
   const [playingVideo, setPlayingVideo] = useState("");
-  const [currentTime, setCurrentTime] = useState("");
+  const [currentTime, setCurrentTime] = useState();
   const [isYoutubeVideo, setIsYoutubeVideo] = useState(false);
   const [listVideo, setListVideo] = useState([]);
   const { t } = useTranslation("course");
   const [canDownload, setCanDownload] = useState(false);
+  const [playingLesson, setPlayingLesson] = useState();
+  const [isOwner, setIsOwner] = useState(false);
 
   const loadCourseDetail = async () => {
     try {
@@ -71,23 +72,53 @@ const CourseDetail = (props) => {
     }
   };
 
-  const onStopVideo = () => {};
+  onStopVideo = async (time) => {
+    if (playingLesson?.id) {
+      await CourseRepo.updateProcessTime({ lessonId: playingLesson.id, currentTime: time });
+    }
+  };
 
-  const onVideoEnded = () => {};
+  const onVideoEnded = async () => {
+    try {
+      if (playingLesson?.id && !playingLesson.isFinish) {
+        await CourseRepo.lessonFinish(playingLesson.id);
+      }
+    } catch (e) {}
+    if (playingLesson?.nextLessonId) {
+      await onSelectSection(id , playingLesson?.nextLessonId);
+    }
+  };
 
   const handleSubmit = (comment) => {};
 
   const onSelectSection = async (courseId, lessonId) => {
     console.log("select " + courseId + lessonId);
+    console.log('====================================');
+    console.log(courseId);
+    console.log(lessonId);
     const lesson = await CourseRepo.getLessonInfo(courseId, lessonId);
     if (lesson) {
+      console.log("--------lesson");
+      console.log(lesson);
+      setPlayingLesson(lesson);
       setPlayingVideo(lesson.videoUrl);
       setCurrentTime(lesson.currentTime);
+
+      if (lesson.videoUrl.includes("youtu")) setIsYoutubeVideo(true);
+    }
+  };
+
+  const checkOwner = async () => {
+    const isOwner = await UserRepo.checkOwnerCourse(id);
+    console.log(isOwner);
+    if (isOwner) {
+      setIsOwner(true);
     }
   };
 
   useEffect(() => {
     loadCourseDetail();
+    checkOwner();
   }, []);
 
   const checkCanBeDownloaded = () => {
@@ -109,6 +140,18 @@ const CourseDetail = (props) => {
 
     setCanDownload(flag);
   };
+
+  useEffect(() => {
+    const getLastWatched = async () => {
+      console.log('get last watched');
+      const doc = await CourseRepo.getLastWatched(id);
+      if(doc) {
+        onSelectSection(id, doc.lessonId);
+      }
+    }
+
+     getLastWatched();
+  }, [])
 
   const handleDownload = async () => {
     if (canDownload) {
@@ -191,6 +234,7 @@ const CourseDetail = (props) => {
               url={playingVideo}
               onStopVideo={onStopVideo}
               onVideoEnded={onVideoEnded}
+              currentTime={currentTime}
             />
           </View>
           <View style={styles.other}>
@@ -202,6 +246,7 @@ const CourseDetail = (props) => {
                 navigationScreen={CourseIntroScreen}
                 canDownload={canDownload}
                 handleDownload={handleDownload}
+                isOwner={isOwner}
               />
               <Tab.Navigator
                 initialRouteName="CONTENTS"

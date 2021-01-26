@@ -14,7 +14,12 @@
     "share_course_success": "Chia sẻ khoá học thành công.",
     "share_course_fail": "Có lỗi khi chia sẻ khoá học",
     "success_like": "Đã thêm khóa học vào danh sách yêu thích",
-    "success_enroll": "Đăng ký tham gia khóa học miễn phí thành công"
+    "success_enroll": "Đăng ký tham gia khóa học miễn phí thành công",
+    "empty_email": "Vui lòng nhập email!",
+    "empty_username": "Vui lòng nhập tên đăng nhập!",
+    "empty_phone": "Vui lòng nhập số điện thoại!",
+    "empty_password": "Vui lòng nhập mật khẩu",
+    "empty_cf_password": "Vui lòng nhập lại mật khẩu!"
   },
   "authentication": {
     "login": "Đăng nhập",
@@ -33,7 +38,8 @@
     "confirm_password": "Nhập lại mật khẩu",
     "avatar": "Đường dẫn ảnh đại diện",
     "old_pw": "Mật khẩu cũ",
-    "new_pw": "Mật khẩu mới"
+    "new_pw": "Mật khẩu mới",
+    "type_email": "Vui lòng nhập email",
   },
   "tab_navigator": {
     "home": "Trang chủ",

@@ -16,6 +16,7 @@ const UserRating = (props) => {
           size={200}
           source={{ uri: reviewData?.user?.avatar }}
         />
+        <Text style={styles.authorName}>{reviewData.user.name}</Text>
       </View>
       <View style={styles.userReviews}>
         <CustomRatingBar

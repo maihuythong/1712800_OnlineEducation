@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 import { Text, View } from "react-native";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
@@ -10,15 +10,28 @@ import { SignInScreen } from "../../global/constants/screenName";
 import { getLoggedAccount } from "../../services/app/getHelper";
 import { SIGNOUT, UPDATE_LANGUAGE } from "../../services/user/constants";
 import styles from "./styles";
+import AsyncStorage from '../../utils/storage/asyncStorage';
 
 
 const Setting = ({ navigation }) => {
   const [lang, setLang] = useState(true);
-  const [streaming, setStreaming] = useState(true);
-  const [downloading, setDownloading] = useState(true);
+  // const [streaming, setStreaming] = useState(true);
+  // const [downloading, setDownloading] = useState(true);
   const dispatch = useDispatch();
   const loggedAccount = useSelector(getLoggedAccount);
   const { t } = useTranslation('settings');
+
+  useEffect(() => {
+    const setLangInit = async () => {
+      const language = (await AsyncStorage.getLanguage()) || LANGUAGE.EN;
+      if(language === 'en'){
+        setLang(true)
+      }else{
+        setLang(false)
+      }
+    }
+    setLangInit();
+  },[])
 
   const languageSetting = () => {
     setLang(!lang);
@@ -29,14 +42,14 @@ const Setting = ({ navigation }) => {
       },
     });
   };
-  const streamingSetting = () => {
-    console.log("stream change");
-    setStreaming(!streaming);
-  };
-  const downloadingSetting = () => {
-    console.log("downloading change");
-    setDownloading(!downloading);
-  };
+  // const streamingSetting = () => {
+  //   console.log("stream change");
+  //   setStreaming(!streaming);
+  // };
+  // const downloadingSetting = () => {
+  //   console.log("downloading change");
+  //   setDownloading(!downloading);
+  // };
 
   const onSignOutPress = () => {
     dispatch({

@@ -21,7 +21,17 @@ const LoadingVideoIndicator = ({ isYoutubeVideo }) => {
 };
 
 const ExpoVideoPlayer = (props) => {
-  const { url, height, currentTime } = props;
+  const { url, height, currentTime = 0, onVideoEnded, onStopVideo } = props;
+  const onPlaybackStatusUpdate = (playbackStatus) => {
+    if (playbackStatus.didJustFinish) {
+      onVideoEnded();
+    }
+  };
+
+  const stopVideo = () => {
+    //   onStopVideo(currentTime)
+  };
+
   return (
     <Video
       shouldPlay
@@ -32,8 +42,13 @@ const ExpoVideoPlayer = (props) => {
       isLooping={false}
       source={{ uri: url }}
       useNativeControls
-      positionMillis={currentTime}
+      positionMillis={currentTime ? currentTime : 0}
       style={[styles.containerVideo, { height: height }]}
+      stopAsync={onStopVideo}
+      stopAsync={stopVideo}
+      onPlaybackStatusUpdate={(playbackStatus) =>
+        onPlaybackStatusUpdate(playbackStatus)
+      }
     />
   );
 };
@@ -53,23 +68,43 @@ const YoutubeVideoPlayer = (props) => {
 
   const videoRef = useRef(null);
   const videoId = useMemo(() => {
-    const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
-    const match = url.match(regExp);
-    return match && match[7].length == 11 ? match[7] : false;
+    // console.log('video aaaa');
+    // console.log(videoId);
+    // try {
+    //   const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+    //   const match = url.match(regExp);
+    //   return match && match[7].length == 11 ? match[7] : false;
+    // }catch (e) {
+    //   console.log(e);
+    //   if(url.contains(youtube.com)){
+    //     const vidId = url.substring(25, url.length);
+    //     console.log('vidId');
+    //     console.log(vidId);
+    //   }
+    // }
+    if (url.includes("watch?")) {
+      return url.substring(url.indexOf("watch?") + 8, url.length);
+    }
+    const paths = url?.split("/");
+    return paths?.[paths.findIndex((p) => p === "embed") + 1];
   }, [url]);
 
-  const onVideoPlayerStageChanged = async (event) => {
-    if (event === "ended") {
-      await onVideoEnded();
-    }
-    if (event === "paused") {
-      const time = await videoRef.current?.getCurrentTime();
-      await onStopVideo(time);
-    }
-  };
+  const onVideoPlayerStageChanged = useCallback(
+    async (event) => {
+      if (event === "ended") {
+        await onVideoEnded();
+      }
+      if (event === "paused") {
+        const time = await videoRef.current?.getCurrentTime();
+        await onStopVideo(time);
+      }
+    },
+    [currentTime]
+  );
 
   const onVideoReady = useCallback(() => {
     if (videoRef.current) {
+      console.log(currentTime);
       videoRef.current.seekTo(currentTime);
     }
   }, [currentTime]);
@@ -116,6 +151,7 @@ const VideoPlayer = (props) => {
     onVideoEnded,
     currentTime = 0,
   } = props;
+
   const [isLoading, setLoading] = useState(true);
   const [height, setHeight] = useState(300);
   return (
@@ -133,7 +169,12 @@ const VideoPlayer = (props) => {
           currentTime={currentTime}
         />
       ) : (
-        <ExpoVideoPlayer url={url} height={height} currentTime={currentTime} />
+        <ExpoVideoPlayer
+          url={url}
+          height={height}
+          currentTime={currentTime}
+          onVideoEnded={onVideoEnded}
+        />
       )}
     </View>
   );

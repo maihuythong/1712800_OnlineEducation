@@ -132,7 +132,7 @@ const Header = (props) => {
         ) : null}
         <MediumButton
           text={t("course:share_course")}
-          uri={images.download.uri}
+          uri={images.share.uri}
           action={shareCourse}
         />
       </View>

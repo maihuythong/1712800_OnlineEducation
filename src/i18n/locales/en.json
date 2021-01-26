@@ -14,8 +14,12 @@
     "share_course_success": "Share course successfully.",
     "share_course_fail": "Failed to share this course. Please try again later!",
     "success_like": "Course added to favorite list",
-    "success_enroll": "Enroll course successfully!"
-
+    "success_enroll": "Enroll course successfully!",
+    "empty_email": "Please type your email!",
+    "empty_username": "Please type your username!",
+    "empty_phone": "Please type your phone number!",
+    "empty_password": "Please type your password!",
+    "empty_cf_password": "Please type your confirm password!"
   },
   "authentication": {
     "login": "Login",
@@ -34,7 +38,8 @@
     "confirm_password": "Re-type password",
     "avatar": "Avatar url",
     "old_pw": "Old password",
-    "new_pw": "New password"
+    "new_pw": "New password",
+    "type_email": "Type your email"
   },
   "tab_navigator": {
     "home": "Home",

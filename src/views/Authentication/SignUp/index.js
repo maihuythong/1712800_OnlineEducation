@@ -21,6 +21,57 @@ const SignUp = (props) => {
   const { t } = useTranslation(['authentication', 'notification']);
 
   const onSignUpPress = useCallback(() => {
+
+    if(username.trim() === ''){
+      dispatch(
+        showFlashMessage({
+          type: MessageType.Type.DANGER,
+          description: t("notification:empty_username"),
+        })
+      );
+      return;
+    }
+
+    if(email.trim() === ''){
+      dispatch(
+        showFlashMessage({
+          type: MessageType.Type.DANGER,
+          description: t("notification:empty_email"),
+        })
+      );
+      return;
+    }
+
+    if(phone.trim() === ''){
+      dispatch(
+        showFlashMessage({
+          type: MessageType.Type.DANGER,
+          description: t("notification:empty_phone"),
+        })
+      );
+      return;
+    }
+
+    if(password.trim() === ''){
+      dispatch(
+        showFlashMessage({
+          type: MessageType.Type.DANGER,
+          description: t("notification:empty_password"),
+        })
+      );
+      return;
+    }
+
+    if(confirmPassword.trim() === ''){
+      dispatch(
+        showFlashMessage({
+          type: MessageType.Type.DANGER,
+          description: t("notification:empty_cf_password"),
+        })
+      );
+      return;
+    }
+
     if(password !== confirmPassword){
       dispatch(
         showFlashMessage({
